@@ -1,0 +1,190 @@
+---
+layout: default
+---
+<!-- site content
+================================================== -->
+<div class="s-content content">
+  <main class="row content__page">
+      
+      <article class="column large-full entry format-standard">
+
+          <div class="content__page-header entry__header">
+              <h1>{{ page.title }}</h1>
+          </div> 
+
+          {% if page.image_large %}
+          <div class="media-wrap entry__media">
+              <div class="entry__post-thumb">
+                  <img src="/assets/papers/{{page.key}}/{{page.image_large}}" alt="{{page.title}} teaser image">
+              </div>
+          </div>
+          {% endif %}
+
+          <div class="entry__content">
+
+              <p class="drop-cap">{{ page.abstract }}</p>
+
+              {%if page.award %}
+              <span class="award"><i class="far fa-gem"></i>&nbsp;{{ page.award }}</span>
+              {% endif %}
+
+              <h3>Resources</h3>
+
+              <ul class="stats-tabs">
+
+                {% if page.external-project %}
+                  <li><a href="{{page.external-project}}" target="_blank"> <i class="far fa-globe"></i> <em>Website</em></a></li>
+                {% endif %}
+
+                {% if page.doi %}
+                  <li><a href="https://dx.doi.org/{{ page.doi }}" target="_blank"> <i class="fas fa-globe"></i> <em>Publisher</em></a></li>
+                {% elsif page.publisher-url %}
+                  <li><a href="{{ page.publisher-url }}" target="_blank"> <i class="fas fa-globe"></i> <em>Publisher</em></a></li>
+                {% endif %}
+                
+                {% if page.pdf %}
+                  <li><a href="/assets/papers/{{page.key}}/{{page.pdf}}" target="_blank"> <i class="far fa-file-pdf"></i> <em>Preprint</em></a></li>
+                {% endif %}
+                
+                {% if page.supplement %}
+                  <li><a href="/assets/papers/{{page.key}}/{{page.supplement}}" target="_blank"> <i class="far fa-file-pdf"></i> <em>Supplement</em></a></li>
+                {% endif %}
+
+                {% if page.supplements %}
+                  {% for sup in page.supplements %}
+                    <li>
+                      <a href="{% if sup.abslink %}{{ sup.abslink }}{% else %}/assets/papers/{{ page.key }}/{{ sup.link }}{% endif %}" target="_blank">
+                      {% if sup.icon %}
+                        {% if sup.icon contains " " %}
+                          <i class="{{ sup.icon }}"></i>
+                        {% else %}
+                          <i class="far fa-file-{{ sup.icon }}"></i>
+                        {% endif %}
+                      {% else %}<i class="far fa-file"></i>{% endif %}
+                      <em>{{sup.name}}</em></a>
+                    </li>
+                  {% endfor %}
+                {% endif %}
+
+                {% if page.code %}
+                <li><a href="{{ page.code }}" target="_blank"> <i class="far fa-code-branch"></i> <em>Code</em></a></li>
+                {% endif %}
+
+                {% if page.doi %}
+                <li id="dimensions_badge_li">
+                  <div id="dimensions_badge" class="__dimensions_badge_embed__" data-doi="{{ page.doi }}" data-hide-zero-citations="true" data-legend="never" data-style="small_circle"></div>
+                </li>
+                <li id="altmetric_badge_li">
+                  <div id="altmetric_badge" data-badge-type="donut" data-doi="{{ page.doi }}" data-hide-no-mentions="true" class="altmetric-embed"></div>
+                </li>
+                {% endif %}
+              </ul>
+
+              <h3>Citation</h3>
+
+              <div class="card-block">
+                <span class="paper-citation paper-authors">
+                  {% assign n_authors = page.authors.size %}
+                  {% assign shorten = false %}
+                  {% if n_authors > 10 %}
+                    {% assign shorten = true %}
+                    {% assign n_authors = 5 %}
+                  {% endif %}
+    
+                  {% for author in page.authors limit:n_authors %}
+    
+                    {% assign known = false %}
+                    {% for person in site.persons %}
+                      {% if author == person.key %}
+                        {% if author == page.authors.last and page.authors.first != page.authors.last %}and{% endif %}
+                        {{ person.first_name }}&nbsp;{{ person.last_name }}{% if author != page.authors.last%}, {% else %}. {% endif %}
+                        {% if shorten and author == page.authors[4] %}et al.{% endif %}
+                        {% assign known = true %}
+                      {% endif %}
+                    {% endfor %}
+    
+                    {% if known == false %}
+                      {% if author == page.authors.last %}and{% endif %}
+                      {{ author }}{% if author != page.authors.last%}, {% else %}. {% endif %}
+                      {% if shorten and author == page.authors[4] %}et al.{% endif %}
+                    {% endif %}
+    
+                  {% endfor %}
+                </span>
+                <span class="paper-citation paper-title">{{page.title}}.</span>
+    
+                {% if page.type == "article" %}
+                  <span class="paper-citation paper-journal">{{ page.journal }},</span>
+                {% elsif page.type == "inproceedings" %}
+                  In {{ page.journal }},
+                {% elsif page.type == "book" or page.type == "inbook" %}
+                  {{ page.publisher }},
+                {% elsif page.type == "phdthesis" or page.type == "mscthesis" %}
+                  {{ page.school }},
+                {% else %}
+                  {{ page.journal }},
+                {% endif %}
+    
+                {% if page.volume %}
+                  {{ page.volume }}{% if page.issue %}({{ page.issue }}){% endif %}:
+                {% endif %}
+    
+                {% if page.chapter %}
+                  chapter {{ page.chapter }},
+                {% endif %}
+    
+                {% if page.page_start and page.page_end %}
+                  <span class="paper-citation paper-pages">
+                    pp. {{ page.page_start }}&ndash;{{ page.page_end }},
+                  </span>
+                {% elsif page.page_start %}
+                  p. {{ page.page_start }},
+                {% endif %}
+    
+                <span class="paper-citation paper-year">{{ page.year }}.</span>
+              </div>
+
+              <h3>BibTeX</h3>
+
+              {% include /functions/create_bibtex.html %}          
+              <pre><code>{{ bibtex }}</code></pre>
+
+          </div> <!-- end entry content -->
+
+      </article> <!-- end column large-full entry-->
+  </main>
+
+</div> <!-- end s-content -->
+
+<script type='text/javascript'>
+  function require(url, callback) 
+  {
+    var e = document.createElement("script");
+    e.src = url;
+    e.type="text/javascript";
+    e.addEventListener('load', callback);
+    document.getElementsByTagName("head")[0].appendChild(e);
+  }
+
+  require("https://badge.dimensions.ai/badge.js", function() {
+    var dimensions_badge = document.getElementById("dimensions_badge");
+    setTimeout(() => {
+    if(dimensions_badge.innerText.length < 1) {
+      var removeMe = document.getElementById("dimensions_badge_li");
+      removeMe.parentNode.removeChild(removeMe);
+      //console.log(dimensions_badge.innerText);
+    };
+    }, 500);
+  });
+
+require("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js", function() {
+  var altmetric_badge = document.getElementById("altmetric_badge");
+  setTimeout(() => {
+  if(altmetric_badge.innerHTML.length < 1) {
+    var removeMe = document.getElementById("altmetric_badge_li");
+    removeMe.parentNode.removeChild(removeMe);
+    //console.log(altmetric_badge.innerHTML)
+  };
+  }, 500);
+});
+</script>

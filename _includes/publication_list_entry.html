@@ -1,0 +1,76 @@
+<article class="masonry__brick entry format-standard animate-this">
+    
+    {% if publication.image_preview %}
+    <div class="entry__thumb">
+        <a href="{{ publication.url }}" class="entry__thumb-link">
+            <img src="/assets/papers/{{ publication.key }}/{{ publication.image_preview }}" alt="{{ publication.shortname }} screenshot">
+        </a>
+    </div>
+    {% endif %}
+
+    <div class="entry__text">
+        <div class="entry__header">
+
+            <div class="entry__title"><a href="{{ publication.url }}">{{ publication.title }}</a></div>
+            <div class="entry__meta">
+                <a href="{{ publication.url }}">
+                <!--span class="entry__meta-cat">
+              			{% assign n_authors = publication.authors.size %}
+              			{% assign shorten = false %}
+              			{% if n_authors > 10 %}
+              				{% assign shorten = true %}
+              				{% assign n_authors = 5 %}
+              			{% endif %}
+                  
+              			{% for author in publication.authors limit:n_authors %}
+              				{% assign known = false %}
+              				{% for person in site.persons %}
+              					{% if author == person.key %}
+              							{% if author == publication.authors.last %}and{% endif %}
+              							{{ person.first_name }}&nbsp;{{ person.last_name }}{% if author != publication.authors.last %},&nbsp;{% endif %}
+              							{% if shorten and author == publication.authors[4] %}et al.{% endif %}
+              						{% assign known = true %}
+              					{% endif %}
+              				{% endfor %}
+              				{% if known == false %}
+              					{% if author == publication.authors.last %}and{% endif %}
+              					{{ author }}{% if author != publication.authors.last %},&nbsp;{% if shorten and author == publication.authors[4] %}et al.{% endif %}{% endif %}
+              				{% endif %}
+              			{% endfor %}
+                </span></br-->
+                <span class="entry__meta-date">
+                	{% if publication.type == "article" %}
+                      	{{ publication.journal }},
+                    {% elsif publication.type == "inproceedings" %}
+                  		In {{ publication.journal }},
+                    {% elsif (publication.type == "book" or publication.type == "inbook") %}
+                  		{{ publication.publisher }},
+                    {% elsif (publication.type == "phdthesis" or publication.type == "mscthesis") %}
+                  		{{ publication.school }},
+                    {% else %}
+                  		{{ publication.journal }},
+                    {% endif %}
+                	{{publication.year}}
+                </span></a>
+            </div>
+            
+        </div>
+        <div class="entry__excerpt">
+            <p>
+                {{ publication.abstract | truncatewords: 30 }}
+            </p>
+        </div>
+        <div class="entry__links">
+            {% if publication.pdf %}<a href="/assets/papers/{{ publication.key }}/{{ publication.pdf }}" target=_blank><span class="paper-btn">pdf</span></a>{% endif %}
+            
+            {% if publication.code %}<a href="{{ publication.code }}" target=_blank><span class="paper-btn">code</span></a>{% endif %}
+            
+            {% if publication.doi %}
+            <a href="https://dx.doi.org/{{ publication.doi }}" target=_blank><span class="paper-btn">DOI</span></a>
+            {% elsif publication.publisher-url %}
+            <a href="{{ publication.publisher-url }}" target=_blank><span class="paper-btn">DOI</span></a>
+            {% endif %}
+        </div>
+    </div>
+
+</article> <!-- end article -->

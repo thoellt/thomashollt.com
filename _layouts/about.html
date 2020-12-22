@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<!-- site content ================================================== -->
+<div class="s-content content">
+    <main class="row s-styles">
+        
+        <section class="column large-full entry format-standard">
+
+            <div class="content__page-header">
+                <h1 class="display-1">
+                Hello, I am Thomas.
+                </h1>
+            </div> <!-- end content__page-header -->
+
+            <div class="row">
+              
+              <div class="column large-3 tab-full">
+                <p>
+                  <img alt="portrait-thomas" src="/assets/images/portrait.jpg">
+                </p>
+              </div>
+              
+              <div class="column large-9 tab-full">
+                <p class="drop-cap">
+                I am an assistant professor in the <a href="https://graphics.tudelft.nl" target="_blank">Computer Graphics and Visualization group</a> at <a href="https://www.tudelft.nl" target="_blank">TU Delft</a>.
+                Before that I was an assistant professor in the <a href="https://www.lcbc.nl" target="_blank">Leiden Computational Biology Center</a> (until 2020) and a Postdoctoral researcher in the <a href="https://graphics.tudelft.nl" target="_blank">Computer Graphics and Visualization group</a> at <a href="https://www.tudelft.nl" target="_blank">TU Delft</a>.
+                I received my PhD from <a href="https://www.kaust.edu.sa" target="_blank">King Abdullah University of Science and Technology</a> in 2013.
+                </p>
+
+                <p>
+                My research interests include Visualization and Visual Analytics, with a focus on high-dimensional data and bio-/medical applications. I lead the research and development of <a href="https://www.cytosplore.org" target=_blank>Cytosplore</a>, an interactive visual analytics platform for cytometry data which is used by researchers world-wide. In 2019, we received the Dirk Bartz Prize for Visual Computing in Medicine for the Cytosplore project. Further, my research won best paper and honorable mention awards at VCBM and PacificVis, respectively.
+                </p>
+
+                <p>
+                If you are a master student looking for a possible theses topic, we have several open projects and possibilities within topics related to data visualization in general, visual analytics and biomedical visualization. The projects can range fundamental to very applied. If you are interested in a project in the direction of my research, please, contact me and we can discuss the possibilities.
+                </p>
+              </div>
+            
+            </div>
+
+            <hr>
+            
+            <header class="listing-header">
+                <h1 class="h2">Recent Publications</h1>
+            </header>
+    
+            <div class="masonry-wrap">
+
+                <div class="masonry">
+
+                    <div class="grid-sizer"></div>
+                    
+                    {% for publication in site.publications reversed %}
+                      {% if publication.key == "2020_vis_cohort" %}
+                        {% include publication_list_entry.html %}
+                      {% endif %}
+                    {% endfor %}
+                    
+                    {% for publication in site.publications reversed %}
+                      {% if publication.key == "2019_eurovis" %}
+                        {% include publication_list_entry.html %}
+                      {% endif %}
+                    {% endfor %}
+                    
+                    {% for publication in site.publications reversed %}
+                      {% if publication.key == "2019_imacyte" %}
+                        {% include publication_list_entry.html %}
+                      {% endif %}
+                    {% endfor %}
+                    
+                    {% for publication in site.publications reversed %}
+                      {% if publication.key == "2019_vis_GPUtSNE" %}
+                        {% include publication_list_entry.html %}
+                      {% endif %}
+                    {% endfor %}
+                    
+                    {% for publication in site.publications reversed %}
+                      {% if publication.key == "2019_nature_immunology" %}
+                        {% include publication_list_entry.html %}
+                      {% endif %}
+                    {% endfor %}
+                    
+                    {% for publication in site.publications reversed %}
+                      {% if publication.key == "2019_divergent_cell_types" %}
+                        {% include publication_list_entry.html %}
+                      {% endif %}
+                    {% endfor %}
+
+                </div> <!-- end masonry -->
+
+            </div> <!-- end masonry-wrap -->
+            
+            <a href="/publications/">all publications...</a>
+
+        </section>
+
+    </main>
+
+</div> <!-- end s-content -->

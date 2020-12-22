@@ -1,0 +1,34 @@
+title: About Thomas
+baseurl: /
+url: "https://www.thomashollt.com"
+asset_url: /assets/
+
+twitter: thomashollt
+github: thoellt
+email: t.hollt-1@tudelft.nl
+
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+sass:
+  sass_dir: _sass
+
+analytics :
+  provider : google
+  google :
+    tracking_id : 'UA-36946869-1'
+
+collections:
+  persons:
+    output: false
+    permalink: /persons/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+exclude: [".git", ".github", ".gitignore", "Gemfile", "LICENSE", "README.md"]

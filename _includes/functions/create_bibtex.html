@@ -1,0 +1,96 @@
+{% assign bibtex = "" %}
+
+<!-- type -->
+{% if page.type == "article" or page.type == "preprint" %}
+    {% assign bibtex = bibtex | append: "@article" %}
+{% elsif page.type == "inproceedings" %}
+    {% assign bibtex = bibtex | append: "@inproceedings" %}
+{% elsif page.type == "inbook" %}
+    {% assign bibtex = bibtex | append: "@inbook" %}
+{% elsif page.type == "book" %}
+    {% assign bibtex = bibtex | append: "@book" %}
+{% elsif page.type == "mscthesis" %}
+    {% assign bibtex = bibtex | append: "@mastersthesis" %}
+{% elsif page.type == "phdthesis" %}
+    {% assign bibtex = bibtex | append: "@phdthesis" %}
+{% else %}
+    {% assign bibtex = bibtex | append: "@misc" %}
+{% endif %}
+
+<!-- key -->
+{% assign bibtex = bibtex | append: "{ bib:" | append: page.key | append: ",<br/>" %}
+
+<!-- authors -->
+{% assign bibtex = bibtex | append: "    author = {" %}
+
+{% for author in page.authors %}
+    {% assign name = author %}
+    {% for person in site.persons %}
+        {% if author == person.key %}
+            {% assign name = person.first_name | append: ' ' | append: person.last_name %}
+        {% endif %}
+    {% endfor %}
+    {% include /functions/replace_umlauts.html input=name %}
+    {% assign bibtex = bibtex | append: fixedString %}
+    
+    {% if author != page.authors.last and page.authors.first != page.authors.last%}
+        {% assign bibtex = bibtex | append: " and " %}
+    {% endif %}
+{% endfor %}
+
+{% assign bibtex = bibtex | append: "},<br/>" %}
+
+<!-- title -->
+{% assign bibtex = bibtex | append: "    title = { " | append: page.title | append: " },<br/>" %}
+
+<!-- journal/proceedings -->
+{% if page.type == "article" %}
+    {% assign bibtex = bibtex | append: "    journal = { " | append: page.journal | append: " },<br/>" %}
+{% elsif page.type == "inproceedings" %}
+    {% assign bibtex = bibtex | append: "    booktitle = { " | append: page.journal | append: " },<br/>" %}
+{% elsif page.type == "poster" %}
+    {% assign bibtex = bibtex | append: "    howpublished = { Poster presentation at " | append: page.journal | append: " },<br/>" %}
+{% endif %}
+
+<!-- issue -->
+{% if page.issue %}
+    {% assign bibtex = bibtex | append: "    number = { " | append: page.issue | append: " },<br/>" %}
+{% endif %}
+
+<!-- pages -->
+{% if page.page_start %}
+    {% assign bibtex = bibtex | append: "    pages = { " | append: page.page_start %}
+    {% if page.page_end %}
+        {% assign bibtex = bibtex | append: " -- " | append: page.page_end  %}
+    {% endif %}
+    {% assign bibtex = bibtex | append: " },<br/>" %}
+{% endif %}
+
+<!-- editor -->
+{% if page.editor %}
+    {% assign bibtex = bibtex | append: "    editor = { " | append: page.editor | append: " },<br/>" %}
+{% endif %}
+
+<!-- publisher -->
+{% if page.publisher %}
+    {% assign bibtex = bibtex | append: "    publisher = { " | append: page.publisher | append: " },<br/>" %}
+{% endif %}
+
+<!-- school -->
+{% if page.school %}
+    {% include /functions/replace_umlauts.html input=page.school %}
+    {% assign bibtex = bibtex | append: "    school = { " | append: fixedString | append: " },<br/>" %}
+{% endif %}
+
+<!-- year -->
+{% if page.year %}
+    {% assign bibtex = bibtex | append: "    year = { " | append: page.year | append: " },<br/>" %}
+{% endif %}
+
+<!-- doi -->
+{% if page.doi %}
+    {% assign bibtex = bibtex | append: "    doi = { " | append: page.doi | append: " },<br/>" %}
+{% endif %}
+
+<!-- close -->
+{% assign bibtex = bibtex | append: "}" %}

@@ -1,0 +1,41 @@
+{% assign fixedString = include.input | replace:'Ä','&#123;\"A&#125;' %}
+{% assign fixedString = fixedString | replace:'Ë','&#123;\"E&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ï','&#123;\"I&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ö','&#123;\"O&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ü','&#123;\"U&#125;' %}
+{% assign fixedString = fixedString  | replace:'ä','&#123;\"a&#125;' %}
+{% assign fixedString = fixedString  | replace:'ë','&#123;\"e&#125;' %}
+{% assign fixedString = fixedString  | replace:'ï','&#123;\"i&#125;' %}
+{% assign fixedString = fixedString  | replace:'ö','&#123;\"o&#125;' %}
+{% assign fixedString = fixedString  | replace:'ü','&#123;\"u&#125;' %}
+
+{% assign fixedString = fixedString  | replace:'Á','&#123;\'A&#125;' %}
+{% assign fixedString = fixedString  | replace:'É','&#123;\'E&#125;' %}
+{% assign fixedString = fixedString  | replace:'Í','&#123;\'I&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ó','&#123;\'O&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ú','&#123;\'U&#125;' %}
+{% assign fixedString = fixedString  | replace:'á','&#123;\'a&#125;' %}
+{% assign fixedString = fixedString  | replace:'é','&#123;\'e&#125;' %}
+{% assign fixedString = fixedString  | replace:'í','&#123;\'i&#125;' %}
+{% assign fixedString = fixedString  | replace:'ó','&#123;\'o&#125;' %}
+{% assign fixedString = fixedString  | replace:'ú','&#123;\'u&#125;' %}
+
+{% assign fixedString = fixedString  | replace:'À','&#123;\`A&#125;' %}
+{% assign fixedString = fixedString  | replace:'È','&#123;\`E&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ì','&#123;\`I&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ò','&#123;\`O&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ù','&#123;\`U&#125;' %}
+{% assign fixedString = fixedString  | replace:'à','&#123;\`a&#125;' %}
+{% assign fixedString = fixedString  | replace:'è','&#123;\`e&#125;' %}
+{% assign fixedString = fixedString  | replace:'ì','&#123;\`i&#125;' %}
+{% assign fixedString = fixedString  | replace:'ò','&#123;\`o&#125;' %}
+{% assign fixedString = fixedString  | replace:'ù','&#123;\`u&#125;' %}
+
+{% assign fixedString = fixedString  | replace:'Ã','&#123;\~A&#125;' %}
+{% assign fixedString = fixedString  | replace:'Ñ','&#123;\~N&#125;' %}
+{% assign fixedString = fixedString  | replace:'Õ','&#123;\~O&#125;' %}
+{% assign fixedString = fixedString  | replace:'ã','&#123;\~a&#125;' %}
+{% assign fixedString = fixedString  | replace:'ñ','&#123;\~n&#125;' %}
+{% assign fixedString = fixedString  | replace:'õ','&#123;\~o&#125;' %}
+
+{% assign fixedString = fixedString  | replace:'ß','&#123;\ss&#125;' %}
