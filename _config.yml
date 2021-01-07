@@ -1,4 +1,4 @@
-title: About Thomas
+title: Thomas Höllt
 baseurl: /
 url: "https://www.thomashollt.com"
 asset_url: /assets/
@@ -15,11 +15,6 @@ kramdown:
 sass:
   sass_dir: _sass
 
-analytics :
-  provider : google
-  google :
-    tracking_id : 'UA-36946869-1'
-
 collections:
   persons:
     output: false
@@ -27,8 +22,5 @@ collections:
   publications:
     output: true
     permalink: /publications/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
 
 exclude: [".git", ".github", ".gitignore", "Gemfile", "LICENSE", "README.md"]

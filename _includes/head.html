@@ -1,7 +1,7 @@
 <!--- basic page needs
 ================================================== -->
 <meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }} &#8226; {% endif %}{{ site.title }}</title>
+<title>{{ site.title }}{% if page.title %} &#8226; {{ page.title }}{% endif %}</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -26,3 +26,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="site.webmanifest">
+
+<!-- analytics
+================================================== -->
+<script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('rgCh29Fzt3idDR2T');
+insights.trackPages();
+</script>

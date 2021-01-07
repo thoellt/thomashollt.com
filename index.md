@@ -1,4 +1,4 @@
 ---
 layout: about
-title: Home
+title: About Thomas
 ---
