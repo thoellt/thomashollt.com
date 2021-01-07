@@ -44,10 +44,10 @@ supplement:
 supplements:
   - name: Pro 3D Project
     abslink: https://www.pro3d.space
-    icon: alt
+    icon: fas fa-globe
   - name: Conference Talk
     abslink: https://www.youtube.com/watch?v=XfQw3eU-kSw
-    icon: video
+    icon: fas fa-chalkboard-teacher
 
 code: https://github.com/vrvis/pro3d/
 

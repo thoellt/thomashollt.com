@@ -46,7 +46,7 @@ supplement:
 supplements:
   - name: Conference Talk
     abslink: https://youtu.be/GVfO0F-4T7g?t=1577
-    icon: video
+    icon: fas fa-chalkboard-teacher
   - name: Fast Forward Video
     abslink: https://youtu.be/xGFBiyBkm38
     icon: video
