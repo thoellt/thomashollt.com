@@ -2,7 +2,7 @@
 layout: publication
 title: "ImaCytE: Visual Exploration of Cellular Microenvironments for Imaging Mass Cytometry Data"
 key: 2019_imacyte
-date:   2020-07-29 12:00:00
+date:   2021-01-01 12:00:00
 permalink: /publications/2019_imacyte/
 type: article
 shortname: IMaCytE

@@ -2,7 +2,7 @@
 layout: publication
 title: "Visual Cohort Comparison for Spatial Single-Cell Omics-Data"
 key: 2020_vis_cohort
-date:   2020-12-01 12:00:00
+date:   2021-02-01 12:00:00
 permalink: /publications/2020_vis_cohort/
 type: article
 shortname: SpaCeCo

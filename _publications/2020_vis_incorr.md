@@ -2,7 +2,7 @@
 layout: publication
 title: "InCorr: Interactive Data-Driven Correlation Panels for Digital Outcrop Analysis"
 key: 2020_vis_incorr
-date:   2020-12-01 12:00:00
+date:   2021-02-01 12:00:00
 permalink: /publications/2020_vis_incorr/
 type: article
 shortname: InCorr
