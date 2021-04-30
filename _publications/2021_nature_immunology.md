@@ -65,10 +65,10 @@ videos:
 pdf: 2021_nature_immunology.pdf
 supplement:
 supplements:
-  - name: Suppl. Tables A
+  - name: Suppl. A
     abslink: https://static-content.springer.com/esm/art%3A10.1038%2Fs41590-021-00911-7/MediaObjects/41590_2021_911_MOESM1_ESM.pdf
     icon: archive
-  - name: Suppl. Tables B
+  - name: Suppl. B
     abslink: https://static-content.springer.com/esm/art%3A10.1038%2Fs41590-021-00911-7/MediaObjects/41590_2021_911_MOESM4_ESM.xlsx
     icon: archive
   - name: Comment
