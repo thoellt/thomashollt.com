@@ -48,6 +48,8 @@
     {% assign bibtex = bibtex | append: "    journal = { " | append: page.journal | append: " },<br/>" %}
 {% elsif page.type == "inproceedings" %}
     {% assign bibtex = bibtex | append: "    booktitle = { " | append: page.journal | append: " },<br/>" %}
+{% elsif page.type == "inbook" %}
+    {% assign bibtex = bibtex | append: "    booktitle = { " | append: page.journal | append: " },<br/>" %}
 {% elsif page.type == "poster" %}
     {% assign bibtex = bibtex | append: "    howpublished = { Poster presentation at " | append: page.journal | append: " },<br/>" %}
 {% endif %}
@@ -55,6 +57,11 @@
 <!-- issue -->
 {% if page.issue %}
     {% assign bibtex = bibtex | append: "    number = { " | append: page.issue | append: " },<br/>" %}
+{% endif %}
+
+<!-- chapter -->
+{% if page.chapter %}
+    {% assign bibtex = bibtex | append: "    chapter = { " | append: page.chapter | append: " },<br/>" %}
 {% endif %}
 
 <!-- pages -->

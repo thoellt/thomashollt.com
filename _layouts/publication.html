@@ -25,8 +25,10 @@ layout: default
               <p class="drop-cap">{{ page.abstract }}</p>
 
               {%if page.award %}
-              <span class="award"><i class="far fa-gem"></i>&nbsp;{{ page.award }}</span>
+              <p class="award"><i class="far fa-gem"></i>&nbsp;{{ page.award }}</p>
               {% endif %}
+			  
+              {{ content }}
 
               <h3>Resources</h3>
 
@@ -117,8 +119,10 @@ layout: default
                   <span class="paper-citation paper-journal">{{ page.journal }},</span>
                 {% elsif page.type == "inproceedings" %}
                   In {{ page.journal }},
-                {% elsif page.type == "book" or page.type == "inbook" %}
+                {% elsif page.type == "book" %}
                   {{ page.publisher }},
+                {% elsif page.type == "inbook" %}
+                  In {{ page.journal }}, {{ page.editor }} (eds), {{ page.publisher }},
                 {% elsif page.type == "phdthesis" or page.type == "mscthesis" %}
                   {{ page.school }},
                 {% else %}
@@ -130,7 +134,7 @@ layout: default
                 {% endif %}
     
                 {% if page.chapter %}
-                  chapter {{ page.chapter }},
+                  Chapter {{ page.chapter }},
                 {% endif %}
     
                 {% if page.page_start and page.page_end %}
