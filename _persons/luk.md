@@ -1,6 +1,6 @@
 ---
 layout: default
-first_name: Sietse J
+first_name: Sietse J.
 last_name: Luk
 key: luk
 permalink: 

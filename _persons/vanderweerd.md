@@ -1,15 +1,15 @@
 ---
 layout: default
-first_name: Marieke E.
-last_name: Ijsselsteijn
-key: ijsselsteijn
+first_name: Louise
+last_name: van der Weerd
+key: vanderweerd
 permalink:
 role: collaborator
 email:
 image:
 organization: LUMC
-position:
+position: Professor
 website:
 interests:
-graduated:
+graduated: 
 ---
