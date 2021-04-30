@@ -21,7 +21,6 @@ authors:
 - Willeke M. C. van Roon-Mom
 - hollt
 - vanderweerd
-- koning
 
 journal: Acta Neuropathologica Communications
 journal-short: Acta Neuropathol Commun
