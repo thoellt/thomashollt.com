@@ -2,6 +2,7 @@
 layout: publication
 title: "Overview + Detail Visualization for Ensembles of Diffusion Tensors"
 key: 2017_eurovis_diftens
+date:   2017-07-04 12:00:00
 permalink: /publications/2017_eurovis_diftens/
 type: article
 shortname: Diffusion Tensor Ensembles
@@ -32,7 +33,7 @@ award:
 doi: 10.1111/cgf.13173
 publisher-url:
 
-project:
+projects:
 external-project:
 
 videos:

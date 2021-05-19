@@ -2,6 +2,7 @@
 layout: publication
 title: "Mass Cytometry of the Human Mucosal Immune System Identifies Tissue- and Disease-Associated Immune Subsets"
 key: 2016_immunity_vvu
+date:   2016-05-10 12:00:00
 permalink: /publications/2016_immunity_vvu/
 type: article
 shortname: Mass Cytometry of the Human Mucosal Immune System
@@ -38,7 +39,9 @@ award: LUMC Best Article Prize 2016 (non clinical)
 doi: 10.1016/j.immuni.2016.04.014
 publisher-url:
 
-project:
+projects:
+- cytosplore
+
 external-project:
 videos:
 

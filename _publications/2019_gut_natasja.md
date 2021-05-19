@@ -2,7 +2,7 @@
 layout: publication
 title: "High-Dimensional Cytometric Analysis of Colorectal Cancer Reveals Novel Mediators of Antitumour Immunity"
 key: 2019_gut_antitumor
-date:   2020-01-01 12:00:00
+date:   2019-07-03 12:00:00
 permalink: /publications/2019_gut_antitumor/
 type: article
 shortname: Mediators of Antitumour Immunity
