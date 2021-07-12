@@ -16,7 +16,7 @@ authors:
 - Lorraine de Haan
 - Oleh Dzyubachyk
 - ijsselsteijn
-- dermiranda
+- demiranda
 - lelieveldt
 - Willeke M. C. van Roon-Mom
 - hollt

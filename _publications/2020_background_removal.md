@@ -2,9 +2,9 @@
 layout: publication
 title: "Semi-Automated Background Removal Limits Loss of Data and Normalises the Images for Downstream Analysis of Imaging Mass Cytometry Data"
 key: 2020_background_removal
-date:   2020-01-01 12:00:00
+date:   2021-06-30 12:00:00
 permalink: /publications/2020_background_removal/
-type: preprint
+type: article
 shortname: IMC Background Removal
 image: 2020_background_removal.png
 image_large: 2020_background_removal_teaser.png
@@ -17,20 +17,20 @@ authors:
 - hollt
 - demiranda
 
-journal: bioRxiv
-journal-short: bioRxiv
-page_start: 
-page_end: 
+journal: Cytometry Part A
+journal-short: Cytometry
+page_start: 1
+page_end: 11
 chapter:
 volume: 
 issue: 
-year: 2020
+year: 2021
 editor:
 publisher:
 school:
 award:
 
-doi: 10.1101/2020.11.26.399717
+doi: 10.1002/cyto.a.24480
 publisher-url:
 
 projects:
