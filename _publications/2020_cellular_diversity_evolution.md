@@ -5,7 +5,7 @@ key: 2020_cellular_diversity_evolution
 date:   2021-10-08 00:00:00
 permalink: /publications/2021_nature/
 redirect_from: /publications/2020_cellular_diversity_evolution/
-type: journal
+type: article
 
 shortname: Cytosplore Viewer
 
