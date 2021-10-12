@@ -1,10 +1,11 @@
 ---
 layout: publication
-title: "Evolution of cellular diversity in primary motor cortex of human, marmoset monkey, and mouse"
+title: "Comparative cellular analysis of motor cortex in human, marmoset and mouse"
 key: 2020_cellular_diversity_evolution
-date:   2020-04-03 00:00:00
-permalink: /publications/2020_cellular_diversity_evolution/
-type: preprint
+date:   2021-10-08 00:00:00
+permalink: /publications/2021_nature/
+redirect_from: /publications/2020_cellular_diversity_evolution/
+type: journal
 
 shortname: Cytosplore Viewer
 
@@ -15,7 +16,7 @@ image_preview: 2020_cellular_diversity_evolution.png
 
 authors:
 - Trygve E. Bakken
-- Nicholas L. Jorstad
+- Nikolas L. Jorstad
 - Qiwen Hu
 - Blue B. Lake
 - Wei Tian
@@ -54,12 +55,16 @@ authors:
 - Yang Eric Li
 - Christine S. Liu
 - Hanqing Liu
+- Jacinta D. Lucero
 - Anup Mahurkar
 - Delissa McMillen
 - Jeremy A. Miller
 - Marmar Moussa
 - Joseph R. Nery
+- Philip R. Nicovich
+- Sheng-Yong Niu
 - Joshua Orvis
+- Julia K. Osteen
 - Scott Owen
 - Carter R. Palmer
 - Thanh Pham
@@ -81,6 +86,7 @@ authors:
 - Anna Marie Yanny
 - Renee Zhang
 - Seth A. Ament
+- M. Margarita Behrens
 - Hector Corrada Bravo
 - Jerold Chun
 - Alexander Dobin
@@ -95,6 +101,7 @@ authors:
 - lelieveldt
 - Chongyuan Luo
 - Eran A. Mukamel
+- António Pinto-Duarte
 - Sebastian Preissl
 - Aviv Regev
 - Bing Ren
@@ -103,7 +110,7 @@ authors:
 - William J. Spain
 - Owen R. White
 - Christof Koch
-- Michael Hawlrylycz
+- Michael Hawrylycz
 - Bosiljka Tasic
 - Evan Z. Macosko
 - Steven A. McCarroll
@@ -115,20 +122,20 @@ authors:
 - Sten Linnarsson
 - Ed S. Lein
 
-journal: bioRxiv
-journal-short: bioRxiv
-page_start:
-page_end:
+journal: Nature
+journal-short: Nature
+page_start: 111
+page_end: 119
 chapter:
-volume:
+volume: 598
 issue:
-year: 2020
+year: 2021
 editor:
 publisher:
 school:
 award:
 
-doi: 10.1101/2020.03.31.016972
+doi: 10.1038/s41586-021-03465-8
 
 projects:
 - cytosplore
@@ -136,6 +143,6 @@ external-project: https://viewer.cytosplore.org/
 
 pdf: 2020_cellular_diversity_evolution.pdf
 
-abstract: "The primary motor cortex (M1) is essential for voluntary fine motor control and is functionally conserved across mammals. Using high-throughput transcriptomic and epigenomic profiling of over 450,000 single nuclei in human, marmoset monkey, and mouse, we demonstrate a broadly conserved cellular makeup of this region, whose similarity mirrors evolutionary distance and is consistent between the transcriptome and epigenome. The core conserved molecular identity of neuronal and non-neuronal types allowed the generation of a cross-species consensus cell type classification and inference of conserved cell type properties across species. Despite overall conservation, many species specializations were apparent, including differences in cell type proportions, gene expression, DNA methylation, and chromatin state. Few cell type marker genes were conserved across species, providing a short list of candidate genes and regulatory mechanisms responsible for conserved features of homologous cell types, such as the GABAergic chandelier cells. This consensus transcriptomic classification allowed the Patch-seq identification of layer 5 (L5) corticospinal Betz cells in non-human primate and human and characterization of their highly specialized physiology and anatomy. These findings highlight the robust molecular underpinnings of cell type diversity in M1 across mammals and point to the genes and regulatory pathways responsible for the functional identity of cell types and their species-specific adaptations."
+abstract: "The primary motor cortex (M1) is essential for voluntary fine-motor control and is functionally conserved across mammals1. Here, using high-throughput transcriptomic and epigenomic profiling of more than 450,000 single nuclei in humans, marmoset monkeys and mice, we demonstrate a broadly conserved cellular makeup of this region, with similarities that mirror evolutionary distance and are consistent between the transcriptome and epigenome. The core conserved molecular identities of neuronal and non-neuronal cell types allow us to generate a cross-species consensus classification of cell types, and to infer conserved properties of cell types across species. Despite the overall conservation, however, many species-dependent specializations are apparent, including differences in cell-type proportions, gene expression, DNA methylation and chromatin state. Few cell-type marker genes are conserved across species, revealing a short list of candidate genes and regulatory mechanisms that are responsible for conserved features of homologous cell types, such as the GABAergic chandelier cells. This consensus transcriptomic classification allows us to use patch–seq (a combination of whole-cell patch-clamp recordings, RNA sequencing and morphological characterization) to identify corticospinal Betz cells from layer 5 in non-human primates and humans, and to characterize their highly specialized physiology and anatomy. These findings highlight the robust molecular underpinnings of cell-type diversity in M1 across mammals, and point to the genes and regulatory pathways responsible for the functional identity of cell types and their species-specific adaptations."
 
 ---
