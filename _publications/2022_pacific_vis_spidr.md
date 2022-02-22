@@ -45,6 +45,9 @@ supplements:
   - name: "Supplemental"
     link: 2022_pacific_vis_spidr_supplement.pdf
     icon: pdf
+  - name: "arXiv"
+    abslink: https://doi.org/10.48550/arXiv.2202.09179
+    icon: "far fa-bookmark"
 code: https://github.com/biovault/Spidr
 
 abstract: "High-dimensional imaging is becoming increasingly relevant in many fields from astronomy and cultural heritage to systems biology.
