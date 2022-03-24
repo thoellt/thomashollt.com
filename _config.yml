@@ -22,5 +22,8 @@ collections:
   publications:
     output: true
     permalink: /publications/:path/
+  courses:
+    output: true
+    permalink: /teaching/:path/
 
 exclude: [".git", ".github", ".gitignore", "Gemfile", "LICENSE", "README.md"]

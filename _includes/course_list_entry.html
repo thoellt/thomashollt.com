@@ -1,0 +1,40 @@
+<article class="masonry__brick entry format-standard animate-this", style="width:100%">
+    
+    {% if course.image_preview %}
+    <div class="entry__thumb">
+        <img src="/assets/courses/{{ course.key }}/{{ course.image_preview }}" alt="{{ course.shortname }} Teaser Image">
+    </div>
+    {% endif %}
+
+    <div class="entry__text">
+        <div class="entry__header">
+            <div class="entry__title">{{ course.key }} &mdash; {{ course.title }}</div>
+            <div class="entry__meta">
+
+                Responsible teacher{% if course.teachers.size > 1 %}s{% endif %}:
+                
+                {% for teacher in course.teachers %}
+  
+                  {% for person in site.persons %}
+                    {% if teacher == person.key %}
+                      {% if teacher == course.teachers.last and course.teachers.first != course.teachers.last %}and{% endif %}
+                      {{ person.first_name }}&nbsp;{{ person.last_name }}{% if teacher != course.teachers.last and  course.teachers.size > 2 %}, {% endif %}
+                    {% endif %}
+                  {% endfor %}
+  
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="entry__excerpt">
+            {{ course.content }}
+        </div>
+
+        <div class="entry__header">
+            <span class="entry__meta">
+                <a href="{{course.courseguide}}" target="_blank">Course in TU Delft study Guide.</a>
+            </span>
+        </div>
+    </div>
+
+</article> <!-- end article -->

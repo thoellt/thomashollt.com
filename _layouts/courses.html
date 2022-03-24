@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<!-- site content ================================================== -->
+<div class="s-content content">
+
+  <header class="listing-header">
+    <h1 class="h2">Courses</h1>
+</header>
+
+<div class="masonry-wrap">
+
+  <div class="masonry">
+
+      <div class="grid-sizer"></div>
+      
+      {% for course in site.courses reversed %}
+        {% include course_list_entry.html %}
+      {% endfor %}
+
+  </div> <!-- end masonry -->
+
+</div> <!-- end masonry-wrap -->
+
+</div> <!-- end s-content -->
