@@ -2,7 +2,7 @@
 layout: publication
 title: "Incorporating Texture Information into Dimensionality Reduction for High-Dimensional Images"
 key: 2022_pacific_vis_spidr
-date:   2022-02-17 12:00:00
+date:   2022-03-24 12:00:00
 permalink: /publications/2022_spidr/
 type: inproceedings
 shortname: 

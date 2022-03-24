@@ -17,8 +17,8 @@ authors:
 
 journal: Computer Graphics Forum (Proceedings of EuroVis 2021)
 journal-short: CGF (EuroVis 2021)
-page_start:
-page_end:
+page_start: 411
+page_end: 422
 chapter:
 volume: 40
 issue: 3
@@ -28,7 +28,7 @@ publisher:
 school:
 award:
 
-doi:
+doi: 10.1111/cgf.14317
 publisher-url:
 
 projects:
