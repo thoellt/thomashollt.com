@@ -8,7 +8,7 @@ role: collaborator
 email:
 image:
 organization: TU Delft
-position: Associate Professor
+position: Professor
 website: https://graphics.tudelft.nl/anna-vilanova/
 interests:
 graduated: 
