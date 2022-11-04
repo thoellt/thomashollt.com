@@ -53,13 +53,13 @@ supplements:
     icon: fas fa-globe
   - name: Code
     abslink: https://github.com/biovault/ImaCytE
-    icon: code
+    icon: fas fa-code-branch
   - name: SpaCeCo Paper
     abslink: /publications/2020_vis_cohort/
     icon: fas fa-globe
   - name: Code
     abslink: https://github.com/biovault/SpaCeCo
-    icon: code
+    icon: fas fa-code-branch
 code: 
 
 abstract: "The detailed analysis of tissue composition is crucial for the understanding of tissue functionality. For example, the location of immune cells related to a tumour area is highly correlated with the effectiveness of immunotherapy. Therefore, experts are interested in presence of cells with specific characteristics as well as the spatial patterns they form. Recent advances in single-cell imaging modalities, producing high-dimensional, high-resolution images enable the analysis of both of these features. However, extracting useful insight on tissue functionality from these high-dimensional images poses serious and diverse challenges to data analysis. We have developed an interactive, data-driven pipeline covering the main analysis challenges experts face, from the pre-processing of images via the exploration of  tissue samples to the comparison of cohorts of samples. All parts of our pipeline have been developed in close collaboration with domain experts and are already a vital part in their daily analysis routine. "
