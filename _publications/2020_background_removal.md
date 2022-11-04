@@ -19,11 +19,11 @@ authors:
 
 journal: Cytometry Part A
 journal-short: Cytometry
-page_start: 1
-page_end: 11
+page_start: 1187
+page_end: 1197
 chapter:
-volume: 
-issue: 
+volume: 99
+issue: 12
 year: 2021
 editor:
 publisher:

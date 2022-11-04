@@ -17,10 +17,10 @@ authors:
 - eisemann
 - hollt
 
-journal: Proceedings of IEEE Pacific Visualization Symposium
+journal: Proceedings of the 15th IEEE Pacific Visualization Symposium
 journal-short: Pacific Vis
-page_start: 
-page_end: 
+page_start: 11
+page_end: 20
 chapter:
 volume: 
 issue: 
@@ -30,7 +30,7 @@ publisher:
 school:
 award:
 
-doi: 
+doi: 10.1109/PacificVis53943.2022.00010
 publisher-url:
 
 projects:
@@ -42,12 +42,18 @@ videos:
 pdf: 2022_pacific_vis_spidr.pdf
 supplement:
 supplements:
+  - name: "Demo Video"
+    abslink: https://graphics.tudelft.nl/Publications-new/2022/VVLEH22/supplement_video_interactive_demo.mp4
+    icon: video
+  - name: "Slides"
+    abslink: https://graphics.tudelft.nl/Publications-new/2022/VVLEH22/Vieth_PacificVis_2022_slides.pdf
+    icon: powerpoint
+  - name: "Presentation"
+    abslink: https://graphics.tudelft.nl/Publications-new/2022/VVLEH22/pvis2022_full_4701_presentation_Vieth.mp4
+    icon: "fas fa-chalkboard-teacher"
   - name: "Supplemental"
     link: 2022_pacific_vis_spidr_supplement.pdf
     icon: pdf
-  - name: "arXiv"
-    abslink: https://doi.org/10.48550/arXiv.2202.09179
-    icon: "far fa-bookmark"
 code: https://github.com/biovault/Spidr
 
 abstract: "High-dimensional imaging is becoming increasingly relevant in many fields from astronomy and cultural heritage to systems biology.

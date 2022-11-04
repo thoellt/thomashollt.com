@@ -54,6 +54,11 @@
     {% assign bibtex = bibtex | append: "    howpublished = { Poster presentation at " | append: page.journal | append: " },<br/>" %}
 {% endif %}
 
+<!-- volume -->
+{% if page.volume %}
+    {% assign bibtex = bibtex | append: "    volume = { " | append: page.volume | append: " },<br/>" %}
+{% endif %}
+
 <!-- issue -->
 {% if page.issue %}
     {% assign bibtex = bibtex | append: "    number = { " | append: page.issue | append: " },<br/>" %}
