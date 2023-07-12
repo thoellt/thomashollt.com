@@ -6,7 +6,7 @@ LABEL version="1.0.0"
 
 # Lets install all dependencies
 # including git and Bundler
-ENV BUNDLER_VERSION
+# ENV BUNDLER_VERSION
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     bats \
