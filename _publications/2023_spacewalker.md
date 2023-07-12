@@ -24,7 +24,7 @@ issue:
 year: 2023
 award:
 
-doi:
+doi: 10.1101/2023.03.20.532934
 publisher-url:
 pdf: 2023_spacewalker.pdf
 
