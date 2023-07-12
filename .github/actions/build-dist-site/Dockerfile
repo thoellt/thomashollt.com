@@ -13,7 +13,7 @@ RUN apt-get update && \
     build-essential \
     ca-certificates \
     curl \
-    libffi \
+    libffi-dev \
     make \
     shellcheck \
     git-all \
