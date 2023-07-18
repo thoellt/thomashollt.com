@@ -6,8 +6,9 @@ date:   2018-03-06 12:00:00
 permalink: /publications/2018_exp_medicine/
 type: article
 shortname: Innate Lymphoid Differentiation
-image: 2018_exp_medicine.png
+image: 2018_exp_medicine.jpg
 image_large: 2018_exp_medicine_teaser.png
+image_preview: 2018_exp_medicine.jpg
 
 authors:
 - lina

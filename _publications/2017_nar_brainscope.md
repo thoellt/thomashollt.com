@@ -6,8 +6,9 @@ date:   2017-01-28 12:00:00
 permalink: /publications/2017_nar_brainscope/
 type: article
 shortname: BrainScope
-image: 2017_nar_brainscope.png
+image: 2017_nar_brainscope.jpg
 image_large: 2017_nar_brainscope_teaser.png
+image_preview: 2017_nar_brainscope.jpg
 
 authors:
 - huisman

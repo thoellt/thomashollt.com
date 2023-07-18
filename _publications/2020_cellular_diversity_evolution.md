@@ -130,6 +130,7 @@ chapter:
 volume: 598
 issue:
 year: 2021
+preprint-year: 2020
 editor:
 publisher:
 school:
@@ -139,7 +140,7 @@ doi: 10.1038/s41586-021-03465-8
 
 projects:
 - cytosplore
-external-project: https://viewer.cytosplore.org/
+external-project:
 
 pdf: 2020_cellular_diversity_evolution.pdf
 supplements:

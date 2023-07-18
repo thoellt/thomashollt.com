@@ -39,7 +39,13 @@
             </p>
         </div>
         <div class="entry__links">
-            {% if publication.pdf %}<a href="/assets/papers/{{ publication.key }}/{{ publication.pdf }}" target=_blank><span class="paper-btn">pdf</span></a>{% endif %}
+            {% if publication.pdf %}
+                {% assign url = site.document_url | append: publication.year %}
+                {% if publication.preprint-year %}
+                    {% assign url = site.document_url | append: publication.preprint-year %}
+                {% endif %}
+                <a href="{{ url }}/{{ publication.pdf }}" target=_blank><span class="paper-btn">pdf</span></a>
+            {% endif %}
             
             {% if publication.code %}<a href="{{ publication.code }}" target=_blank><span class="paper-btn">code</span></a>{% endif %}
             

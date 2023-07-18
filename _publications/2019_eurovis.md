@@ -44,12 +44,12 @@ videos:
 pdf: 2019_eurovis.pdf
 supplement:
 supplements:
-  - name: Slides (pdf)
-    abslink: https://talks.thomashollt.com/2019/06_EuroVis/static.pdf
-    icon: powerpoint
-  - name: Slides (interactive)
-    abslink: https://talks.thomashollt.com/2019/06_EuroVis/interactive
-    icon: powerpoint
+#  - name: Slides (pdf)
+#    abslink: https://talks.thomashollt.com/2019/06_EuroVis/static.pdf
+#    icon: powerpoint
+#  - name: Slides (interactive)
+#    abslink: https://talks.thomashollt.com/2019/06_EuroVis/interactive
+#    icon: powerpoint
   - name: Video
     abslink: https://vimeo.com/329367752
     icon: video

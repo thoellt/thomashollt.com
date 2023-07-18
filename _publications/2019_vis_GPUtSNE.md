@@ -29,6 +29,7 @@ chapter:
 volume: 26
 issue: 1
 year: 2020
+preprint-year: 2019
 editor:
 publisher:
 school:

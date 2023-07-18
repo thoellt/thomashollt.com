@@ -11,7 +11,7 @@ image_preview:
 
 authors:
 - Jessica S. Suwandi
-- SandraLaban
+- Sandra Laban
 - Kincso Vass
 - Antoinette Joosten
 - vanunen
@@ -29,6 +29,7 @@ chapter:
 volume: 107
 issue: 
 year: 2020
+preprint-year: 2019
 editor:
 publisher:
 school:

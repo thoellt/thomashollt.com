@@ -7,7 +7,7 @@ permalink: /publications/2017_tvcg_atsne/
 type: article
 shortname: a-tSNE
 image: 2017_tvcg_atsne.jpg
-image_large:
+image_large: 2017_tvcg_atsne_teaser.png
 image_preview: 2017_tvcg_atsne.png
 
 authors:

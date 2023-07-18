@@ -43,19 +43,24 @@ layout: default
                 {% elsif page.publisher-url %}
                   <li><a href="{{ page.publisher-url }}" target="_blank"> <i class="fas fa-globe"></i> <em>Publisher</em></a></li>
                 {% endif %}
-                
+
+                {% assign url = site.document_url | append: page.year %}
+                {% if page.preprint-year %}
+                  {% assign url = site.document_url | append: page.preprint-year %}
+                {% endif %}
+
                 {% if page.pdf %}
-                  <li><a href="/assets/papers/{{page.key}}/{{page.pdf}}" target="_blank"> <i class="far fa-file-pdf"></i> <em>Preprint</em></a></li>
+                  <li><a href="{{ url }}/{{page.pdf}}" target="_blank"> <i class="far fa-file-pdf"></i> <em>Preprint</em></a></li>
                 {% endif %}
                 
                 {% if page.supplement %}
-                  <li><a href="/assets/papers/{{page.key}}/{{page.supplement}}" target="_blank"> <i class="far fa-file-pdf"></i> <em>Supplement</em></a></li>
+                  <li><a href="{{ url }}/{{page.supplement}}" target="_blank"> <i class="far fa-file-pdf"></i> <em>Supplement</em></a></li>
                 {% endif %}
 
                 {% if page.supplements %}
                   {% for sup in page.supplements %}
                     <li>
-                      <a href="{% if sup.abslink %}{{ sup.abslink }}{% else %}/assets/papers/{{ page.key }}/{{ sup.link }}{% endif %}" target="_blank">
+                      <a href="{% if sup.abslink %}{{ sup.abslink }}{% else %}{{ url }}/{{ sup.link }}{% endif %}" target="_blank">
                       {% if sup.icon %}
                         {% if sup.icon contains " " %}
                           <i class="{{ sup.icon }}"></i>

@@ -26,6 +26,7 @@ chapter:
 volume: 24
 issue: 1
 year: 2018
+preprint-year: 2017
 editor:
 publisher:
 school:
@@ -50,7 +51,7 @@ supplements:
     link: 2017_vis_cyteguide_slides.pdf
     icon: powerpoint
   - name: Slides (interactive)
-    link: 2017_vis_cyteguide_slides/
+    abslink: https://www.thomashollt.com/assets/papers/2017_vis_cyteguide/2017_vis_cyteguide_slides/
     icon: powerpoint
   - name: Video
     abslink: https://vimeo.com/223373844

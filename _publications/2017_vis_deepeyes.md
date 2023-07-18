@@ -26,6 +26,7 @@ chapter:
 volume: 24
 issue: 1
 year: 2018
+preprint-year: 2017
 editor:
 publisher:
 school:
