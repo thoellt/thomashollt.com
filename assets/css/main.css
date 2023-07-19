@@ -2523,6 +2523,10 @@ input::-moz-focus-inner {
   background-image: url(../images/icons/social/icon-twitter.svg);
 }
 
+.header__social .ss-mastodon a::after {
+  background-image: url(../images/icons/social/icon-mastodon.svg);
+}
+
 .header__social .ss-address a::after {
   background-image: url(../images/icons/social/icon-address.svg);
 }
