@@ -45,6 +45,11 @@ videos:
 
 pdf: 2022_gch_andra.pdf
 
+supplements:
+  - name: Video
+    abslink: https://vimeo.com/848284241
+    icon: video
+    
 abstract: "Reflectance Imaging Spectroscopy (RIS) is a hyperspectral imaging technique used for investigating the molecular composition of materials. It can help identify pigments used in a painting, which are relevant information for art conservation and history. For every scanned pixel, a reflectance spectrum is obtained and domain experts look for pure representative spectra, called endmembers, which could indicate the presence of particular pigments. However, the identification of endmembers can be a lengthy process, which requires domain experts to manually select pixels and visually inspect multiple spectra in order to find accurate endmembers that belong to the historical context of an investigated painting. We propose an integrated interactive visual-analysis workflow, that combines dimensionality reduction and linked visualizations to identify and inspect endmembers. Here, we present initial results, obtained in collaboration with domain experts."
 
 ---
