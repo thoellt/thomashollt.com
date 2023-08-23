@@ -5,7 +5,8 @@ asset_url: /assets/
 document_url: https://raw.githubusercontent.com/thoellt/publications/main/
 
 twitter: thomashollt
-mastodon: thomashollt@vis.social
+mastodon: thomashollt
+mastodoninstance: vis.social
 github: thoellt
 email: t.hollt-1@tudelft.nl
 
