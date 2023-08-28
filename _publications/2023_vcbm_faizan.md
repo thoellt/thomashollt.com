@@ -13,7 +13,7 @@ authors:
 - hollt
 - vilanova
 
-journal: Eurographics Workshop on Visual Computing in Biology and Medicin
+journal: Eurographics Workshop on Visual Computing in Biology and Medicine
 jourunal-short: VCBM
 page_start:
 page_end:
