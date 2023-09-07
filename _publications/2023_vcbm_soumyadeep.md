@@ -14,6 +14,7 @@ authors:
 - kroes
 - Nikolas Jorstad
 - Trygve Bakken
+- Ed Lein
 - lelieveldt
 - hollt
 
