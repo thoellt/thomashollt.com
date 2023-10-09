@@ -15,14 +15,14 @@ authors:
 
 journal: Eurographics Workshop on Visual Computing in Biology and Medicine
 jourunal-short: VCBM
-page_start:
-page_end:
+page_start: 13
+page_end: 22
 volume:
 issue:
 year: 2023
 award:
 
-doi:
+doi: 10.2312/vcbm.20231208
 publisher-url: 
 pdf: 2023_vcbm_faizan.pdf
 supplements:

@@ -20,14 +20,14 @@ authors:
 
 journal: Eurographics Workshop on Visual Computing in Biology and Medicine
 jourunal-short: VCBM
-page_start:
-page_end:
+page_start: 111
+page_end: 120
 volume:
 issue:
 year: 2023
 award:
 
-doi:
+doi: 10.2312/vcbm.20231219
 publisher-url: 
 pdf: 2023_vcbm_soumyadeep.pdf
 supplements:
