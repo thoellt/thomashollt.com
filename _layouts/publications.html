@@ -51,8 +51,8 @@ layout: default
         <div class="masonry">
 
             <div class="grid-sizer"></div>
-            
-            {% for publication in site.publications reversed %}
+            {% assign publications = site.publications | sort: "year" %}
+            {% for publication in publications reversed %}
               {% if publication.type == "inproceedings" or publication.type == "article" %}
                 {% include publication_list_entry.html %}
               {% endif %}
