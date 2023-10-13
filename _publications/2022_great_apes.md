@@ -2,10 +2,10 @@
 layout: publication
 title: "Comparative transcriptomics reveals human-specific cortical features"
 key: 2022_great_apes
-date:   2022-10-08 00:00:00
+date:   2023-10-12 20:00:00
 permalink: 
 redirect_from: /publications/2022_great_apes/
-type: preprint
+type: article
 
 shortname: 
 
@@ -15,16 +15,16 @@ image_preview: 2022_great_apes.png
 
 
 authors:
-- Nikolas L Jorstad
-- Janet HT Song
+- Nikolas L. Jorstad
+- Janet H.T. Song
 - David Exposito-Alonso
 - Hamsini Suresh
-- Nathan Castro
-- Fenna M Krienen
+- Nathan Castro-Pacheco
+- Fenna M. Krienen
 - Anna Marie Yanny
 - Jennie Close
 - Emily Gelfand
-- Kyle J Travaglini
+- Kyle J. Travaglini
 - basu
 - Marc Beaudin
 - Darren Bertagnolli
@@ -33,7 +33,7 @@ authors:
 - eggermont
 - Alexandra Glandon
 - Jeff Goldy
-- Thomas Kroes
+- kroes
 - Brian Long
 - Delissa McMillen
 - Trangthanh Pham
@@ -42,38 +42,37 @@ authors:
 - Saroja Somasundaram
 - Michael Tieu
 - Amy Torkelson
-- Katelyn Ward
 - Guoping Feng
 - William D Hopkins
 - hollt
-- C Dirk Keene
+- C. Dirk Keene
 - Sten Linnarsson
-- Steven A McCarroll
+- Steven A. McCarroll
 - lelieveldt
-- Chet C Sherwood
+- Chet C. Sherwood
 - Kimberly Smith
-- Christopher A Walsh
+- Christopher A. Walsh
 - Alexander Dobin
 - Jesse Gillis
-- Ed S Lein
-- Rebecca D Hodge
-- Trygve E Bakken
+- Ed S. Lein
+- Rebecca D. Hodge
+- Trygve E. Bakken
 
-journal: bioRxiv
-journal-short: 
-page_start: 
+journal: Science
+journal-short: Science
+page_start: eade9516
 page_end: 
 chapter:
-volume: 
+volume: 382
 issue:
-year: 2022
+year: 2023
 preprint-year: 2022
 editor:
 publisher:
 school:
 award:
 
-doi: 10.1101/2022.09.19.508480
+doi: 10.1126/science.ade9516
 
 projects:
 - cytosplore
@@ -81,6 +80,18 @@ external-project:
 
 pdf: 2022_great_apes.pdf
 
-abstract: "Humans have unique cognitive abilities among primates, including language, but their molecular, cellular, and circuit substrates are poorly understood. We used comparative single nucleus transcriptomics in adult humans, chimpanzees, gorillas, rhesus macaques, and common marmosets from the middle temporal gyrus (MTG) to understand human-specific features of cellular and molecular organization. Human, chimpanzee, and gorilla MTG showed highly similar cell type composition and laminar organization, and a large shift in proportions of deep layer intratelencephalic-projecting neurons compared to macaque and marmoset. Species differences in gene expression generally mirrored evolutionary distance and were seen in all cell types, although chimpanzees were more similar to gorillas than humans, consistent with faster divergence along the human lineage. Microglia, astrocytes, and oligodendrocytes showed accelerated gene expression changes compared to neurons or oligodendrocyte precursor cells, indicating either relaxed evolutionary constraints or positive selection in these cell types. Only a few hundred genes showed human-specific patterning in all or specific cell types, and were significantly enriched near human accelerated regions (HARs) and conserved deletions (hCONDELS) and in cell adhesion and intercellular signaling pathways. These results suggest that relatively few cellular and molecular changes uniquely define adult human cortical structure, particularly by affecting circuit connectivity and glial cell function."
+supplements:
+    - name: bioRxiv
+      abslink: https://doi.org/10.1101/2022.09.19.508480
+      icon: fas fa-archive
+    - name: Software
+      abslink: https://viewer.cytosplore.org
+      icon: fas fa-globe
+
+
+abstract: "<b>INTRODUCTION</b></br> The cerebral cortex is involved in complex cognitive functions such as language. Although the diversity and organization of cortical cell types has been extensively studied in several mammalian species, human cortical specializations that may underlie our distinctive cognitive abilities remain poorly understood.</br>
+<b>RATIONALE</b></br> Single-nucleus RNA sequencing (snRNA-seq) offers a relatively unbiased characterization of cellular diversity of brain regions. Comparative transcriptomic analysis enables the identification of molecular and cellular features that are conserved and specialized but is often limited by the number of species analyzed. We applied deep transcriptomic profiling of the cerebral cortex of humans and four nonhuman primate (NHP) species to identify homologous cell types and human specializations.</br>
+<b>RESULTS</b></br> We generated snRNA-seq data from humans, chimpanzees, gorillas, rhesus macaques, and marmosets (more than 570,000 nuclei in total) to build a cellular classification of a language-associated region of the cortex, the middle temporal gyrus (MTG), in each species and a consensus primate taxonomy. Cell-type proportions and distributions across cortical layers are highly conserved among great apes, whereas marmosets have higher proportions of L5/6 IT CAR3 and L5 ET excitatory neurons and Chandelier inhibitory neurons. This strongly points to the possibility that other cellular features drive human-specific cortical evolution. Profiling gorillas enabled discrimination of which human and chimpanzee expression differences are specialized in humans. We discovered that chimpanzee neurons have gene expression profiles that are more similar to those of gorilla neurons than to those of human neurons, despite chimpanzees and humans sharing a more-recent common ancestor. By contrast, glial expression changes were consistent with evolutionary distances and were more rapid than neuronal expression changes in all species. Thus, our data support a faster divergence of neuronal, but not glial, expression on the human lineage. For all primate species, many differentially expressed genes (DEGs) were specific to one or a few cell types and were significantly enriched in molecular pathways related to synaptic connectivity and signaling. Hundreds of genes had human-specific differences in transcript isoform usage, and these genes were largely distinct from DEGs. We leveraged published datasets to link human-specific DEGs to regions of the genome with human-accelerated mutations or deletions (HARs and hCONDELs). This led to the surprising discovery that a large fraction of human-specific DEGs (15 to 40%), and particularly those associated with synaptic connections and signaling, were near these genomic regions that are under adaptive selection.</br>
+<b>CONCLUSION</b></br> Our study found that MTG cell types are largely conserved across approximately 40 million years of primate evolution, and the composition and spatial positioning of cell types are shared among great apes. In each species, hundreds of genes exhibit cell type–specific expression changes, particularly in pathways related to neuronal and glial communication. Human-specific DEGs are enriched near likely adaptive genomic changes and are poised to contribute to human-specialized cortical function."
 
 ---
