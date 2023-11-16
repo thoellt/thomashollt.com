@@ -78,9 +78,12 @@ projects:
 - cytosplore
 external-project:
 
-pdf: 2022_great_apes.pdf
+pdf: 2023_science.pdf
 
 supplements:
+    - name: Collection Intro
+      link: 2023_science.pdf
+      icon: pdf
     - name: bioRxiv
       abslink: https://doi.org/10.1101/2022.09.19.508480
       icon: fas fa-archive
