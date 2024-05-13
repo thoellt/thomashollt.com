@@ -1,0 +1,39 @@
+<div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">
+        {{ entry.start }}
+        {% if entry.end %}
+            &mdash; {{ entry.end }}
+        {% endif %}
+    </div>
+    <div class="cv-profile-content col-md">
+        {% if entry.type == "work" or entry.type == "guest" %}
+            {{ entry.role}},
+            
+            {% if entry.group %}
+            {% if entry.group_url %}<a href="{{ entry.group_url }}" target="_blank">{% endif %}{{ entry.group }}{% if entry.group_url %}</a>{% endif %},
+            {% endif %}
+            
+            {% if entry.org_url %}<a href="{{ entry.org_url }}" target="_blank">{% endif %}{{ entry.org }}{% if entry.org_url %}</a>{% endif %},
+            
+            {{ entry.city }}, {{ entry.country }}
+        {% endif %}
+        
+        {% if entry.type == "education" %}
+            {{ entry.role}}<br/>
+            
+            <span class="cv_profile_edu_title">{{ entry.title}}</span>.<br/>
+            
+            {% if entry.org_url %}<a href="{{ entry.org_url }}" target="_blank">{% endif %}{{ entry.org }}{% if entry.org_url %}</a>{% endif %},
+            
+            {{ entry.country }}.<br/>
+            
+            Advisor{% if entry.advisor.size > 1 %}s{% endif %}:
+            {% for advisor in entry.advisor %}{{ advisor }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+            
+            {% if entry.committee.size > 0 %}<br/> Committee Members:
+            {% for committee in entry.committee %}{{ committee }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+            {% endif %}
+            
+        {% endif %}
+    </div>
+</div> <!-- end profile item -->

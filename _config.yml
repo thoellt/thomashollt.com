@@ -28,5 +28,17 @@ collections:
   courses:
     output: true
     permalink: /teaching/:path/
+  profiles:
+    output: false
+    permalink: /profiles/:path/
+  awards:
+    output: false
+    permalink: /awards/:path/
+  activities:
+    output: false
+    permalink: /activities/:path/
+  teaching:
+    output: false
+    permalink: /teaching/:path/
 
 exclude: [".git", ".github", ".gitignore", "Gemfile", "LICENSE", "README.md"]

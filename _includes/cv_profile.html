@@ -1,0 +1,32 @@
+<div class="cv-profile-block">
+  {% assign entries = site.profiles %}
+  {% for entry in entries reversed %}
+    {% if entry.type == "work" %}
+      {% include cv_profile_list_entry.html %}
+    {% endif %}
+  {% endfor %}
+</div> <!-- end cv-pub-block -->
+
+<div class="cv-profile-block">
+  <header class="listing-header">
+      <h2>Guest Research Stays</h2>
+  </header>
+  {% assign entries = site.profiles %}
+  {% for entry in entries reversed %}
+    {% if entry.type == "guest" %}
+      {% include cv_profile_list_entry.html %}
+    {% endif %}
+  {% endfor %}
+</div> <!-- end cv-pub-block -->
+
+<div class="cv-profile-block">
+  <header class="listing-header">
+      <h2>Education</h2>
+  </header>
+  {% assign entries = site.profiles %}
+  {% for entry in entries reversed %}
+    {% if entry.type == "education" %}
+      {% include cv_profile_list_entry.html %}
+    {% endif %}
+  {% endfor %}
+</div> <!-- end cv-pub-block -->

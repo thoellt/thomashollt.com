@@ -1,17 +1,22 @@
 ---
 layout: default
 title: "Data Visualization"
-key: IN4089
-date: 2021-01-11 00:00:0
+key: IN4086-14
 shortname: DataVis
-image_preview: IN4089_teaser.png
-
-teachers:
+year: 2020
+quarter: 2
+org: TU Delft
+role: Responsible Lecturer
+image_preview:
+    
+responsible:
 - hollt
 - eisemann
 
+teachers:
+
 courseguide:
-- https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=60232
+- https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=55266
 
 ---
 Data visualization makes use of computer-generated images to gain insight and knowledge from data and its inherent patterns and relationships. Data visualizations use a combination of methods from a diverse variety of disciplines: perception, computer graphics, human computer interaction, algorithmics, image processing, machine learning, numerical analysis, optimization, and more.

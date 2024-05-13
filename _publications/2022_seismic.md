@@ -12,7 +12,7 @@ image_preview: 2022_seismic.png
 authors:
 - Daniel Patel
 - hollt
-- Markus Hadiwger
+- Markus Hadwiger
 
 journal: Interactive Data Processing and 3D Visualization of the Solid Earth
 journal-short: Interactive Data Processing and 3D Visualization of the Solid Earth

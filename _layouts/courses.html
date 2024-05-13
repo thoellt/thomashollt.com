@@ -5,8 +5,10 @@ layout: default
 <!-- site content ================================================== -->
 <div class="s-content content">
 
-  <header class="listing-header">
+<header class="listing-header">
     <h1 class="h2">Courses</h1>
+    
+    <h3>Current Academic Year</h3>
 </header>
 
 <div class="masonry-wrap">
@@ -15,12 +17,18 @@ layout: default
 
       <div class="grid-sizer"></div>
       
-      {% for course in site.courses reversed %}
+      {% assign current_courses = site.courses | where:'year', "2023" %}
+      
+      {% for course in current_courses %}
         {% include course_list_entry.html %}
       {% endfor %}
 
   </div> <!-- end masonry -->
 
 </div> <!-- end masonry-wrap -->
+
+<header class="listing-header">
+    <h3>Previous Courses</h3>
+</header>
 
 </div> <!-- end s-content -->

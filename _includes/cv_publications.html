@@ -1,0 +1,110 @@
+<!-- site content ================================================== -->
+{% for publication in site.publications %}
+  {% if publication.type == "preprint" %}
+    {% assign ifpreprint = 'true' %}
+  {% elsif publication.type == "inproceedings" or publication.type == "article" %}
+    {% assign ifpaper = 'true' %}
+  {% elsif publication.type == "book" or publication.type == "inbook" %}
+    {% assign ifbook = 'true' %}
+  {% elsif publication.type == "poster" %}
+    {% assign ifposter = 'true' %}
+  {% elsif publication.type == "mscthesis" or publication.type == "phdthesis" %}
+    {% assign ifthesis = 'true' %}
+  {% endif %}
+{% endfor %}
+
+
+{% assign item-number = 1 %}
+
+
+  
+  
+    {% if ifpreprint %}
+    <header class="listing-header">
+        <h2>Preprints</h2>
+    </header>
+    
+    <div class="cv-pub-block">
+      
+            {% assign publications = site.publications | sort: "year" %}
+            {% for publication in publications reversed %}
+              {% if publication.type == "preprint" %}
+                {% include cv_publication_list_entry.html %}
+                {% assign item-number = item-number | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+    
+    </div> <!-- end cv-pub-block -->
+    {% endif %}
+
+    {% if ifpaper %}
+    <header class="listing-header">
+        <h2>Peer Reviewed Journal &amp; Conference Papers</h2>
+    </header>
+    
+    <div class="cv-pub-block">
+      
+            {% assign publications = site.publications | sort: "year" %}
+            {% for publication in publications reversed %}
+              {% if publication.type == "inproceedings" or publication.type == "article" %}
+                {% include cv_publication_list_entry.html %}
+                {% assign item-number = item-number | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+
+    </div> <!-- end cv-pub-block -->
+    {% endif %}
+
+    {% if ifbook %}
+    <header class="listing-header">
+        <h2>Books &amp;  Bookchapters</h2>
+    </header>
+    
+    <div class="cv-pub-block">
+      
+            {% assign publications = site.publications | sort: "year" %}
+            {% for publication in publications reversed %}
+              {% if publication.type == "book" or publication.type == "inbook" %}
+                {% include cv_publication_list_entry.html %}
+                {% assign item-number = item-number | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+    
+    </div> <!-- end cv-pub-block -->
+    {% endif %}
+
+    {% if ifposter %}
+    <header class="listing-header">
+        <h2>Posters &amp; Abstracts</h2>
+    </header>
+    
+    <div class="cv-pub-block">
+      
+            {% assign publications = site.publications | sort: "year" %}
+            {% for publication in publications reversed %}
+              {% if publication.type == "poster" %}
+                {% include cv_publication_list_entry.html %}
+                {% assign item-number = item-number | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+    
+    </div> <!-- end cv-pub-block -->
+    {% endif %}
+
+    {% if ifthesis %}
+    <header class="listing-header">
+        <h2>Theses</h2>
+    </header>
+    
+    <div class="cv-pub-block">
+      
+            {% assign publications = site.publications | sort: "year" %}
+            {% for publication in publications reversed %}
+              {% if publication.type == "mscthesis" or publication.type == "phdthesis" %}
+                {% include cv_publication_list_entry.html %}
+                {% assign item-number = item-number | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+    
+    </div> <!-- end cv-pub-block -->
+    {% endif %}

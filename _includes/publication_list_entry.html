@@ -15,20 +15,20 @@
             <div class="entry__meta">
                 <a href="{{ publication.url }}">
                 <span class="entry__meta-date">
-                	{% if publication.type == "article" %}
-                      	{{ publication.journal }},
+                    {% if publication.type == "article" %}
+                          {{ publication.journal }},
                     {% elsif publication.type == "inproceedings" %}
-                  		In {{ publication.journal }},
-	                {% elsif publication.type == "book" %}
-	                  {{ publication.publisher }},
-	                {% elsif publication.type == "inbook" %}
-	                  In {{ publication.journal }}, {{ publication.publisher }},
+                          In {{ publication.journal }},
+                    {% elsif publication.type == "book" %}
+                      {{ publication.publisher }},
+                    {% elsif publication.type == "inbook" %}
+                      In {{ publication.journal }}, {{ publication.publisher }},
                     {% elsif (publication.type == "phdthesis" or publication.type == "mscthesis") %}
-                  		{{ publication.school }},
+                          {{ publication.school }},
                     {% else %}
-                  		{{ publication.journal }},
+                          {{ publication.journal }},
                     {% endif %}
-                	{{publication.year}}
+                    {{publication.year}}
                 </span></a>
             </div>
             

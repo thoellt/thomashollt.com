@@ -1,0 +1,23 @@
+<div class="cv-grants-block">
+  <header class="listing-header">
+      <h2>Grants</h2>
+  </header>
+  {% assign awards = site.awards %}
+  {% for award in awards reversed %}
+    {% if award.type == "grant" %}
+      {% include cv_awards_list_entry.html %}
+    {% endif %}
+  {% endfor %}
+</div> <!-- end cv-pub-block -->
+
+<div class="cv-grants-block">
+  <header class="listing-header">
+      <h2>Awards & Prizes</h2>
+  </header>
+  {% assign awards = site.awards %}
+  {% for award in awards reversed %}
+    {% if award.type == "prize" %}
+      {% include cv_awards_list_entry.html %}
+    {% endif %}
+  {% endfor %}
+</div> <!-- end cv-pub-block -->

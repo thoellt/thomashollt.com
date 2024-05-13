@@ -17,7 +17,7 @@ authors:
 - Mette Schreurs
 - abdelaal
 - Yvonne Kooy-Winkelaar
-- beyrend
+- Guillaume Beyrend
 - hollt
 - P. W. Jeroen Maljaars
 - M. Luisa Mearin

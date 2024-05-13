@@ -11,18 +11,33 @@
             <div class="entry__title">{{ course.key }} &mdash; {{ course.title }}</div>
             <div class="entry__meta">
 
-                Responsible teacher{% if course.teachers.size > 1 %}s{% endif %}:
+                Responsible teacher{% if course.responsible.size > 1 %}s{% endif %}:
+                
+                {% for teacher in course.responsible %}
+  
+                  {% for person in site.persons %}
+                    {% if teacher == person.key %}
+                      {% if teacher == course.responsible.last and course.responsible.first != course.responsible.last %}and{% endif %}
+                      {{ person.first_name }}&nbsp;{{ person.last_name }}{% if teacher != course.responsible.last and  course.responsible.size > 2 %}, {% endif %}
+                    {% endif %}
+                  {% endfor %}
+  
+                {% endfor %}
+                
+                {% if course.teachers.size > 0 %}
+                &#8226; Co-Teacher{% if course.teachers.size > 1 %}s{% endif %}:
                 
                 {% for teacher in course.teachers %}
-  
+                
                   {% for person in site.persons %}
                     {% if teacher == person.key %}
                       {% if teacher == course.teachers.last and course.teachers.first != course.teachers.last %}and{% endif %}
                       {{ person.first_name }}&nbsp;{{ person.last_name }}{% if teacher != course.teachers.last and  course.teachers.size > 2 %}, {% endif %}
                     {% endif %}
                   {% endfor %}
-  
+                
                 {% endfor %}
+                {% endif %}
             </div>
         </div>
 

@@ -1,0 +1,92 @@
+<div class="cv-pub-item">
+    <span class="cv-pub-number">
+    {{ item-number }}.
+    </span>
+    
+    <span class="cv-pub-authors">
+      {% assign n_authors = publication.authors.size %}
+      {% assign shorten = false %}
+      {% if n_authors > 15 %}
+        {% assign shorten = true %}
+        {% assign n_authors = 8 %}
+      {% endif %}
+    
+      {% for author in publication.authors limit:n_authors %}
+    
+        {% assign known = false %}
+        {% for person in site.persons %}
+          {% if author == person.key %}
+            {% if author == publication.authors.last and publication.authors.first != publication.authors.last %}and{% endif %}
+            {% if person.key == "hollt" %}<u>{% endif %}
+            {{ person.first_name }}&nbsp;{{ person.last_name }}{% if person.key == "hollt" %}</u>{% endif %}{% if author != publication.authors.last%}, {% else %}. {% endif %}
+            {% if shorten and author == publication.authors[4] %}et al.{% endif %}
+            {% assign known = true %}
+          {% endif %}
+        {% endfor %}
+    
+        {% if known == false %}
+          {% if author == publication.authors.last %}and{% endif %}
+          {{ author }}{% if author != publication.authors.last%}, {% else %}. {% endif %}
+          {% if shorten and author == publication.authors[4] %}et al.{% endif %}
+        {% endif %}
+    
+      {% endfor %}
+    </span>    
+    
+    <span class="cv-pub-title">
+        <a href="{{ publication.url }}" target="_blank">{{ publication.title }}</a>,
+    </span>  
+    
+    <span class="cv-pub-venue">
+        {% if publication.type == "article" %}
+              {{ publication.journal }},
+        {% elsif publication.type == "inproceedings" %}
+              In {{ publication.journal }},
+        {% elsif publication.type == "book" %}
+          {{ publication.publisher }},
+        {% elsif publication.type == "inbook" %}
+          In {{ publication.journal }}, {{ publication.publisher }},
+        {% elsif (publication.type == "phdthesis" or publication.type == "mscthesis") %}
+              {{ publication.school }},
+        {% else %}
+              {{ publication.journal }},
+        {% endif %}
+    </span>
+    
+    {% if publication.volume %}
+        <span class="cv-pub-volume">
+            {{ publication.volume }}{% if publication.issue %}({{ publication.issue }}){% endif %}, 
+        </span>
+    {% endif %}
+    
+    {% if publication.chapter %}
+        <span class="cv-pub-chapter">
+            Chapter {{ publication.chapter }},
+        </span>
+    {% endif %}
+    
+    {% if publication.page_start and publication.page_end %}
+        <span class="cv-pub-pages">
+            pp. {{ publication.page_start }}&ndash;{{ publication.page_end }},
+        </span>
+    {% elsif publication.page_start %}
+        <span class="cv-pub-pages">
+            p. {{ publication.page_start }},
+        </span>
+    {% endif %}
+    
+    <span class="cv-pub-year">
+        {{publication.year}}.
+    </span>
+    
+    <span class="cv-pub-award">
+        {{publication.award}}
+    </span>
+    
+    {% if publication.doi %}
+    <span class="cv-pub-doi">
+        DOI: <a href="https://dx.doi.org/{{ publication.doi }}" target="_blank"><span class="paper-btn"> {{ publication.doi }}</span></a>
+    </span>
+    {% endif %}
+
+</div> <!-- end publication entry -->

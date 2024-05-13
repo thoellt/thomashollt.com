@@ -2,15 +2,21 @@
 layout: default
 title: "Medical Visualization"
 key: IN4307
-date: 2021-01-01 00:00:00
 shortname: MedVis
-image_preview: IN4307_teaser.png
+year: 2020
+quarter: 1
+org: TU Delft
+role: Responsible Lecturer
+image_preview:
 
-teachers:
+responsible:
 - hollt
 
+teachers:
+- eisemann
+
 courseguide:
-- https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=57424
+- https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=55194
 
 ---
 Medical Visualization is a subfield of data visualization with a focus on medical applications. This course covers  theory and practice of data acquisition image processing, volume visualization and interaction techniques in clinical practice.
