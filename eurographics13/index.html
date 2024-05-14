@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.main {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #333;
+	text-decoration: none;
+	background-color: #FFF;
+	background-image: none;
+	padding: 5px;
+	width: 1333px;
+	border: thin solid #333;
+	position: static;
+	visibility: visible;
+	left: auto;
+	top: 20px;
+	right: auto;
+	bottom: auto;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+.image {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div class="main">
+  <div align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="15">
+      <tr>
+        <td colspan="12"><p>The <strong>complete cost function</strong> is:</p>
+          <p> <img src="img/latex-image-1.png" width="500" height="20" alt="cost" /></p>
+<p>        In total it uses three parameters, p0, p1, p2. <strong>p1</strong> ( above) is used as the  weight of the grey value based component and waveform based component.</p>
+<p>My standard setting before (as in the pacificVis paper) did not incorporate the wave form based component, so basically p1 = 1.</p>
+<p>&nbsp;</p>
+        <p><strong>p0</strong> is another weight used in the grey value based component:<br />
+          <img src="img/latex-image-5.png" width="700" height="50" vspace="2" /></p>
+        <p>t is the target value, meaning -1 or 1 depending on wethe valleys or ridges should be found.<br />
+          m is the number of pixels
+        </p>
+        <p>The standard setting I used before is 0.65</p>
+        <p>&nbsp;</p>
+        <p> <strong>p2</strong> is used to weigth vertical edges/facets.<br />
+        <img src="img/latex-image-3.png" width="400" height="40" vspace="2" />        <br />
+        <br />
+        I use different values for the edges in 2D and the facets in 3D. This turned out to be effective when I was tuning for the PacificVis paper. 0.15 for edges and 1 for facets is the standard setting.</p>
+        <p>&nbsp;</p>
+        <p>The cost function for the waveform is a little more complicated. It is parameter free, so we can just view it as a black box. I used the same approach before for highlighting horizons during rendering. A description of  <img src="img/latex-image-6.png" alt="" width="100" height="20" vspace="0" /> can be found int <a href="wave_from_cost.pdf">this pdf</a>. I the pdf I use it for rendering, where high probability of horizons are used for higher opacity, here I want high probability to correspond to lower cost, henxe 1 - <img src="img/latex-image-6.png" alt="" width="100" height="20" vspace="0" />.</p>
+        <p><img src="img/latex-image-4.png" width="300" height="50" /></p>
+        <p>&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top">Ensemble 1 (gray value cost function only)</td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><p>Ensemble 2 (mix of gray value cost function and waveform based cost function, gray value cost function with fixed parameter)</p>
+        <p>This is the ensemble I used for the screenshots is send out before</p></td>
+        <td colspan="3" valign="top">Ensemble 3 (mix of gray value cost function and waveform based cost function)</td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">Ensemble 4 (mix of gray value cost function and waveform based cost function, with fixed weights p0 and p1) and verying vertical facet/edge weight</td>
+      </tr>
+      <tr>
+        <td valign="top"><strong>p0 = [0..1],<br />
+        0.01 steps</strong></td>
+        <td valign="top">p1 = 1</td>
+        <td valign="top">p2 = 1.0/0.15</td>
+        <td valign="top" bgcolor="#EEEEEE">p0 = 0.65</td>
+        <td valign="top" bgcolor="#EEEEEE"><strong>p1 = [0..1],<br />
+ 0.01 steps</strong></td>
+        <td valign="top" bgcolor="#EEEEEE">p2 = 1.0/0.15</td>
+        <td valign="top"><strong>p0 = [0..1],<br />
+ 0.1 steps</strong></td>
+        <td valign="top"><strong>p1 = [0..1],<br />
+ 0.1 steps</strong></td>
+        <td valign="top">p2 = 1.0/0.15</td>
+        <td valign="top">p0 = 0.65</td>
+        <td valign="top">p1 = 1</td>
+        <td valign="top"><p><strong>p2 = [0.75..1.25]</strong></p>
+        <p><strong>(0.15*p2 for 2D)</strong></p></td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><p>this one is  being computed and should be finished tomorrow (friday)</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><p><a href="img/100_cf/stddev_full.png"><img src="img/100_cf/stddev_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+        Standard Deviaton, whole ensemble</p></td>
+        <td colspan="3" valign="top"><p><a href="img/11x11_015/var_full.png"><img src="img/11x11_015/var_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+        Standard Deviaton, whole ensemble</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><a href="img/75_125_vert/stddev_full.png"><img src="img/75_125_vert/stddev_full.png" alt="img" width="300" height="300" class="image" /><br />
+        </a>Standard Deviaton, whole ensemble        </td>
+      </tr>
+      <tr>
+        <td colspan="12" valign="top"><p>Using the whole parameter-domain the Ensembles unsing p0 do not highlight the same areas as the one only using p1. When p0 is 1 (or close to one) the cost function only (mostly) uses the similarity of the pixels belonging to the edge/facet for the cost. The similarity to the target amplitude is the force keeping the trace on the horizon, whereas the similarity of the pixels is used to avoid big jumps in amplitude. The result is that using large p0 value the minimum cost path/surface is merely useless, and does not necessarily followe the horizon at all.</p>
+        <p>In the below  screnshots  p0 is limited to [0..0.9].</p></td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><a href="img/001.png"><br />
+        </a></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><a href="img/100_cf/stddev_full.png"><img src="img/100_cf/stddev_full.png" alt="img" width="300" height="300" class="image" /></a><a href="img/001.png"><br />
+</a>Standard Deviaton, whole ensemble (same as above)</td>
+        <td colspan="3" valign="top"><a href="img/11x11_015/var_10.png"><img src="img/11x11_015/var_10.png" alt="img" width="300" height="300" class="image" /><br />
+</a>Standard Deviaton, p0 in [0..0.9], p1 in  [0..1]</td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><a href="img/75_125_vert/stddev_full.png"><img src="img/75_125_vert/stddev_full.png" alt="img" width="300" height="300" class="image" /></a><a href="img/001.png"><br />
+        </a>Standard Deviaton, whole ensemble (same as above)</td>
+      </tr>
+      <tr>
+        <td colspan="12">I can now also interactively visualize only parts of the parameter-domain. The videos below demonstrate the differences between smaller parameter ranges.</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top">
+
+        </td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">
+                	<p>
+        	  <video id="movie" width="300" height="300" preload controls>
+        	    <source src="movies/100cf_300.ogv" type='video/ogg; codecs="theora, vorbis"' />
+        	    <source src="movies/100cf_300.mp4" />
+      	    </video>
+        	  <br />
+        	  Standard Deviation, <strong>p1 in 0.2 wide ranges from [0..0.2] to [0.8..1]</strong><script>
+          		var v = document.getElementById("movie");
+           		v.onclick = function() {
+ 	 				if (v.paused) {
+            			v.play();
+             		} else {
+                		v.pause();
+                	}
+               	};
+        	</script>
+   	    	</p>
+       		<p><a href="movies/100cf.mp4">Hires Version</a></p>
+        </td>
+        <td colspan="3" valign="top"> 
+        <p>
+       	    <video id="movie" width="300" height="300" preload controls>
+        	    <source src="movies/11x11_15_300.ogv" type='video/ogg; codecs="theora, vorbis"' />
+        	    <source src="movies/11x11_15_300.mp4" />
+      	    </video>
+        	  <br />
+        	  Standard Deviation, every step in the movie <strong>increases p0 by 0.1 from 0 to 1, p1 always in  [0..1]</strong><script>
+          		var v = document.getElementById("movie");
+           		v.onclick = function() {
+ 	 				if (v.paused) {
+            			v.play();
+             		} else {
+                		v.pause();
+                	}
+               	};
+        	</script>
+    	  </p>
+       		<p><a href="movies/11x11_15.mp4">Hires Version</a></p>
+        </td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><p>
+          <video id="movie4" width="300" height="300" preload="preload" controls="controls">
+            <source src="movies/100cf_300.ogv" type='video/ogg; codecs=&quot;theora, vorbis&quot;' />
+            <source src="movies/100cf_300.mp4" />
+          </video>
+          <br />
+          Standard Deviation, <strong>p2 in 0.1 wide ranges from [0.75..0.85] to [1.15..1.25]</strong>
+          <script>
+          		var v = document.getElementById("movie");
+           		v.onclick = function() {
+ 	 				if (v.paused) {
+            			v.play();
+             		} else {
+                		v.pause();
+                	}
+               	};
+        	</script>
+        </p>
+        <p><a href="movies/100cf.mp4">Hires Version</a></p></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+        <td colspan="3" bgcolor="#EEEEEE">&nbsp;</td>
+        <td colspan="3">&nbsp;</td>
+        <td colspan="3" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><p>&nbsp;</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><p><a href="img/100_cf/prob_full.png"><img src="img/100_cf/prob_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Probability, whole ensemble</p></td>
+        <td colspan="3" valign="top"><p><a href="img/11x11_015/prob_full.png"><img src="img/11x11_015/prob_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Probability, whole ensemble</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><p><a href="img/75_125_vert/prob_full.png"><img src="img/75_125_vert/prob_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Probability, whole ensemble</p></td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><a href="img/001.png"><br />
+          </a></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><a href="img/100_cf/prob_full.png"><img src="img/100_cf/prob_full.png" alt="img" width="300" height="300" class="image" /></a><a href="img/001.png"><br />
+        </a>Probability, whole ensemble (same as above)</td>
+        <td colspan="3" valign="top"><a href="img/11x11_015/prob_110.png"><img src="img/11x11_015/prob_110.png" alt="img" width="300" height="300" class="image" /><br />
+        </a>Probability, p0 in [0..0.9], p1 in  [0..1]</td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE"><a href="img/75_125_vert/prob_full.png"><img src="img/75_125_vert/prob_full.png" alt="img" width="300" height="300" class="image" /></a><a href="img/001.png"><br />
+        </a>Probability, whole ensemble (same as above)</td>
+      </tr>
+      <tr>
+        <td colspan="12">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="12">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="12"><p>I do not have any parameter studies for <strong>p2</strong>, but I have two ensembles with the same data as above except for p2 = 1.0/0.25</p>
+        <p>In general these show less variation as above, as surfaces with a larger area are stronger penalized.</p></td>
+      </tr>
+      <tr>
+        <td valign="top"><strong>p0 = [0..1],<br />
+          0.01 steps</strong></td>
+        <td valign="top">p1 = 1</td>
+        <td valign="top">p2 = 1.0/<strong>0.25</strong></td>
+        <td valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td valign="top"><strong>p0 = [0..1],<br />
+          0.1 steps</strong></td>
+        <td valign="top"><strong>p1 = [0..1],<br />
+          0.1 steps</strong></td>
+        <td valign="top">p2 = 1.0/<strong>0.25</strong></td>
+        <td valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><p><a href="img/100_grey_025/stddev_full.png"><img src="img/100_grey_025/stddev_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Standard Deviaton, whole ensemble</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td colspan="3" valign="top"><p><a href="img/11x11_025/stddev_full.png"><img src="img/11x11_025/stddev_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Standard Deviaton, whole ensemble</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><a href="img/100_grey_025/stddev_90.png"><img src="img/100_grey_025/stddev_90.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Standard Deviaton, <strong>p0 in [0..0.9] </strong><a href="img/001.png"><br />
+        </a></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td colspan="3" valign="top"><a href="img/11x11_025/stddev_10.png"><img src="img/11x11_025/stddev_10.png" alt="img" width="300" height="300" class="image" /><br />
+        </a>Standard Deviaton, p0 in [0..0.9], p1 in  [0..1]</td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><p>
+          <video id="movie2" width="300" height="300" preload="preload" controls="controls">
+            <source src="movies/100_grey_25_300.ogv" type='video/ogg; codecs=&quot;theora, vorbis&quot;' />
+            <source src="movies/100_grey_25_300.mp4" />
+          </video>
+          <script>
+          		var v = document.getElementById("movie");
+           		v.onclick = function() {
+ 	 				if (v.paused) {
+            			v.play();
+             		} else {
+                		v.pause();
+                	}
+               	};
+        	</script>
+          <br />
+          Standard Deviation, <strong>p0 in 0.2 wide ranges from [0..0.2] to [0.8..1]</strong>        </p>
+        <p><a href="movies/100_grey_25.mp4">Hires Version</a><br />
+        </p>          
+        <strong></strong></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td colspan="3" valign="top"><p>
+          <video id="movie3" width="300" height="300" preload="preload" controls="controls">
+            <source src="movies/11x11_25_300.ogv" type='video/ogg; codecs=&quot;theora, vorbis&quot;' />
+            <source src="movies/11x11_25_300.mp4" />
+          </video>
+          <br />
+          Standard Deviation, every step in the movie <strong>increases p0 by 0.1 from 0 to 1, p1 always in  [0..1]</strong><script>
+          		var v = document.getElementById("movie");
+           		v.onclick = function() {
+ 	 				if (v.paused) {
+            			v.play();
+             		} else {
+                		v.pause();
+                	}
+               	};
+        	</script>
+        </p>
+        <p><a href="movies/11x11_25.mp4">Hires Version</a></p>          
+        <strong></strong></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+        <td colspan="3" bgcolor="#EEEEEE">&nbsp;</td>
+        <td colspan="3">&nbsp;</td>
+        <td colspan="3" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><p><a href="img/100_grey_025/prob_full.png"><img src="img/100_grey_025/prob_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Probability, whole ensemble</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td colspan="3" valign="top"><p><a href="img/11x11_025/prob_full.png"><img src="img/11x11_025/prob_full.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Probability, whole ensemble</p></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3" valign="top"><a href="img/100_grey_025/prob_90.png"><img src="img/100_grey_025/prob_90.png" alt="img" width="300" height="300" class="image" /></a><br />
+          Probability, <strong>p0 in [0..0.9] </strong><a href="img/001.png"><br />
+        </a></td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+        <td colspan="3" valign="top"><a href="img/11x11_025/prob_10.png"><img src="img/11x11_025/prob_10.png" alt="img" width="300" height="300" class="image" /><br />
+        </a>Probability, p0 in [0..0.9], p1 in  [0..1]</td>
+        <td colspan="3" valign="top" bgcolor="#EEEEEE">&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>
