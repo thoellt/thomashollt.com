@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <!--- basic page needs
+================================================== -->
+<meta charset="utf-8">
+<title>Thomas Höllt &#8226; Direct Processing of Compressed Volume Data</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- mobile specific metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/vendor.css">
+<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- script
+================================================== -->
+<script src="/assets/js/modernizr.js"></script>
+
+<!-- favicons
+================================================== -->
+<!-- TODO
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+-->
+
+<!-- analytics
+================================================== -->
+<script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('rgCh29Fzt3idDR2T');
+insights.trackPages();
+</script>
+</head>
+
+<body>
+
+    <!-- preloader ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+    
+      <!-- site header
+================================================== -->
+<header class="s-header header">
+
+    <div class="header__top">
+        <div class="header__logo">
+            <a class="site-logo" href="https://www.thomashollt.com">
+                <img src="/assets/images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <!-- toggles -->
+        <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+    </div>
+
+    <nav class="header__nav-wrap">
+
+        <ul class="header__nav">
+            <li><a href="/index.html" title="">About</a></li>
+            <li><a href="/teaching/" title="">Teaching</a></li>
+            <li><a href="/publications/" title="">Publications</a></li>
+            <li><a href="https://gallery.thomashollt.com/" title="">Photography</a></li>
+            <li><a href="/contact/" title="">Contact</a></li>
+        </ul> <!-- end header__nav -->
+
+        <ul class="header__social">
+            <li class="ss-address">
+                <a href="https://maps.apple.com/?address=Van%20Mourik%20Broekmanweg%206,%202628%20XE%20Delft,%20Netherlands&auid=14847247505893078258&ll=51.999005,4.378132&lsp=9902&q=TU%20Delft%20-%20Mathematics%20%26%20Computer%20Science" alt="https://goo.gl/maps/c8CYdisjBKtTNrGj6">
+                    <span class="screen-reader-text">Address</span>
+                </a>
+            </li>
+            <li class="ss-email">
+                <a href="mailto:t.hollt-1@tudelft.nl">
+                    <span class="screen-reader-text">Email</span>
+                </a>
+            </li>
+            <li class="ss-twitter">
+                <a href="https://www.twitter.com/thomashollt" target="_blank">
+                    <span class="screen-reader-text">Twitter</span>
+                </a>
+            </li>
+            <li class="ss-mastodon">
+                <a href="https://vis.social/@thomashollt" target="_blank">
+                    <span class="screen-reader-text">Mastodon</span>
+                </a>
+            </li>
+            <li class="ss-github">
+                <a href="https://www.github.com/thoellt" target="_blank">
+                    <span class="screen-reader-text">Twitter</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav> <!-- end header__nav-wrap -->
+
+</header> <!-- end s-header -->
+    
+      <!-- site content
+================================================== -->
+<div class="s-content content">
+  <main class="row content__page">
+      
+      <article class="column large-full entry format-standard">
+
+          <div class="content__page-header entry__header">
+              <h1>Direct Processing of Compressed Volume Data</h1>
+          </div> 
+
+          
+          <div class="media-wrap entry__media">
+              <div class="entry__post-thumb">
+                  <img src="/assets/papers/2008_msc_thesis/2008_msc_thesis_teaser.png" alt="Direct Processing of Compressed Volume Data teaser image">
+              </div>
+          </div>
+          
+
+          <div class="entry__content">
+
+              <p class="drop-cap">Using programmable graphics hardware (GPU) is the de-facto standard for real time volume rendering nowadays. In addition to that, GPUs are often used for non-graphical tasks to accelerate complex computations and also allow the direct rendering of (intermediate) results. However, the amount of graphics memory can become a problem when working with large volume datasets. Even though todays graphics hardware provides more memory than ever before, the amount of data is also increasing rapidly.</br> In order to overcome this, lots of compression algorithms have been developed and some of them even are hardware-accelerated. As these implementations only support a small range of formats and often do not provide sufficient quality, custom algorithms have been implemented which often utilize shader programs for decoding and encoding. While this has proven useful for visualization, providing interactive framerates for direct volume rendering, the algorithms focus on displaying the data, not processing it. In this thesis different compression techniques are compared with focus on their suitability for processing in the compression domain. A wavelet transform based compression scheme is implemented which allows lossless as well as lossy compression of volume data. Image processing operations are classified based on their applicability in the wavelet compression domain. Based on this classification different image operations are exemplarily implemented. Furthermore for visualization multi-planar reconstruction directly from the compressed data is presented.</br> The results of this thesis are compared to processing in the spatial domain, showing advantages and shortcomings. Concluding an outlook on possible future work is given.</p>
+
+              
+			  
+              
+
+
+              <h3>Resources</h3>
+
+              <ul class="stats-tabs">
+
+                
+
+                
+
+                
+                
+
+                
+                  <li><a href="https://raw.githubusercontent.com/thoellt/publications/main/2008/2008_msc_thesis.pdf" target="_blank"> <i class="far fa-file-pdf"></i> <em>Preprint</em></a></li>
+                
+                
+                
+
+                
+                  
+                    <li>
+                      <a href="https://raw.githubusercontent.com/thoellt/publications/main/2008/2008_msc_thesis_poster.pdf" target="_blank">
+                      
+                        
+                          <i class="far fa-file-image"></i>
+                        
+                      
+                      <em>Poster</em></a>
+                    </li>
+                  
+                
+
+                
+
+                
+              </ul>
+
+              <h3>Citation</h3>
+
+              <div class="card-block">
+                <span class="paper-citation paper-authors">
+                  
+                  
+                  
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Thomas&nbsp;Höllt. 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+                </span>
+                <span class="paper-citation paper-title">Direct Processing of Compressed Volume Data.</span>
+    
+                
+                  Universität Koblenz-Landau,
+                
+    
+                
+    
+                
+    
+                
+    
+                <span class="paper-citation paper-year">2008.</span>
+              </div>
+
+              <h3>BibTeX</h3>
+
+              
+
+<!-- type -->
+
+
+<!-- key -->
+
+
+<!-- authors -->
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+
+
+<!-- title -->
+
+
+<!-- journal/proceedings -->
+
+
+<!-- volume -->
+
+
+<!-- issue -->
+
+
+<!-- chapter -->
+
+
+<!-- pages -->
+
+
+<!-- editor -->
+
+
+<!-- publisher -->
+
+
+<!-- school -->
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<!-- year -->
+
+
+<!-- doi -->
+
+
+<!-- close -->
+          
+              <pre><code>@mastersthesis{ bib:2008_msc_thesis,<br/>    author = {Thomas H&#123;\"o&#125;llt},<br/>    title = { Direct Processing of Compressed Volume Data },<br/>    school = { Universit&#123;\"a&#125;t Koblenz-Landau },<br/>    year = { 2008 },<br/>}</code></pre>
+
+          </div> <!-- end entry content -->
+
+      </article> <!-- end column large-full entry-->
+  </main>
+
+</div> <!-- end s-content -->
+
+<script type='text/javascript'>
+  function require(url, callback) 
+  {
+    var e = document.createElement("script");
+    e.src = url;
+    e.type="text/javascript";
+    e.addEventListener('load', callback);
+    document.getElementsByTagName("head")[0].appendChild(e);
+  }
+
+  require("https://badge.dimensions.ai/badge.js", function() {
+    var dimensions_badge = document.getElementById("dimensions_badge");
+    setTimeout(() => {
+    if(dimensions_badge.innerText.length < 1) {
+      var removeMe = document.getElementById("dimensions_badge_li");
+      removeMe.parentNode.removeChild(removeMe);
+      //console.log(dimensions_badge.innerText);
+    };
+    }, 500);
+  });
+
+require("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js", function() {
+  var altmetric_badge = document.getElementById("altmetric_badge");
+  setTimeout(() => {
+  if(altmetric_badge.innerHTML.length < 1) {
+    var removeMe = document.getElementById("altmetric_badge_li");
+    removeMe.parentNode.removeChild(removeMe);
+    //console.log(altmetric_badge.innerHTML)
+  };
+  }, 500);
+});
+</script>
+
+      <!-- footer ================================================== -->
+      <!-- footer ================================================== -->
+<footer class="s-footer footer">
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+    </div>
+</footer>
+
+    </div> <!-- end s-wrap -->
+
+    <!-- Java Script ================================================== -->
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
