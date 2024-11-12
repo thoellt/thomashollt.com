@@ -2,7 +2,7 @@
     
     {% if course.image_preview %}
     <div class="entry__thumb">
-        <img src="/assets/courses/{{ course.key }}/{{ course.image_preview }}" alt="{{ course.shortname }} Teaser Image">
+        <img src="/assets/courses/images/{{ course.image_preview }}" alt="{{ course.shortname }} Teaser Image">
     </div>
     {% endif %}
 
@@ -15,12 +15,19 @@
                 
                 {% for teacher in course.responsible %}
   
+                  {% assign known = false %}
                   {% for person in site.persons %}
                     {% if teacher == person.key %}
                       {% if teacher == course.responsible.last and course.responsible.first != course.responsible.last %}and{% endif %}
                       {{ person.first_name }}&nbsp;{{ person.last_name }}{% if teacher != course.responsible.last and  course.responsible.size > 2 %}, {% endif %}
+                      {% assign known = true %}
                     {% endif %}
                   {% endfor %}
+                  
+                  {% if known == false %}
+                    {% if teacher == course.responsible.last %}and{% endif %}
+                    {{ teacher }}{% if teacher != course.responsible.last%}, {% else %}. {% endif %}
+                  {% endif %}
   
                 {% endfor %}
                 
@@ -29,12 +36,19 @@
                 
                 {% for teacher in course.teachers %}
                 
+                  {% assign known = false %}
                   {% for person in site.persons %}
                     {% if teacher == person.key %}
                       {% if teacher == course.teachers.last and course.teachers.first != course.teachers.last %}and{% endif %}
                       {{ person.first_name }}&nbsp;{{ person.last_name }}{% if teacher != course.teachers.last and  course.teachers.size > 2 %}, {% endif %}
+                      {% assign known = true %}
                     {% endif %}
                   {% endfor %}
+                    
+                  {% if known == false %}
+                    {% if teacher == course.teachers.last %}and{% endif %}
+                    {{ teacher }}{% if teacher != course.teachers.last%}, {% else %}. {% endif %}
+                  {% endif %}
                 
                 {% endfor %}
                 {% endif %}
