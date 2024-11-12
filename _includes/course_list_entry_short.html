@@ -1,0 +1,10 @@
+{% assign responsible = "Co-Instructor" %}
+{% for teacher in course.responsible %}
+  {% if teacher == "hollt" %}
+    {% assign responsible = "Responsible Instructor" %}
+  {% endif %}
+{% endfor %}
+
+<div class="entry__text">
+    <span class="entry__title">{{ course.key }} &mdash; {{ course.title }} &#8226; {{responsible}} &#8226; <a href="{{course.courseguide}}" target="_blank">Study Guide.</a></span>
+</div>

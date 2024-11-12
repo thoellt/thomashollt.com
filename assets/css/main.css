@@ -3659,3 +3659,7 @@ body.search-is-visible {
 .paper-pages {}
 
 .paper-year {}
+
+.course-section{
+  margin-top: 0.7em;
+}

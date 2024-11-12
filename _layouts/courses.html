@@ -29,6 +29,28 @@ layout: default
 
 <header class="listing-header">
     <h3>Previous Courses</h3>
+    <h3>2023/24</h3>
+    {% assign current_courses = site.courses | where:'year', "2023" %}
+    {% for course in current_courses %}
+      {% include course_list_entry_short.html %}
+    {% endfor %}
+    <h3 class="course-section">2022/23</h3>
+    {% assign current_courses = site.courses | where:'year', "2022" %}
+    {% for course in current_courses %}
+      {% include course_list_entry_short.html %}
+    {% endfor %}
+    
+    <h3 class="course-section">2021/22</h3>
+    {% assign current_courses = site.courses | where:'year', "2021" %}
+    {% for course in current_courses %}
+      {% include course_list_entry_short.html %}
+    {% endfor %}
+    
+    <h3 class="course-section">2020/21</h3>
+    {% assign current_courses = site.courses | where:'year', "2020" %}
+    {% for course in current_courses %}
+      {% include course_list_entry_short.html %}
+    {% endfor %}
 </header>
 
 </div> <!-- end s-content -->
