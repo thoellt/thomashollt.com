@@ -25,3 +25,4 @@ courseguide:
 - https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=70215
 
 ---
+This course offers a comprehensive introduction to core topics in data, data management, and data engineering. It covers the role of data in AI systems, data modelling, dataset creation, data quality improvement, data visualization, dataset integration, data analysis using mining techniques, data storage and retrieval, data distribution, and the impact of inadequate data on subsequent systems and decision making. 
