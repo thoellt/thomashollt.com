@@ -7,7 +7,7 @@ year: 2024
 quarter: 1
 org: TU Delft
 role: Co-Lecturer
-image_preview:
+image_preview: DSAIT4000_teaser.png
 
 responsible:
 - Rihan Hai
