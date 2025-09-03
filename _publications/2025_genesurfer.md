@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "Incorporating Texture Information into Dimensionality Reduction for High-Dimensional Images"
+title: "GeneSurfer enables transcriptome-wide exploration and annotation of gene co-expression modules in 3D spatial transcriptomics data
 key: 2025_genesurfer
 date:   2025-05-01 12:00:00
 permalink: /publications/2025_genesurfer/
@@ -30,7 +30,7 @@ publisher:
 school:
 award:
 
-doi: 10.1101/2024.07.05.602230
+doi: 10.1016/j.isci.2025.112713
 publisher-url:
 
 projects:
