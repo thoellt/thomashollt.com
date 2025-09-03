@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "Incorporating Texture Information into Dimensionality Reduction for High-Dimensional Images"
+title: "Cytosplore EvoViewer: Visual Analytics of Conserved Evolutionary Patterns in multi-species single-cell sequencing data"
 key: 2025_evoviewer
 date:   2025-03-24 12:00:00
 permalink: /publications/2025_evoviewer/
