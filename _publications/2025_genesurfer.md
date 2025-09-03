@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "GeneSurfer enables transcriptome-wide exploration and annotation of gene co-expression modules in 3D spatial transcriptomics data
+title: "GeneSurfer enables transcriptome-wide exploration and annotation of gene co-expression modules in 3D spatial transcriptomics data"
 key: 2025_genesurfer
 date:   2025-05-01 12:00:00
 permalink: /publications/2025_genesurfer/
