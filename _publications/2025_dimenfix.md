@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "Incorporating Texture Information into Dimensionality Reduction for High-Dimensional Images"
+title: "DimenFix: A novel meta-strategy to preserve user-defined data values on dimensionality reduction layouts"
 key: 2025_dimenfix
 date:   2025-06-01 12:00:00
 permalink: /publications/2025_dimenfix/
