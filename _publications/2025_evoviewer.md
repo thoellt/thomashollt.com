@@ -11,7 +11,7 @@ image_large: 2025_evoviewer.png
 image_preview: 2025_evoviewer.png
 
 authors:
-- vibasueth
+- basu
 - Morgan Wirthlin
 - eggermont
 - kroes

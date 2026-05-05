@@ -2,7 +2,7 @@
 layout: publication
 title: "GeneSurfer enables transcriptome-wide exploration and annotation of gene co-expression modules in 3D spatial transcriptomics data"
 key: 2025_genesurfer
-date:   2025-05-01 12:00:00
+date: 2025-05-01 12:00:00
 permalink: /publications/2025_genesurfer/
 type: article
 shortname: 
@@ -11,19 +11,21 @@ image_large: 2025_genesurfer.png
 image_preview: 2025_genesurfer.png
 
 authors:
-- vieth
-- vilanova
-- lelieveldt
-- eisemann
+- Chang Li
+- thijssen
+- kroes
+- Ximaine van der Burg
+- Louise van der Weerd
 - hollt
+- lelieveldt
 
 journal: iScience
 journal-short: iScience
 page_start: 112713
 page_end: 
 chapter:
-volume: 
-issue: 
+volume: 28
+issue: 7
 year: 2025
 editor:
 publisher:
