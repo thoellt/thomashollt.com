@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <!--- basic page needs
+================================================== -->
+<meta charset="utf-8">
+<title>Thomas Höllt &#8226; DimenFix: A novel meta-strategy to preserve user-defined data values on dimensionality reduction layouts</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- mobile specific metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/vendor.css">
+<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- script
+================================================== -->
+<script src="/assets/js/modernizr.js"></script>
+
+<!-- favicons
+================================================== -->
+<!-- TODO
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+-->
+
+<!-- analytics
+================================================== -->
+<script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('rgCh29Fzt3idDR2T');
+insights.trackPages();
+</script>
+</head>
+
+<body>
+
+    <!-- preloader ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+    
+      <!-- site header
+================================================== -->
+<header class="s-header header">
+
+    <div class="header__top">
+        <div class="header__logo">
+            <a class="site-logo" href="https://www.thomashollt.com">
+                <img src="/assets/images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <!-- toggles -->
+        <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+    </div>
+
+    <nav class="header__nav-wrap">
+
+        <ul class="header__nav">
+            <li><a href="/index.html" title="">About</a></li>
+            <li><a href="/teaching/" title="">Teaching</a></li>
+            <li><a href="/publications/" title="">Publications</a></li>
+            <li><a href="https://gallery.thomashollt.com/" title="">Photography</a></li>
+            <li><a href="/contact/" title="">Contact</a></li>
+        </ul> <!-- end header__nav -->
+
+        <ul class="header__social">
+            <li class="ss-address">
+                <a href="https://maps.apple.com/?address=Van%20Mourik%20Broekmanweg%206,%202628%20XE%20Delft,%20Netherlands&auid=14847247505893078258&ll=51.999005,4.378132&lsp=9902&q=TU%20Delft%20-%20Mathematics%20%26%20Computer%20Science" alt="https://goo.gl/maps/c8CYdisjBKtTNrGj6">
+                    <span class="screen-reader-text">Address</span>
+                </a>
+            </li>
+            <li class="ss-email">
+                <a href="mailto:t.hollt-1@tudelft.nl">
+                    <span class="screen-reader-text">Email</span>
+                </a>
+            </li>
+            <li class="ss-twitter">
+                <a href="https://www.twitter.com/thomashollt" target="_blank">
+                    <span class="screen-reader-text">Twitter</span>
+                </a>
+            </li>
+            <li class="ss-mastodon">
+                <a href="https://vis.social/@thomashollt" target="_blank">
+                    <span class="screen-reader-text">Mastodon</span>
+                </a>
+            </li>
+            <li class="ss-github">
+                <a href="https://www.github.com/thoellt" target="_blank">
+                    <span class="screen-reader-text">Twitter</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav> <!-- end header__nav-wrap -->
+
+</header> <!-- end s-header -->
+    
+      <!-- site content
+================================================== -->
+<div class="s-content content">
+  <main class="row content__page">
+      
+      <article class="column large-full entry format-standard">
+
+          <div class="content__page-header entry__header">
+              <h1>DimenFix: A novel meta-strategy to preserve user-defined data values on dimensionality reduction layouts</h1>
+          </div> 
+
+          
+          <div class="media-wrap entry__media">
+              <div class="entry__post-thumb">
+                  <img src="/assets/papers/2025_dimenfix/2025_dimenfix.png" alt="DimenFix: A novel meta-strategy to preserve user-defined data values on dimensionality reduction layouts teaser image">
+              </div>
+          </div>
+          
+
+          <div class="entry__content">
+
+              <p class="drop-cap">Dimensionality Reduction (DR) methods have become essential tools for the data analysis toolbox. Typically, DR methods combine features of a multivariate dataset to produce dimensions in a reduced space, preserving some data properties, usually pairwise distances or local neighborhoods. Preserving such properties makes DR methods attractive, but it is also one of their weaknesses. When calculating the embedded dimensions, usually through non-linear strategies, the original feature values are lost and not explicitly represented in the spatialization of the produced layouts, making it challenging to interpret the results and understand the features’ contributions to the attained representations. Some strategies have been proposed to tackle this issue, such as coloring the DR layouts or generating explanations. Still, they are post-processes, so specific features (values) are not guaranteed to be preserved or represented. This paper proposes DimenFix, a novel meta-DR strategy that explicitly preserves the values of a particular user-defined feature or external data (not used to generate a layout) in one of the embedded axes. DimenFix can be used to preserve ordinal (e.g., numerical measures) and nominal (e.g., labels) values and works with virtually any gradient-descent DR method. It requires minimum changes to the underlying DR technique, running in linear time considering the number of data instances. In our results, involving Force Scheme and t-SNE adaptations, DimenFix was capable of representing features without heavily impacting distance or neighborhood preservation, allowing for creating hybrid layouts that join characteristics of scatter plots and DR methods.</p>
+
+              
+			  
+              
+
+
+              <h3>Resources</h3>
+
+              <ul class="stats-tabs">
+
+                
+
+                
+                  <li><a href="https://dx.doi.org/10.1016/j.cag.2025.104231" target="_blank"> <i class="fas fa-globe"></i> <em>Publisher</em></a></li>
+                
+
+                
+                
+
+                
+                  <li><a href="https://raw.githubusercontent.com/thoellt/publications/main/2025/2025_dimenfix.pdf" target="_blank"> <i class="far fa-file-pdf"></i> <em>Preprint</em></a></li>
+                
+                
+                
+
+                
+
+                
+                <li><a href="https://github.com/fpaulovich/dimensionality-reduction/" target="_blank"> <i class="fas fa-code-branch"></i> <em>Code</em></a></li>
+                
+
+                
+                <li id="dimensions_badge_li">
+                  <div id="dimensions_badge" class="__dimensions_badge_embed__" data-doi="10.1016/j.cag.2025.104231" data-hide-zero-citations="true" data-legend="never" data-style="small_circle"></div>
+                </li>
+                <li id="altmetric_badge_li">
+                  <div id="altmetric_badge" data-badge-type="donut" data-doi="10.1016/j.cag.2025.104231" data-hide-no-mentions="true" class="altmetric-embed"></div>
+                </li>
+                
+              </ul>
+
+              <h3>Citation</h3>
+
+              <div class="card-block">
+                <span class="paper-citation paper-authors">
+                  
+                  
+                  
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+                      
+                      Zixuan Han, 
+                      
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+                      
+                      Diede van der Hoorn, 
+                      
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Thomas&nbsp;Höllt, 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+                      
+                      Qiaodan Luo, 
+                      
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+                      
+                      Leonardo Christino, 
+                      
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+                      
+                      Evangelos Milios, 
+                      
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+                      and
+                      Fernando Paulovich. 
+                      
+                    
+    
+                  
+                </span>
+                <span class="paper-citation paper-title">DimenFix: A novel meta-strategy to preserve user-defined data values on dimensionality reduction layouts.</span>
+    
+                
+                  <span class="paper-citation paper-journal">Computers and Graphics,</span>
+                
+    
+                
+                  130:
+                
+    
+                
+    
+                
+                  p. 104231,
+                
+    
+                <span class="paper-citation paper-year">2025.</span>
+              </div>
+
+              <h3>BibTeX</h3>
+
+              
+
+<!-- type -->
+
+
+<!-- key -->
+
+
+<!-- authors -->
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+
+
+<!-- title -->
+
+
+<!-- journal/proceedings -->
+
+
+<!-- volume -->
+
+
+<!-- issue -->
+
+
+<!-- chapter -->
+
+
+<!-- pages -->
+
+
+<!-- editor -->
+
+
+<!-- publisher -->
+
+
+<!-- school -->
+
+
+<!-- year -->
+
+
+<!-- doi -->
+
+
+<!-- close -->
+          
+              <pre><code>@article{ bib:2025_dimenfix,<br/>    author = {Zixuan Han and Diede van der Hoorn and Thomas H&#123;\"o&#125;llt and Qiaodan Luo and Leonardo Christino and Evangelos Milios and Fernando Paulovich},<br/>    title = { DimenFix: A novel meta-strategy to preserve user-defined data values on dimensionality reduction layouts },<br/>    journal = { Computers and Graphics },<br/>    volume = { 130 },<br/>    pages = { 104231 },<br/>    year = { 2025 },<br/>    doi = { 10.1016/j.cag.2025.104231 },<br/>}</code></pre>
+
+          </div> <!-- end entry content -->
+
+      </article> <!-- end column large-full entry-->
+  </main>
+
+</div> <!-- end s-content -->
+
+<script type='text/javascript'>
+  function require(url, callback) 
+  {
+    var e = document.createElement("script");
+    e.src = url;
+    e.type="text/javascript";
+    e.addEventListener('load', callback);
+    document.getElementsByTagName("head")[0].appendChild(e);
+  }
+
+  require("https://badge.dimensions.ai/badge.js", function() {
+    var dimensions_badge = document.getElementById("dimensions_badge");
+    setTimeout(() => {
+    if(dimensions_badge.innerText.length < 1) {
+      var removeMe = document.getElementById("dimensions_badge_li");
+      removeMe.parentNode.removeChild(removeMe);
+      //console.log(dimensions_badge.innerText);
+    };
+    }, 500);
+  });
+
+require("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js", function() {
+  var altmetric_badge = document.getElementById("altmetric_badge");
+  setTimeout(() => {
+  if(altmetric_badge.innerHTML.length < 1) {
+    var removeMe = document.getElementById("altmetric_badge_li");
+    removeMe.parentNode.removeChild(removeMe);
+    //console.log(altmetric_badge.innerHTML)
+  };
+  }, 500);
+});
+</script>
+
+      <!-- footer ================================================== -->
+      <!-- footer ================================================== -->
+<footer class="s-footer footer">
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+    </div>
+</footer>
+
+    </div> <!-- end s-wrap -->
+
+    <!-- Java Script ================================================== -->
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>

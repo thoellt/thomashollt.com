@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <!--- basic page needs
+================================================== -->
+<meta charset="utf-8">
+<title>Thomas Höllt &#8226; Cytosplore: Interactive Immune Cell Phenotyping for Large Single-Cell Datasets</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- mobile specific metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/vendor.css">
+<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- script
+================================================== -->
+<script src="/assets/js/modernizr.js"></script>
+
+<!-- favicons
+================================================== -->
+<!-- TODO
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+-->
+
+<!-- analytics
+================================================== -->
+<script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('rgCh29Fzt3idDR2T');
+insights.trackPages();
+</script>
+</head>
+
+<body>
+
+    <!-- preloader ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+    
+      <!-- site header
+================================================== -->
+<header class="s-header header">
+
+    <div class="header__top">
+        <div class="header__logo">
+            <a class="site-logo" href="https://www.thomashollt.com">
+                <img src="/assets/images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <!-- toggles -->
+        <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+    </div>
+
+    <nav class="header__nav-wrap">
+
+        <ul class="header__nav">
+            <li><a href="/index.html" title="">About</a></li>
+            <li><a href="/teaching/" title="">Teaching</a></li>
+            <li><a href="/publications/" title="">Publications</a></li>
+            <li><a href="https://gallery.thomashollt.com/" title="">Photography</a></li>
+            <li><a href="/contact/" title="">Contact</a></li>
+        </ul> <!-- end header__nav -->
+
+        <ul class="header__social">
+            <li class="ss-address">
+                <a href="https://maps.apple.com/?address=Van%20Mourik%20Broekmanweg%206,%202628%20XE%20Delft,%20Netherlands&auid=14847247505893078258&ll=51.999005,4.378132&lsp=9902&q=TU%20Delft%20-%20Mathematics%20%26%20Computer%20Science" alt="https://goo.gl/maps/c8CYdisjBKtTNrGj6">
+                    <span class="screen-reader-text">Address</span>
+                </a>
+            </li>
+            <li class="ss-email">
+                <a href="mailto:t.hollt-1@tudelft.nl">
+                    <span class="screen-reader-text">Email</span>
+                </a>
+            </li>
+            <li class="ss-twitter">
+                <a href="https://www.twitter.com/thomashollt" target="_blank">
+                    <span class="screen-reader-text">Twitter</span>
+                </a>
+            </li>
+            <li class="ss-mastodon">
+                <a href="https://vis.social/@thomashollt" target="_blank">
+                    <span class="screen-reader-text">Mastodon</span>
+                </a>
+            </li>
+            <li class="ss-github">
+                <a href="https://www.github.com/thoellt" target="_blank">
+                    <span class="screen-reader-text">Twitter</span>
+                </a>
+            </li>
+        </ul>
+
+    </nav> <!-- end header__nav-wrap -->
+
+</header> <!-- end s-header -->
+    
+      <!-- site content
+================================================== -->
+<div class="s-content content">
+  <main class="row content__page">
+      
+      <article class="column large-full entry format-standard">
+
+          <div class="content__page-header entry__header">
+              <h1>Cytosplore: Interactive Immune Cell Phenotyping for Large Single-Cell Datasets</h1>
+          </div> 
+
+          
+          <div class="media-wrap entry__media">
+              <div class="entry__post-thumb">
+                  <img src="/assets/papers/2016_eurovis_cytosplore/2016_eurovis_cytosplore_teaser.png" alt="Cytosplore: Interactive Immune Cell Phenotyping for Large Single-Cell Datasets teaser image">
+              </div>
+          </div>
+          
+
+          <div class="entry__content">
+
+              <p class="drop-cap">To understand how the immune system works, one needs to have a clear picture of its cellular compositon and the cells’ corresponding properties and functionality. Mass cytometry is a novel technique to determine the properties of single-cells with unprecedented detail. This amount of detail allows for much finer differentiation but also comes at the cost of more complex analysis. In this work, we present Cytosplore, implementing an interactive workflow to analyze mass cytometry data in an integrated system, providing multiple linked views, showing different levels of detail and enabling the rapid definition of known and unknown cell types. Cytosplore handles millions of cells, each represented as a high-dimensional data point, facilitates hypothesis generation and confirmation, and provides a significant speed up of the current workflow. We show the effectiveness of Cytosplore in a case study evaluation.</p>
+
+              
+			  
+              
+
+
+              <h3>Resources</h3>
+
+              <ul class="stats-tabs">
+
+                
+                  <li><a href="https://www.cytosplore.org/" target="_blank"> <i class="fas fa-globe"></i> <em>Website</em></a></li>
+                
+
+                
+                  <li><a href="https://dx.doi.org/10.1111/cgf.12893" target="_blank"> <i class="fas fa-globe"></i> <em>Publisher</em></a></li>
+                
+
+                
+                
+
+                
+                  <li><a href="https://raw.githubusercontent.com/thoellt/publications/main/2016/2016_eurovis_cytosplore.pdf" target="_blank"> <i class="far fa-file-pdf"></i> <em>Preprint</em></a></li>
+                
+                
+                
+
+                
+                  
+                    <li>
+                      <a href="https://raw.githubusercontent.com/thoellt/publications/main/2016/eurovis16_Cytosplore_Interactive_Immune_Cell_Phenotyping_for_Large_Single-Cell_Datasets_slides.pdf" target="_blank">
+                      
+                        
+                          <i class="far fa-file-image"></i>
+                        
+                      
+                      <em>Presentation Slides</em></a>
+                    </li>
+                  
+                    <li>
+                      <a href="https://vimeo.com/161594269" target="_blank">
+                      
+                        
+                          <i class="far fa-file-video"></i>
+                        
+                      
+                      <em>Video</em></a>
+                    </li>
+                  
+                    <li>
+                      <a href="https://vimeo.com/170441199" target="_blank">
+                      
+                        
+                          <i class="far fa-file-video"></i>
+                        
+                      
+                      <em>Fast Forward Video</em></a>
+                    </li>
+                  
+                
+
+                
+
+                
+                <li id="dimensions_badge_li">
+                  <div id="dimensions_badge" class="__dimensions_badge_embed__" data-doi="10.1111/cgf.12893" data-hide-zero-citations="true" data-legend="never" data-style="small_circle"></div>
+                </li>
+                <li id="altmetric_badge_li">
+                  <div id="altmetric_badge" data-badge-type="donut" data-doi="10.1111/cgf.12893" data-hide-no-mentions="true" class="altmetric-embed"></div>
+                </li>
+                
+              </ul>
+
+              <h3>Citation</h3>
+
+              <div class="card-block">
+                <span class="paper-citation paper-authors">
+                  
+                  
+                  
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Thomas&nbsp;Höllt, 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Nicola&nbsp;Pezzotti, 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Vincent&nbsp;van Unen, 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Frits&nbsp;Koning, 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Elmar&nbsp;Eisemann, 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        
+                        Boudewijn&nbsp;Lelieveldt, 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+    
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                        and
+                        Anna&nbsp;Vilanova. 
+                        
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+    
+                    
+    
+                  
+                </span>
+                <span class="paper-citation paper-title">Cytosplore: Interactive Immune Cell Phenotyping for Large Single-Cell Datasets.</span>
+    
+                
+                  <span class="paper-citation paper-journal">Computer Graphics Forum (Proceedings of EuroVis 2016),</span>
+                
+    
+                
+                  35(3):
+                
+    
+                
+    
+                
+                  <span class="paper-citation paper-pages">
+                    pp. 171&ndash;180,
+                  </span>
+                
+    
+                <span class="paper-citation paper-year">2016.</span>
+              </div>
+
+              <h3>BibTeX</h3>
+
+              
+
+<!-- type -->
+
+
+<!-- key -->
+
+
+<!-- authors -->
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+
+
+<!-- title -->
+
+
+<!-- journal/proceedings -->
+
+
+<!-- volume -->
+
+
+<!-- issue -->
+
+
+<!-- chapter -->
+
+
+<!-- pages -->
+
+
+<!-- editor -->
+
+
+<!-- publisher -->
+
+
+<!-- school -->
+
+
+<!-- year -->
+
+
+<!-- doi -->
+
+
+<!-- close -->
+          
+              <pre><code>@article{ bib:2016_eurovis_cytosplore,<br/>    author = {Thomas H&#123;\"o&#125;llt and Nicola Pezzotti and Vincent van Unen and Frits Koning and Elmar Eisemann and Boudewijn Lelieveldt and Anna Vilanova},<br/>    title = { Cytosplore: Interactive Immune Cell Phenotyping for Large Single-Cell Datasets },<br/>    journal = { Computer Graphics Forum (Proceedings of EuroVis 2016) },<br/>    volume = { 35 },<br/>    number = { 3 },<br/>    pages = { 171 -- 180 },<br/>    year = { 2016 },<br/>    doi = { 10.1111/cgf.12893 },<br/>}</code></pre>
+
+          </div> <!-- end entry content -->
+
+      </article> <!-- end column large-full entry-->
+  </main>
+
+</div> <!-- end s-content -->
+
+<script type='text/javascript'>
+  function require(url, callback) 
+  {
+    var e = document.createElement("script");
+    e.src = url;
+    e.type="text/javascript";
+    e.addEventListener('load', callback);
+    document.getElementsByTagName("head")[0].appendChild(e);
+  }
+
+  require("https://badge.dimensions.ai/badge.js", function() {
+    var dimensions_badge = document.getElementById("dimensions_badge");
+    setTimeout(() => {
+    if(dimensions_badge.innerText.length < 1) {
+      var removeMe = document.getElementById("dimensions_badge_li");
+      removeMe.parentNode.removeChild(removeMe);
+      //console.log(dimensions_badge.innerText);
+    };
+    }, 500);
+  });
+
+require("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js", function() {
+  var altmetric_badge = document.getElementById("altmetric_badge");
+  setTimeout(() => {
+  if(altmetric_badge.innerHTML.length < 1) {
+    var removeMe = document.getElementById("altmetric_badge_li");
+    removeMe.parentNode.removeChild(removeMe);
+    //console.log(altmetric_badge.innerHTML)
+  };
+  }, 500);
+});
+</script>
+
+      <!-- footer ================================================== -->
+      <!-- footer ================================================== -->
+<footer class="s-footer footer">
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+    </div>
+</footer>
+
+    </div> <!-- end s-wrap -->
+
+    <!-- Java Script ================================================== -->
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
