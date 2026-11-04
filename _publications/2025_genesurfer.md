@@ -7,7 +7,7 @@ permalink: /publications/2025_genesurfer/
 type: article
 shortname: 
 image: 2025_genesurfer.png
-image_large: 2025_genesurfer.png
+image_large: 2025_genesurfer_teaser.png
 image_preview: 2025_genesurfer.png
 
 authors:

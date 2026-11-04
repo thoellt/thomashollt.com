@@ -7,7 +7,7 @@ permalink: /publications/2025_ai_in_the_loop/
 type: article
 shortname: AI in the Loop
 image: 2025_ai_in_the_loop.png
-image_large: 2025_ai_in_the_loop.png
+image_large: 2025_ai_in_the_loop_teaser.png
 image_preview: 2025_ai_in_the_loop.png
 
 authors:

@@ -7,7 +7,7 @@ permalink: /publications/2025_dimenfix/
 type: article
 shortname: 
 image: 2025_dimenfix.png
-image_large: 2025_dimenfix.png
+image_large: 2025_dimenfix_teaser_.png
 image_preview: 2025_dimenfix.png
 
 authors:

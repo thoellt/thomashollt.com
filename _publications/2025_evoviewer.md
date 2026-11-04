@@ -7,7 +7,7 @@ permalink: /publications/2025_evoviewer/
 type: inproceedings
 shortname: 
 image: 2025_evoviewer.png
-image_large: 2025_evoviewer.png
+image_large: 2025_evoviewer_teaser_.png
 image_preview: 2025_evoviewer.png
 
 authors:
