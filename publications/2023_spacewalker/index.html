@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--- basic page needs
+================================================== -->
+<meta charset="utf-8">
+<title>Thomas Höllt &#8226; SpaceWalker Enables Interactive Gradient Exploration for Spatial Transcriptomics Data</title>
+<meta name="description" content="Thomas Höllt, professor for visualization in the Vis Group at the University of Bergen, Norway. Visual analytics for large, high-dimensional data, single-cell and spatial omics.">
+<meta name="author" content="Thomas Höllt">
+
+<!-- mobile specific metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- day / evening theme, applied before first paint
+================================================== -->
+<script>if (localStorage.getItem("theme")) document.documentElement.dataset.theme = localStorage.getItem("theme");</script>
+
+<!-- fonts & CSS
+================================================== -->
+<link rel="preload" href="/assets/fonts/literata-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- favicons
+================================================== -->
+<!-- the wordmark's terracotta dab; favicon.ico at the root for browsers that ask for it -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+<!-- analytics
+================================================== -->
+<script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('rgCh29Fzt3idDR2T');
+insights.trackPages();
+</script>
+
+</head>
+
+<body>
+
+    <div id="top" class="wrap">
+
+      <!-- site header
+================================================== -->
+<header class="site-header">
+    <a class="wordmark" href="/"><span class="dab c-terracotta" style="--r:-14deg"></span>Thomas Höllt</a>
+
+    <nav class="site-nav" id="site-nav">
+        <a href="/">About</a>
+        <a href="/publications/">Publications</a>
+        <a href="/cv/">CV</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <button class="search-toggle" aria-label="Search" title="Search (⌘K / Ctrl K)">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.2 15.4 C17 17.2 18.6 18.8 20 20.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <kbd class="search-key">⌘K</kbd>
+    </button>
+    <button class="theme-toggle" aria-label="Toggle evening mode" title="Day / evening">◐</button>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7.2 C9 6.6 15 7.6 20 6.9 M4 12.3 C9 11.8 14.5 12.8 20 12.1 M4 17.3 C8.5 16.8 15 17.8 20 17.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </button>
+</header> <!-- end site-header -->
+
+
+      <main>
+      <article class="paper col" data-paper="design">
+
+    <!-- header ================================================== -->
+    <header class="paper-head">
+        <div class="wash wash-3 c-dusk" style="left:-9rem; top:-6rem; width:26rem; height:20rem; --o:.75" aria-hidden="true"></div>
+        <p class="eyebrow"><span class="dab c-dusk"></span>Design Study & Systems &nbsp;·&nbsp; Journal &nbsp;·&nbsp; 2023</p>
+        <h1>SpaceWalker Enables Interactive Gradient Exploration for Spatial Transcriptomics Data</h1>
+        <p class="authors">Chang Li, Julian Thijssen, Thomas Kroes, Mitchell de Boer, Tamim Abdelaal, et al.</p>
+        <p class="venue">Cell Reports Methods</p>
+        <div class="pub-links"><a href="https://raw.githubusercontent.com/thoellt/publications/main/2023/2023_spacewalker.pdf" target="_blank">Preprint<svg class="arrow arrow-down" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a><a href="https://dx.doi.org/10.1016/j.crmeth.2023.100645" target="_blank">Publisher<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a><a href="https://youtu.be/NtvK4Ubo718" target="_blank">Video HybISS<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a><a href="https://youtu.be/2sHyZ46nTho" target="_blank">Video EEL FISH<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a><a href="https://youtu.be/UrJtq9wZqu0" target="_blank">Video smFISH<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a><a href="https://youtu.be/eafIllwO7FY" target="_blank">Video 3D<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a><a href="https://doi.org/10.5281/zenodo.10017490" target="_blank">Software<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a>
+            <a href="data:application/x-bibtex;charset=utf-8,%40article%7B2023_spacewalker%2C%0A%20%20%20%20author%20%3D%20%7B%20Chang%20Li%20and%20Julian%20Thijssen%20and%20Thomas%20Kroes%20and%20Mitchell%20de%20Boer%20and%20Tamim%20Abdelaal%20and%20Thomas%20H%7B%5C%22o%7Dllt%20and%20Boudewijn%20Lelieveldt%20%7D%2C%0A%20%20%20%20title%20%3D%20%7B%20SpaceWalker%20Enables%20Interactive%20Gradient%20Exploration%20for%20Spatial%20Transcriptomics%20Data%20%7D%2C%0A%20%20%20%20journal%20%3D%20%7B%20Cell%20Reports%20Methods%20%7D%2C%0A%20%20%20%20year%20%3D%20%7B%202023%20%7D%2C%0A%20%20%20%20doi%20%3D%20%7B%2010.1016%2Fj.crmeth.2023.100645%20%7D%2C%0A%7D" download="2023_spacewalker.bib">BibTeX<svg class="arrow arrow-down" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a>
+        </div>
+    </header>
+    <figure class="paper-teaser"><img src="/publications/2023_spacewalker/2023_spacewalker_teaser.png" alt="SpaceWalker teaser image" loading="lazy"></figure>
+
+    <!-- abstract ================================================== -->
+    <section class="paper-section">
+        <h2>Abstract</h2>
+        <div class="paper-abstract"><p><b>Motivation</b> Spatial transcriptomics (ST) enables profiling of the expression of hundreds of genes in tissue sections down to the level of single cells in their tissue environment. The gradient structure of ST data is particularly interesting for tissue biology because spatial gene expression gradients often represent tissue compartment edges, whereas in the single-cell transcriptomic domain, gene expression gradients may represent cell-type differences and smooth phenotypic transitions. Various computational approaches have been developed to extract information from either the spatial domain or the gene expression domain individually. However, integrative biological interpretation of expression gradients in single-cell and ST data spaces remains challenging. Many prior ST analysis pipelines are script based, lack interactive exploration facilities, and do not have specific facilities for automatic identification of localized expression gradients.<br /><b>Summary</b> In spatial transcriptomics (ST) data, biologically relevant features such as tissue compartments or cell-state transitions are reflected by gene expression gradients. Here, we present SpaceWalker, a visual analytics tool for exploring the local gradient structure of 2D and 3D ST data. The user can be guided by the local intrinsic dimensionality of the high-dimensional data to define seed locations, from which a flood-fill algorithm identifies transcriptomically similar cells on the fly, based on the high-dimensional data topology. In several use cases, we demonstrate that the spatial projection of these flooded cells highlights tissue architectural features and that interactive retrieval of gene expression gradients in the spatial and transcriptomic domains confirms known biology. We also show that SpaceWalker generalizes to several different ST protocols and scales well to large, multi-slice, 3D whole-brain ST data while maintaining real-time interaction performance.</p>
+</div>
+    </section>
+
+    <!-- citation ================================================== -->
+    <section class="paper-section">
+        <h2>Cite</h2>
+        <p class="citation" id="citation">Chang Li, Julian Thijssen, Thomas Kroes, Mitchell de Boer, Tamim Abdelaal, Thomas Höllt, and Boudewijn Lelieveldt. SpaceWalker Enables Interactive Gradient Exploration for Spatial Transcriptomics Data. <em>Cell Reports Methods</em>, 2023.</p>
+        <div class="pub-links copy-links">
+            <button type="button" data-copy="#citation">Copy</button>
+            <a href="data:text/plain;charset=utf-8,Chang%20Li%2C%20Julian%20Thijssen%2C%20Thomas%20Kroes%2C%20Mitchell%20de%20Boer%2C%20Tamim%20Abdelaal%2C%20Thomas%20H%C3%B6llt%2C%20and%20Boudewijn%20Lelieveldt.%20SpaceWalker%20Enables%20Interactive%20Gradient%20Exploration%20for%20Spatial%20Transcriptomics%20Data.%20Cell%20Reports%20Methods%2C%202023." download="2023_spacewalker.txt">Download<svg class="arrow arrow-down" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a>
+        </div>
+
+        <pre class="bibtex" id="bibtex"><code>@article{2023_spacewalker,
+    author = { Chang Li and Julian Thijssen and Thomas Kroes and Mitchell de Boer and Tamim Abdelaal and Thomas H{\&quot;o}llt and Boudewijn Lelieveldt },
+    title = { SpaceWalker Enables Interactive Gradient Exploration for Spatial Transcriptomics Data },
+    journal = { Cell Reports Methods },
+    year = { 2023 },
+    doi = { 10.1016/j.crmeth.2023.100645 },
+}</code></pre>
+        <div class="pub-links copy-links">
+            <button type="button" data-copy="#bibtex">Copy</button>
+            <a href="data:application/x-bibtex;charset=utf-8,%40article%7B2023_spacewalker%2C%0A%20%20%20%20author%20%3D%20%7B%20Chang%20Li%20and%20Julian%20Thijssen%20and%20Thomas%20Kroes%20and%20Mitchell%20de%20Boer%20and%20Tamim%20Abdelaal%20and%20Thomas%20H%7B%5C%22o%7Dllt%20and%20Boudewijn%20Lelieveldt%20%7D%2C%0A%20%20%20%20title%20%3D%20%7B%20SpaceWalker%20Enables%20Interactive%20Gradient%20Exploration%20for%20Spatial%20Transcriptomics%20Data%20%7D%2C%0A%20%20%20%20journal%20%3D%20%7B%20Cell%20Reports%20Methods%20%7D%2C%0A%20%20%20%20year%20%3D%20%7B%202023%20%7D%2C%0A%20%20%20%20doi%20%3D%20%7B%2010.1016%2Fj.crmeth.2023.100645%20%7D%2C%0A%7D" download="2023_spacewalker.bib">Download<svg class="arrow arrow-down" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a>
+        </div>
+    </section>
+    <div class="metrics" aria-label="Citations and mentions">
+        <div class="__dimensions_badge_embed__" data-doi="10.1016/j.crmeth.2023.100645" data-hide-zero-citations="true" data-legend="never" data-style="small_circle"></div>
+        <div class="altmetric-embed" data-badge-type="donut" data-link-target="_blank" data-doi="10.1016/j.crmeth.2023.100645" data-hide-no-mentions="true"></div>
+    </div>
+    <script async src="https://badge.dimensions.ai/badge.js"></script>
+    <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+</article>
+
+      </main>
+
+      <!-- footer ================================================== -->
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <span class="label">Write</span>
+            <p><a href="mailto:thomas.hollt@uib.no">thomas.hollt@uib.no<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a></p>
+        </div>
+        <div>
+            <span class="label">Visit</span>
+            <p><a href="https://www.uib.no/en/ii" target="_blank">Department of Informatics<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a><br>University of Bergen, Norway</p>
+        </div>
+        <div>
+            <span class="label">Office</span>
+            <p>HIB – Thormøhlens gate 55<br>5006 Bergen, <a href="https://link.mazemap.com/BokraRLT" target="_blank">room 403N1<svg class="arrow arrow-out" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate(-45 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg></a></p>
+        </div>
+    </div>
+    <p class="small">© 2026 Thomas Höllt</p>
+</footer>
+
+
+    </div> <!-- end wrap -->
+
+    <!-- Java Script ================================================== -->
+    <script src="/assets/js/search-data.js"></script>
+    <script src="/assets/js/search.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
