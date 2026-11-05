@@ -7,20 +7,21 @@ year: 2024
 quarter: 4
 org: TU Delft
 role: Co-Lecturer
+program: MSc Computer Science
+group: seminar_cgv
+cv_note:
 image_preview:
 
 responsible:
-- kellnhofer
-
+- Petr Kellnhofer
 teachers:
-- bidarra
-- eisemann
-- hildebrandt
-- hollt
-- marroquim
-- skrodzki
-- weinmann 
-
+- Rafa Bidarra
+- Elmar Eisemann
+- Klaus Hildebrandt
+- Thomas Höllt
+- Ricardo Marroquim
+- Martin Skrodzki
+- Michael Weinmann
 courseguide:
 - https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=70138
 

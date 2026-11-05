@@ -1,0 +1,19 @@
+{%- comment -%} Publications (_publications), grouped by type and numbered throughout. {%- endcomment -%}
+{%- assign publications = site.publications | sort: "year" | reverse %}
+\section*{Publications}
+{%- assign pub_groups = "preprint:Preprints|inproceedings,article:Peer Reviewed Journal \& Conference Papers|book,inbook:Books \& Bookchapters|poster:Posters \& Abstracts|mscthesis,phdthesis:Theses" | split: "|" %}
+{%- assign item_number = 1 %}
+{%- for group in pub_groups %}
+{%- assign group_types = group | split: ":" | first | split: "," %}
+{%- assign group_pubs = publications | where_exp: "p", "group_types contains p.type" %}
+{%- if group_pubs.size > 0 %}
+
+\subsection*{ {{- group | split: ":" | last -}} }
+\begin{enumerate}[leftmargin=0cm,start={{ item_number }}]
+{%- for publication in group_pubs %}
+{% include latex/publication_entry.tex %}
+{% endfor %}
+\end{enumerate}
+{%- assign item_number = item_number | plus: group_pubs.size %}
+{%- endif %}
+{%- endfor %}

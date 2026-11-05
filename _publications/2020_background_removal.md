@@ -2,6 +2,7 @@
 layout: publication
 title: "Semi-Automated Background Removal Limits Loss of Data and Normalises the Images for Downstream Analysis of Imaging Mass Cytometry Data"
 key: 2020_background_removal
+kind: method
 date:   2021-06-30 12:00:00
 permalink: /publications/2020_background_removal/
 type: article
@@ -11,11 +12,11 @@ image_large: 2020_background_removal_teaser.png
 image_preview: 2020_background_removal.png
 
 authors:
-- ijsselsteijn
-- somarakis
-- lelieveldt
-- hollt
-- demiranda
+- Marieke E. Ijsselsteijn
+- Antonios Somarakis
+- Boudewijn Lelieveldt
+- Thomas Höllt
+- Noel F.C.C. De Miranda
 
 journal: Cytometry Part A
 journal-short: Cytometry

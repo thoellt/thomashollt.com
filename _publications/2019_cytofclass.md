@@ -2,6 +2,7 @@
 layout: publication
 title: "Predicting cell types in single cell mass cytometry data"
 key: 2019_cytofclass
+kind: method
 date:   2019-03-01 00:00:00
 permalink: /publications/2019_cytofclass/
 type: article
@@ -10,15 +11,16 @@ shortname: CyTOF Classification
 
 image: 
 image_large: 
+image_preview:
 
 
 authors:
-- abdelaal
-- vanunen
-- hollt
-- koning
-- reinders
-- mahfouz
+- Tamim Abdelaal
+- Vincent van Unen
+- Thomas Höllt
+- Frits Koning
+- Marcel Reinders
+- Ahmed Mahfouz
 
 
 journal: Cytometry Part A

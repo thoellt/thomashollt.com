@@ -2,28 +2,29 @@
 layout: publication
 title: "Tumor-specific T cells support chemokine-driven spatial organization of intratumoral immune microaggregates needed for long survival"
 key: 2022_immuno_therapy_cancer
+kind: domain
 date:   2022-03-17 12:00:00
 permalink: /publications/2022_immuno_therapy_cancer/
 type: article
 shortname: 
-image: 2022_immuno_therapy_cancer.png
-image_large: 2022_immuno_therapy_cancer_teaser.png
-image_preview: 2022_immuno_therapy_cancer.png
+image:
+image_large:
+image_preview:
 
 authors:
 - Ziena Abdulrahman
 - Saskia J. Santegoets
 - Gregor Sturm
 - Pornpimol Charoentong
-- ijsselsteijn
-- somarakis
-- hollt
+- Marieke E. Ijsselsteijn
+- Antonios Somarakis
+- Thomas Höllt
 - Francesca Finotello
 - Zlatko Trajanoski
 - Sylvia L. van Egmond
 - Dana A. M. Mustafa
 - Marij J. P. Welters
-- demiranda
+- Noel F.C.C. De Miranda
 - Sjoerd H. van der Burg
 
 journal: Journal for ImmunoTherapy of Cancer

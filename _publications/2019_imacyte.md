@@ -2,6 +2,7 @@
 layout: publication
 title: "ImaCytE: Visual Exploration of Cellular Microenvironments for Imaging Mass Cytometry Data"
 key: 2019_imacyte
+kind: design
 date:   2021-01-01 12:00:00
 permalink: /publications/2019_imacyte/
 type: article
@@ -11,11 +12,11 @@ image_large: 2019_imacyte_large.png
 image_preview: 2019_imacyte.png
 
 authors:
-- somarakis
-- vanunen
-- koning
-- lelieveldt
-- hollt
+- Antonios Somarakis
+- Vincent van Unen
+- Frits Koning
+- Boudewijn Lelieveldt
+- Thomas Höllt
 
 journal: IEEE Transactions on Visualization and Computer Graphics
 journal-short: TVCG

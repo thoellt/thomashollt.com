@@ -1,0 +1,32 @@
+{%- comment -%}
+  Prints an author list. Usage:
+    {% include functions/author_list.html authors=pub.authors %}
+  More than 6 authors: the first 5, then "et al.".
+  Otherwise all of them, the last joined with "and" (Oxford comma for 3 or more).
+  full=true:      never shorten.
+  brief=true:     only the first author and "et al." (one or two authors: all of them).
+  highlight=true: wrap names listed in site.me in <span class="me">.
+{%- endcomment -%}
+{%- assign authors = include.authors -%}
+{%- assign n = authors.size -%}
+{%- assign short = false -%}
+{%- if include.brief and n > 2 -%}
+    {%- assign author = authors | first -%}
+    {%- if include.highlight and site.me contains author -%}<span class="me">{{ author }}</span>{%- else -%}{{ author }}{%- endif -%}
+    {{- " et al." -}}
+{%- else -%}
+{%- if n > 6 and include.full != true -%}
+    {%- assign short = true -%}
+    {%- assign n = 5 -%}
+{%- endif -%}
+{%- for author in authors limit: n -%}
+    {%- if include.highlight and site.me contains author -%}<span class="me">{{ author }}</span>{%- else -%}{{ author }}{%- endif -%}
+    {%- if short -%}
+        {{- ", " -}}{%- if forloop.last -%}et al.{%- endif -%}
+    {%- elsif forloop.rindex == 2 -%}
+        {%- if n == 2 -%}{{- " and " -}}{%- else -%}{{- ", and " -}}{%- endif -%}
+    {%- elsif forloop.last == false -%}
+        {{- ", " -}}
+    {%- endif -%}
+{%- endfor -%}
+{%- endif -%}

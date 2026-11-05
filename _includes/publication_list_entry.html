@@ -1,60 +1,49 @@
-<article class="masonry__brick entry format-standard animate-this">
-    
-    {% if publication.image_preview %}
-    <div class="entry__thumb">
-        <a href="{{ publication.url }}" class="entry__thumb-link">
-            <img src="/assets/papers/{{ publication.key }}/{{ publication.image_preview }}" alt="{{ publication.shortname }} screenshot">
-        </a>
-    </div>
-    {% endif %}
+{%- comment -%}
+  One publication. Usage:
+    {% include publication_list_entry.html publication=publication %}
+    {% include publication_list_entry.html publication=publication year=true %}
+  year=true:   add the year to the venue line (for lists not grouped by year).
+  selected=true: the start page's selected work (full width, no colour marker, authors, venue and award on one line, no links besides the title, first author et al., short venue).
+  List entries never show paper images; those are on the paper pages only.
+{%- endcomment -%}
+{%- assign pub = include.publication -%}
+{%- assign ptype = site.data.paper_types | where: "key", pub.kind | first -%}
+{%- assign kind = site.data.kinds | where_exp: "k", "k.types contains pub.type" | first -%}
 
-    <div class="entry__text">
-        <div class="entry__header">
+{%- comment %} documents live in the publications repository, by (preprint) year {% endcomment -%}
+{%- assign doc_url = site.document_url | append: pub.year -%}
+{%- if pub.preprint-year -%}{%- assign doc_url = site.document_url | append: pub.preprint-year -%}{%- endif -%}
+{%- comment %} GitHub raw serves the documents as downloads, not to view in the browser {% endcomment -%}
+{%- assign doc_arrow = "out" -%}{%- if site.document_url contains "raw.githubusercontent.com" -%}{%- assign doc_arrow = "down" -%}{%- endif -%}
 
-            <div class="entry__title"><a href="{{ publication.url }}">{{ publication.title }}</a></div>
-            <div class="entry__meta">
-                <a href="{{ publication.url }}">
-                <span class="entry__meta-date">
-                    {% if publication.type == "article" %}
-                          {{ publication.journal }},
-                    {% elsif publication.type == "inproceedings" %}
-                          In {{ publication.journal }},
-                    {% elsif publication.type == "book" %}
-                      {{ publication.publisher }},
-                    {% elsif publication.type == "inbook" %}
-                      In {{ publication.journal }}, {{ publication.publisher }},
-                    {% elsif (publication.type == "phdthesis" or publication.type == "mscthesis") %}
-                          {{ publication.school }},
-                    {% else %}
-                          {{ publication.journal }},
-                    {% endif %}
-                    {{publication.year}}
-                </span></a>
-            </div>
-            
-        </div>
-        <div class="entry__excerpt">
-            <p>
-                {{ publication.abstract | truncatewords: 30 }}
-            </p>
-        </div>
-        <div class="entry__links">
-            {% if publication.pdf %}
-                {% assign url = site.document_url | append: publication.year %}
-                {% if publication.preprint-year %}
-                    {% assign url = site.document_url | append: publication.preprint-year %}
-                {% endif %}
-                <a href="{{ url }}/{{ publication.pdf }}" target=_blank><span class="paper-btn">pdf</span></a>
-            {% endif %}
-            
-            {% if publication.code %}<a href="{{ publication.code }}" target=_blank><span class="paper-btn">code</span></a>{% endif %}
-            
-            {% if publication.doi %}
-            <a href="https://dx.doi.org/{{ publication.doi }}" target=_blank><span class="paper-btn">DOI</span></a>
-            {% elsif publication.publisher-url %}
-            <a href="{{ publication.publisher-url }}" target=_blank><span class="paper-btn">DOI</span></a>
-            {% endif %}
-        </div>
-    </div>
+{%- if pub.type == "book" -%}{%- assign venue = "Book, " | append: pub.publisher -%}
+{%- elsif pub.type == "inbook" -%}{%- assign venue = pub.journal | append: ", " | append: pub.publisher -%}
+{%- elsif pub.type == "phdthesis" or pub.type == "mscthesis" -%}{%- assign venue = pub.school -%}
+{%- else -%}{%- assign venue = pub.journal -%}{%- endif -%}
+{%- comment %} selected work: the short venue name, where there is one {% endcomment -%}
+{%- if include.selected and pub.journal-short and pub.journal-short != "" -%}{%- assign venue = pub.journal-short -%}{%- endif -%}
 
-</article> <!-- end article -->
+<article class="pub{% if include.selected %} pub-selected{% endif %}" data-type="{{ kind.key }}" data-paper="{{ pub.kind }}">
+  {%- unless include.selected %}
+  <span class="dab topic c-{{ ptype.color }}" title="{{ ptype.label }}"></span>
+  {%- endunless %}
+  {%- comment %} the arrow is joined to the last word of the title, so it never wraps onto a line of its own {% endcomment %}
+  {%- assign title_last = pub.title | split: " " | last %}
+  {%- assign title_head_size = pub.title.size | minus: title_last.size %}
+  <h3><a href="{{ pub.url | relative_url }}">{{ pub.title | slice: 0, title_head_size }}<span class="nobr">{{ title_last }}{% include arrow.html %}</span></a></h3>
+  <p class="authors">{% include functions/author_list.html authors=pub.authors highlight=true brief=include.selected %}</p>
+  <p class="venue">
+    {{- venue }}{% if include.year %}, {{ pub.year }}{% endif %}
+    {%- if pub.award %} <span class="badge">{{ pub.award }}</span>{% endif -%}
+  </p>
+  {%- unless include.selected %}
+  {%- comment %} only PDF, DOI and BibTeX here; code, supplements and videos are on the paper page {% endcomment %}
+  {%- include functions/create_bibtex.html publication=pub %}
+  <div class="pub-links">
+    {%- if pub.pdf %}<a href="{{ doc_url }}/{{ pub.pdf }}" target="_blank">PDF{% include arrow.html to=doc_arrow %}</a>{% endif %}
+    {%- if pub.doi %}<a href="https://dx.doi.org/{{ pub.doi }}" target="_blank">DOI{% include arrow.html to="out" %}</a>
+    {%- elsif pub.publisher-url %}<a href="{{ pub.publisher-url }}" target="_blank">DOI{% include arrow.html to="out" %}</a>{% endif %}
+    <a href="data:application/x-bibtex;charset=utf-8,{{ bibtex | url_encode | replace: '+', '%20' }}" download="{{ pub.key }}.bib">BibTeX{% include arrow.html to="down" %}</a>
+  </div>
+  {%- endunless %}
+</article>

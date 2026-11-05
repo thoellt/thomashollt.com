@@ -2,6 +2,7 @@
 layout: publication
 title: "Multiscale Visualization and Exploration of Large Bipartite Graphs"
 key: 2018_eurovis_waowvis
+kind: method
 date:   2018-06-15 12:00:00
 permalink: /publications/2018_eurovis_waowvis/
 type: article
@@ -11,12 +12,12 @@ image_large: 2018_eurovis_waowvis_teaser.png
 image_preview: 2018_eurovis_waowvis.png
 
 authors:
-- pezzotti
+- Nicola Pezzotti
 - Jean-Daniel Fekete
-- hollt
-- lelieveldt
-- eisemann
-- vilanova
+- Thomas Höllt
+- Boudewijn Lelieveldt
+- Elmar Eisemann
+- Anna Vilanova
 
 journal: Computer Graphics Forum (Proceedings of EuroVis 2018)
 journal-short: CGF (EuroVis 2018)

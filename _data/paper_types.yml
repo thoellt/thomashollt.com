@@ -1,0 +1,17 @@
+# Paper types, matched against `kind` in the publication files.
+# color: one of the pigments defined in assets/css/main.css
+- key: method
+  label: Method
+  color: terracotta
+- key: design
+  label: Design Study & Systems
+  color: dusk
+- key: position
+  label: Position
+  color: rose
+- key: survey
+  label: Survey
+  color: ochre
+- key: domain
+  label: Domain
+  color: sage

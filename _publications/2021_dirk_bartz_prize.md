@@ -2,6 +2,7 @@
 layout: publication
 title: "Visual Analysis of Tissue Images at Cellular Level"
 key: 2021_dirk_bartz_prize
+kind: design
 date:   2021-04-29 12:00:00
 permalink: /publications/2021_dirk_bartz_prize/
 type: inproceedings
@@ -11,16 +12,16 @@ image_large: 2021_dirk_bartz_prize_teaser.png
 image_preview: 2021_dirk_bartz_prize.png
 
 authors:
-- somarakis
-- ijsselsteijn
-- kenkhuis
-- vanunen
-- luk
-- koning
-- vanderweerd
-- demiranda
-- lelieveldt
-- hollt
+- Antonios Somarakis
+- Marieke E. Ijsselsteijn
+- Boyd Kenkhuis
+- Vincent van Unen
+- Sietse J. Luk
+- Frits Koning
+- Louise van der Weerd
+- Noel F.C.C. De Miranda
+- Boudewijn Lelieveldt
+- Thomas Höllt
 
 journal: EuroVis 2021 - Dirk Bartz Prize
 journal-short: Dirk Bartz Prize

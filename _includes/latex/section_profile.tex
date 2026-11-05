@@ -1,0 +1,23 @@
+{%- comment -%} Professional profile, guest stays and education (_profiles). {%- endcomment -%}
+{%- assign profiles = site.profiles | reverse %}
+\section*{Professional Profile}
+\vspace{-2mm}
+\begin{description}[style=multiline,leftmargin=3.5cm,font=\normalfont]
+{%- for entry in profiles %}{% if entry.type == "work" %}
+{% include latex/profile_entry.tex %}
+{%- endif %}{% endfor %}
+\end{description}
+
+\subsection*{Guest Research Stays}
+\begin{description}[style=multiline,leftmargin=3.5cm,font=\normalfont]
+{%- for entry in profiles %}{% if entry.type == "guest" %}
+{% include latex/profile_entry.tex %}
+{%- endif %}{% endfor %}
+\end{description}
+
+\subsection*{Education}
+\begin{description}[style=multiline,leftmargin=3.5cm,font=\normalfont]
+{%- for entry in profiles %}{% if entry.type == "education" %}
+{% include latex/profile_entry.tex %}
+{%- endif %}{% endfor %}
+\end{description}

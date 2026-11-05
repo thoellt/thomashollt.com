@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
   {% include head.html %}
 </head>
 
 <body>
 
-    <!-- preloader ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+    <div id="top" class="wrap">
 
-    <div id="top" class="s-wrap site-wrapper">
-    
       {% include navigation.html %}
-    
-      {{ content }}
 
-      <!-- footer ================================================== -->
+      <main>
+      {{ content }}
+      </main>
+
       {% include footer.html %}
 
-    </div> <!-- end s-wrap -->
+    </div> <!-- end wrap -->
 
     <!-- Java Script ================================================== -->
-    <script src="/assets/js/jquery-3.2.1.min.js"></script>
-    <script src="/assets/js/plugins.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="{{ '/assets/js/search-data.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
 </body>
+</html>

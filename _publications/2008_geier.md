@@ -2,15 +2,17 @@
 layout: publication
 title: "Interaktive Exploration und Quantifizierung von Ungänzen in komplexen Bauteilen"
 key: 2008_geier
+kind: domain
 type: article
 shortname: 
 image:
-image_large: 2008_vis_teaser.png
+image_large:
+image_preview:
 
 authors:
 - Georg Geier
-- hadwiger
-- hollt
+- Markus Hadwiger
+- Thomas Höllt
 - Laura Fritz
 - Thomas Pabel
 

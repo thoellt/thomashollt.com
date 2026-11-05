@@ -2,6 +2,7 @@
 layout: publication
 title: "Visual Cohort Comparison for Spatial Single-Cell Omics-Data"
 key: 2020_vis_cohort
+kind: design
 date:   2021-02-01 12:00:00
 permalink: /publications/2020_vis_cohort/
 type: article
@@ -11,13 +12,13 @@ image_large: 2020_vis_cohort_teaser.png
 image_preview: 2020_vis_cohort.png
 
 authors:
-- somarakis
-- ijsselsteijn
-- luk
-- kenkhuis
-- demiranda
-- lelieveldt
-- hollt
+- Antonios Somarakis
+- Marieke E. Ijsselsteijn
+- Sietse J. Luk
+- Boyd Kenkhuis
+- Noel F.C.C. De Miranda
+- Boudewijn Lelieveldt
+- Thomas Höllt
 
 journal: IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VAST 2020)
 journal-short: TVCG (VAST '20)

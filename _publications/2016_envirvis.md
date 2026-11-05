@@ -2,6 +2,7 @@
 layout: publication
 title: "Visual Analysis of Reservoir Simulation Ensembles"
 key: 2016_envirvis
+kind: design
 type: inproceedings
 shortname: 
 image: 2016_envirvis.png
@@ -9,10 +10,10 @@ image_large: 2016_envirvis_teaser.png
 image_preview: 2016_envirvis.png
 
 authors:
-- hollt
+- Thomas Höllt
 - Fabio M. de Matos Ravanelli
-- hadwiger
-- hoteit
+- Markus Hadwiger
+- Ibrahim Hoteit
 
 journal: Proceedings of Workshop on Visualisation in Environmental Sciences
 jourunal-short: EnvirVis

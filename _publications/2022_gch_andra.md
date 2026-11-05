@@ -2,6 +2,7 @@
 layout: publication
 title: "Visual Analysis of RIS Data for Endmember Selection"
 key: 2022_gch_andra
+kind: design
 date:   2022-09-01 12:00:00
 permalink: /publications/2022_gch_andra/
 type: inproceedings
@@ -11,14 +12,14 @@ image_large: 2022_gch_andra_teaser.png
 image_preview: 2022_gch_andra.png
 
 authors:
-- popa
-- gabrieli
-- kroes
+- Andra Popa
+- Francesca Gabrieli
+- Thomas Kroes
 - Anna Krekeler
-- alfeld
-- lelieveldt
-- eisemann
-- hollt
+- Matthias Alfeld
+- Boudewijn Lelieveldt
+- Elmar Eisemann
+- Thomas Höllt
 
 journal: Proceedings of Eurographics Workshop on Graphics and Cultural Heritage Short Papers
 journal-short: GCH

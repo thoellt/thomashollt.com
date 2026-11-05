@@ -5,18 +5,19 @@ key: 2024_hyperbolic
 date:   2024-02-12 12:00:00
 permalink: /publications/2024_hyperbolic/
 type: article
+kind: method
 shortname: Accelerating Hyperbolic t-SNE
 image: 2024_hyperbolic.png
 image_large: 2024_hyperbolic_teaser.png
 image_preview: 2024_hyperbolic.png
 
 authors:
-- skrodzki
+- Martin Skrodzki
 - Hunter van Geffen
 - Nicolas F. Chaves-de-Plaza
-- hollt
-- eisemann
-- hildebrandt
+- Thomas Höllt
+- Elmar Eisemann
+- Klaus Hildebrandt
 
 journal: IEEE Transactions on Visualization and Computer Graphics
 journal-short: TVCG

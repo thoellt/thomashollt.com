@@ -5,6 +5,7 @@ key: 2025_ai_in_the_loop
 date:   2025-06-01 12:00:00
 permalink: /publications/2025_ai_in_the_loop/
 type: article
+kind: position
 shortname: AI in the Loop
 image: 2025_ai_in_the_loop.png
 image_large: 2025_ai_in_the_loop_teaser.png
@@ -12,7 +13,7 @@ image_preview: 2025_ai_in_the_loop.png
 
 authors:
 - Katja Bühler
-- hollt
+- Thomas Höllt
 - Thomas Schultz
 - Pere-Pau Vázquez
 

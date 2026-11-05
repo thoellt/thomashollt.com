@@ -2,6 +2,7 @@
 layout: publication
 title: "Visual Analysis of Uncertainties in Ocean Forecasts for Planning and Operation of Off-Shore Structures"
 key: 2013_pacificvis
+kind: design
 type: inproceedings
 shortname: 
 image: 2013_pacificvis.png
@@ -9,13 +10,13 @@ image_large: 2013_pacificvis_teaser.png
 image_preview: 2013_pacificvis.png
 
 authors:
-- hollt
+- Thomas Höllt
 - Ahmed Magby
 - Guoning Chen
 - Ganesh Gopalakrishnan
-- hoteit
+- Ibrahim Hoteit
 - Charles D. Hansen
-- hadwiger
+- Markus Hadwiger
 
 journal: Proceedings of IEEE Pacific Visualization Symposium
 jourunal-short: Pacific Vis
@@ -24,7 +25,7 @@ page_end: 192
 volume: 
 issue: 
 year: 2013
-award: Honorable mention for best paper award
+award: Best Paper Honorable Mention
 
 doi: 10.1109/PacificVis.2013.6596144
 pdf: 2013_pacificvis.pdf

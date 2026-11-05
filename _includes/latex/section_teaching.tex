@@ -1,0 +1,42 @@
+{%- comment -%} Teaching: coordination roles and teaching activities (_activities), courses (_courses), training. {%- endcomment -%}
+{%- assign visible = site.activities | where_exp: "a", "a.cv != false" -%}
+{%- assign coordination = visible | where: "type", "coordination" | sort: "start" | reverse -%}
+{%- assign other_teaching = visible | where: "type", "teaching" | sort: "start" | reverse -%}
+{%- assign training = visible | where: "type", "training" -%}
+{%- assign courses = site.courses | where_exp: "c", "c.cv != false" | sort: "year" | reverse -%}
+{%- comment -%} runs of a course (same `group`, or same `key`) become one entry, most recent first {%- endcomment -%}
+{%- assign course_groups = courses | group_by_exp: "c", "c.group | default: c.key" %}
+\section*{Teaching}
+{%- if coordination.size > 0 %}
+\subsection*{Coordination}
+\begin{description}[style=multiline,leftmargin=2.0cm,font=\normalfont]
+{%- for a in coordination %}
+\item[{% include latex/dates.tex start=a.start end=a.end dates=a.dates %}] {% include latex/escape.tex text=a.role %}, {% include latex/link.tex text=a.title url=a.link %}, {% include latex/escape.tex text=a.program %}.
+{%- endfor %}
+\end{description}
+{%- endif %}
+{%- if course_groups.size > 0 or other_teaching.size > 0 %}
+
+\subsection*{Courses}
+\begin{description}[style=multiline,leftmargin=2.0cm,font=\normalfont]
+{%- for group in course_groups %}
+{%- assign latest = group.items | first %}
+{%- assign earliest = group.items | last %}
+{%- assign keys = group.items | map: "key" | uniq | reverse | join: "/" %}
+{%- assign programs = group.items | map: "program" | compact | uniq | reverse | join: " and " %}
+{%- assign url = latest.courseguide | first %}
+\item[{% include latex/dates.tex start=earliest.year end=latest.year %}] {% include latex/escape.tex text=latest.role %}, {% include latex/escape.tex text=keys %}: {% include latex/link.tex text=latest.title url=url %},
+{%- if programs != "" %} {% include latex/escape.tex text=programs %},{% endif %} {% include latex/escape.tex text=latest.org %}.
+{%- endfor %}
+{%- for a in other_teaching %}
+\item[{% include latex/dates.tex start=a.start end=a.end dates=a.dates %}] {% include latex/md.tex text=a.content %}
+{%- endfor %}
+\end{description}
+{%- endif %}
+{%- if training.size > 0 %}
+
+\subsection*{Training}
+{%- for a in training %}
+{% include latex/md.tex text=a.content %}
+{% endfor %}
+{%- endif %}

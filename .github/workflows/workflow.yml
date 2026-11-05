@@ -15,23 +15,23 @@ jobs:
     name: deploy
     # Here we specify in whith OS we want it to run
     runs-on: ubuntu-latest
+    # The action pushes the built site to the gh-pages branch,
+    # so the GITHUB_TOKEN needs write access to the repository contents
+    permissions:
+      contents: write
     # Now we define which actions will take place.
     # One after another
     steps:
       # This is the first action. It will make sure that we have
       # all the necessary files from our repo, including our custom actions
       # This action here is actually from a remote repo available from Githup itself
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       # This is our custom action. Here is where we will define our git commands
       # to push our website updates to the `gh-pages` branch.
       # Notice that we are specifying the path to the action here.
-      # We will create those files in a sec
       - uses: ./.github/actions/build-dist-site
         env:
-          # Now make sure you add this environment variable.
           # This token will allow us to push to github directly
           # without having to type in our password.
-          # The GITHUB_TOKEN is available by default 
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-         GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          # GITHUB_REPOSITORY and GITHUB_ACTOR are set by Github itself.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

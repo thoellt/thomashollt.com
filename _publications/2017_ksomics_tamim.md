@@ -2,19 +2,21 @@
 layout: publication
 title: "Mass Cytometry Marker Panel Extension"
 key: 2017_ksomics_tamim
+kind: method
 type: poster
 shortname: 
 image:
 image_large:
+image_preview:
 
 authors:
-- abdelaal
-- mahfouz
-- hollt
-- vanunen
-- koning
-- lelieveldt
-- reinders
+- Tamim Abdelaal
+- Ahmed Mahfouz
+- Thomas Höllt
+- Vincent van Unen
+- Frits Koning
+- Boudewijn Lelieveldt
+- Marcel Reinders
 
 journal: Poster Presentation, Keystone Symposia on Molecular and Cellular Biology; Single Cell Omics, Stockholm, Swe
 jourunal-short: 

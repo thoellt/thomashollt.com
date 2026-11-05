@@ -2,26 +2,27 @@
 layout: publication
 title: "Mass Cytometry Reveals Innate Lymphoid Cell Differentiation Pathways in the Human Fetal Intestine"
 key: 2018_exp_medicine
+kind: domain
 date:   2018-03-06 12:00:00
 permalink: /publications/2018_exp_medicine/
 type: article
 shortname: Innate Lymphoid Differentiation
-image: 2018_exp_medicine.jpg
-image_large: 2018_exp_medicine_teaser.png
-image_preview: 2018_exp_medicine.jpg
+image:
+image_large:
+image_preview:
 
 authors:
-- lina
-- vanunen
-- hollt
+- Na Li
+- Vincent van Unen
+- Thomas Höllt
 - Allan Thompson
 - Jeroen van Bergen
-- pezzotti
-- eisemann
-- vilanova
+- Nicola Pezzotti
+- Elmar Eisemann
+- Anna Vilanova
 - Susana M. Chuva de Sousa Lopes
-- lelieveldt
-- koning
+- Boudewijn Lelieveldt
+- Frits Koning
 
 journal: Journal of Experimental Medicine
 journal-short: JEM

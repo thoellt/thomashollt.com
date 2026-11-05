@@ -22,6 +22,7 @@ echo "⚡️ Installing project dependencies..."
 bundle install
 
 # Build the website using Jekyll
+# (this also compiles the CV PDF, _plugins/cv_pdf.rb; a LaTeX error stops the deploy)
 echo "🏋️ Building website..."
 JEKYLL_ENV=production bundle exec jekyll build
 echo "Jekyll build done"
@@ -34,6 +35,9 @@ echo "☁️ Publishing website"
 
 # We don't need the README.md file on this branch
 rm -f README.md
+
+# The site is already built: tell GitHub Pages not to run Jekyll over it again
+touch .nojekyll
 
 # Now we init a new git repository inside _site
 # So we can perform a commit

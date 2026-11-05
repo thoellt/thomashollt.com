@@ -2,26 +2,28 @@
 layout: publication
 title: "Mass Cytometry of the Human Mucosal Immune System Identifies Tissue- and Disease-Associated Immune Subsets"
 key: 2016_immunity_vvu
+kind: domain
 date:   2016-05-10 12:00:00
 permalink: /publications/2016_immunity_vvu/
 type: article
 shortname: Mass Cytometry of the Human Mucosal Immune System
-image: 2016_immunity_vvu.png
+image:
 image_large:
+image_preview:
 
 authors:
-- vanunen
-- lina
+- Vincent van Unen
+- Na Li
 - Ilse Molendijk
 - Mine Temurhan
-- hollt
+- Thomas Höllt
 - Andrea E. van der Meulen-de Jong
 - Hein W. Verspaget
 - M. Luisa Mearin
 - Chris J. Mulder
 - Jeroen van Bergen
-- lelieveldt
-- koning
+- Boudewijn Lelieveldt
+- Frits Koning
 
 journal: Immunity
 journal-short: Immunity

@@ -2,6 +2,7 @@
 layout: publication
 title: "InCorr: Interactive Data-Driven Correlation Panels for Digital Outcrop Analysis"
 key: 2020_vis_incorr
+kind: design
 date:   2021-02-01 12:00:00
 permalink: /publications/2020_vis_incorr/
 type: article
@@ -15,7 +16,7 @@ authors:
 - Andreas Walch
 - Rebecca Nowak
 - Robert Barnes
-- hollt
+- Thomas Höllt
 - Meister Eduard Gröller
 
 journal: IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VAST 2020)

@@ -2,6 +2,7 @@
 layout: publication
 title: "Guidelines for the Use of Flow Cytometry and Cell Sorting in Immunological Studies (Second Edition)"
 key: 2019_cytometry_guidelines
+kind: survey
 date:
 -  2019-10-21 12:00:00
 permalink: /publications/2019_cytometry_guidelines/
@@ -171,7 +172,7 @@ authors:
 - Petra Hoffmann
 - Kristin Hogquist
 - Tristan Holland
-- hollt
+- Thomas Höllt
 - Rikard Holmdahl
 - Pleun Hombrink
 - Jessica P. Houston

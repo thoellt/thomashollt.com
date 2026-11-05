@@ -2,22 +2,24 @@
 layout: publication
 title: "Heterogeneity of Circulating CD8 T-cells Specific to Islet, Neo-antigen and Virus in Patients with Type 1 Diabetes Mellitus"
 key: 2018_plos_circulating_t_cells
+kind: domain
 date:   2018-08-08 12:00:00
 permalink: /publications/2018_plos_circulating_t_cells/
 type: article
 shortname: Circulating CD8 T-Cells
-image: 2018_plos_circulating_t_cells.png
+image:
+image_preview:
 
 authors:
 - Sandra Laban
 - Jessica S. Suwandi
-- vanunen
+- Vincent van Unen
 - Jos Pool
 - Joris Wesselius
-- hollt
-- pezzotti
-- vilanova
-- lelieveldt
+- Thomas Höllt
+- Nicola Pezzotti
+- Anna Vilanova
+- Boudewijn Lelieveldt
 - Bart O. Roep
 
 

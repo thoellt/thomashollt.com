@@ -2,39 +2,40 @@
 layout: publication
 title: "Systems Analysis and Controlled Malaria Infection in Europeans and Africans Elucidate Naturally Acquired Immunity"
 key: 2021_nature_immunology
+kind: domain
 date:   2021-04-22 12:00:00
 permalink: /publications/2021_nature_immunology/
 type: article
 shortname: Malaria Infection in Europeans and Africans
-image: 2021_nature_immunology.png
-image_large: 2021_nature_immunology_teaser.png
-image_preview: 2021_nature_immunology.png
+image:
+image_large:
+image_preview:
 
 authors:
 - Sanne E. de Jong
-- vanunen
+- Vincent van Unen
 - Mikhael D. Manurung
 - Koen A. Stam
 - Jelle J. Goeman
 - Simon P. Jochems
-- hollt
-- pezzotti
+- Thomas Höllt
+- Nicola Pezzotti
 - Yoanne D. Mouwenda
 - Madeleine Eunice Betouke Ongwe
 - Freia-Raphaella Lorenz
 - Yvonne C. M. Kruize
 - Shohreh Azimi
 - Marion H. König
-- vilanova
-- eisemann
-- lelieveldt
+- Anna Vilanova
+- Elmar Eisemann
+- Boudewijn Lelieveldt
 - Meta Roestenberg
 - B. Kim Lee Sim
-- reinders
+- Marcel Reinders
 - Rolf Fendel
 - Stephen L. Hoffman
 - Peter G. Kremsner
-- koning
+- Frits Koning
 - Benjamin Mordmüller
 - Bertrand Lell
 - Maria Yazdanbakhsh

@@ -2,6 +2,7 @@
 layout: publication
 title: "Visualizing Uncertainties in a Storm Surge Ensemble Data Assimilation and Forecasting System"
 key: 2015_nathazards
+kind: design
 type: article
 shortname:
 image: 2015_nathazards.png
@@ -9,12 +10,12 @@ image_large: 2015_nathazards_teaser.png
 image_preview: 2015_nathazards.png
 
 authors:
-- hollt
+- Thomas Höllt
 - Mohamed U. Altaf
 - Kyle T. Mandli
-- hadwiger
+- Markus Hadwiger
 - Clint N. Dawson
-- hoteit
+- Ibrahim Hoteit
 
 journal: Natural Hazards
 jourunal-short:

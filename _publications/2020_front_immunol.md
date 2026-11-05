@@ -2,25 +2,26 @@
 layout: publication
 title: "Visualizing Dynamic Changes at the Maternal-Fetal Interface Throughout Human Pregnancy by Mass Cytometry"
 key: 2020_front_immunol
+kind: domain
 date:   2020-10-26 12:00:00
 permalink: /publications/2020_front_immunol/
 type: article
 shortname: Visualizing the Maternal-Fetal Interface 
-image: 2020_front_immunol.png
-image_large: 2020_front_immunol_teaser.png
-image_preview: 2020_front_immunol.png
+image:
+image_large:
+image_preview:
 
 authors:
 - Anita van der Zwan
-- vanunen
+- Vincent van Unen
 - Guillaume Beyrend
 - Sandra Laban
 - Carin van der Keur
 - Hanneke J. M. Kapsenberg
-- hollt
+- Thomas Höllt
 - Susana M. Chuva de Sousa Lopes
 - Marie-Louise P. van der Hoorn
-- koning
+- Frits Koning
 - Frans H. J. Claas
 - Michael Eikmans
 - Sebastiaan Heidt

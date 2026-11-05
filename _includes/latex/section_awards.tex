@@ -1,0 +1,20 @@
+{%- comment -%} Grants and awards & prizes (_awards). {%- endcomment -%}
+{%- assign awards = site.awards | reverse %}
+\section*{Grants \& Awards}
+\renewcommand{\arraystretch}{1.75}
+{%- assign award_groups = "grant:Grants|prize:Awards \& Prizes" | split: "|" %}
+{%- for group in award_groups %}
+{%- assign group_type = group | split: ":" | first %}
+{%- assign group_awards = awards | where: "type", group_type %}
+{%- if group_awards.size > 0 %}
+
+\subsection*{ {{- group | split: ":" | last -}} }
+\vspace{-5mm}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}r@{}}
+{%- for award in group_awards %}
+{%- capture award_html %}{{ award.content | markdownify }}{% endcapture %}
+{% include latex/html.tex html=award_html %} & {% include latex/escape.tex text=award.value %}\\
+{%- endfor %}
+\end{tabularx}
+{%- endif %}
+{%- endfor %}

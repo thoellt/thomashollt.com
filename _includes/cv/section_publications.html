@@ -1,0 +1,18 @@
+{%- comment -%} Publications (_publications), grouped by type and numbered throughout. Mirrors latex/section_publications.tex. {%- endcomment -%}
+{%- assign publications = site.publications | sort: "year" | reverse -%}
+{%- assign groups = "preprint:Preprints|inproceedings,article:Peer Reviewed Journal & Conference Papers|book,inbook:Books & Bookchapters|poster:Posters & Abstracts|mscthesis,phdthesis:Theses" | split: "|" -%}
+{%- assign item_number = 1 -%}
+<h1>Publications</h1>
+{%- for group in groups %}
+{%- assign group_types = group | split: ":" | first | split: "," %}
+{%- assign group_pubs = publications | where_exp: "p", "group_types contains p.type" %}
+{%- if group_pubs.size > 0 %}
+<header class="listing-header"><h2>{{ group | split: ":" | last }}</h2></header>
+<div class="cv-pub-block">
+  {%- for publication in group_pubs %}
+  {% include cv/publication_entry.html %}
+  {%- assign item_number = item_number | plus: 1 %}
+  {%- endfor %}
+</div>
+{%- endif %}
+{%- endfor %}

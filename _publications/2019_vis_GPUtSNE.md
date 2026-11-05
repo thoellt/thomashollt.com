@@ -2,6 +2,7 @@
 layout: publication
 title: "GPGPU Linear Complexity t-SNE Optimization"
 key: 2019_vis_GPUtSNE
+kind: method
 date:   2020-01-01 12:00:00
 permalink: /publications/2019_vis_GPUtSNE/
 redirect_from: /publications/2018_arxiv_ttsne/
@@ -12,14 +13,14 @@ image_large: 2019_vis_GPUtSNE_teaser.png
 image_preview: 2019_vis_GPUtSNE.png
 
 authors:
-- pezzotti
+- Nicola Pezzotti
 - Julian Thijssen
 - Alexander Mordvintsev
-- hollt
+- Thomas Höllt
 - Baldur van Lew
-- lelieveldt
-- eisemann
-- vilanova
+- Boudewijn Lelieveldt
+- Elmar Eisemann
+- Anna Vilanova
 
 journal: IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VAST 2019)
 journal-short: TVCG (VAST '19)

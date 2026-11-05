@@ -2,18 +2,20 @@
 layout: publication
 title: "Computertomographie als zerstörungsfreies Prüfverfahren für Gussteile"
 key: 2010_geier
+kind: domain
 type: article
 shortname: 
 image:
-image_large: 2008_vis_teaser.png
+image_large:
+image_preview:
 
 authors:
 - Georg Geier
 - Thomas Pabel
 - Daniel Habe
 - Jördis Rosc
-- hadwiger
-- hollt
+- Markus Hadwiger
+- Thomas Höllt
 - Laura Fritz
 
 journal: Druckguss-Praxis

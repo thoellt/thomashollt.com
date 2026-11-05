@@ -2,6 +2,7 @@
 layout: publication
 title: "DeepEyes: Progressive Visual Analytics for Designing Deep Neural Networks"
 key: 2017_vis_deepeyes
+kind: design
 date:   2018-01-01 12:00:00
 permalink: /publications/2017_vis_deepeyes/
 type: article
@@ -11,12 +12,12 @@ image_large: 2017_vis_deepeyes_teaser.png
 image_preview: 2017_vis_deepeyes.png
 
 authors:
-- pezzotti
-- hollt
+- Nicola Pezzotti
+- Thomas Höllt
 - Jan van Gemert
-- lelieveldt
-- eisemann
-- vilanova
+- Boudewijn Lelieveldt
+- Elmar Eisemann
+- Anna Vilanova
 
 journal: IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VAST 2017)
 journal-short: TVCG (VAST '17)

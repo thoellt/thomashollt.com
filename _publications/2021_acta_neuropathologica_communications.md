@@ -2,25 +2,26 @@
 layout: publication
 title: "Iron Loading is a Prominent Feature of Activated Microglia in Alzheimer’s Disease Patients"
 key: 2021_acta_neuropathologica_communications
+kind: domain
 date:   2021-02-17 12:00:00
 permalink: /publications/2021_acta_neuropathologica_communications/
 type: article
 shortname: "Iron Loading in Alzheimer’s Disease"
-image: 2021_acta_neuropathologica_communications.png
-image_large: 2021_acta_neuropathologica_communications_teaser.png
-image_preview: 2021_acta_neuropathologica_communications.png
+image:
+image_large:
+image_preview:
 
 authors:
-- kenkhuis
-- somarakis
+- Boyd Kenkhuis
+- Antonios Somarakis
 - Lorraine de Haan
 - Oleh Dzyubachyk
-- ijsselsteijn
-- demiranda
-- lelieveldt
+- Marieke E. Ijsselsteijn
+- Noel F.C.C. De Miranda
+- Boudewijn Lelieveldt
 - Willeke M. C. van Roon-Mom
-- hollt
-- vanderweerd
+- Thomas Höllt
+- Louise van der Weerd
 
 journal: Acta Neuropathologica Communications
 journal-short: Acta Neuropathol Commun

@@ -2,6 +2,7 @@
 layout: publication
 title: "Approximated and User Steerable tSNE for Progressive Visual Analytics"
 key: 2017_tvcg_atsne
+kind: method
 date:   2017-01-01 12:00:00
 permalink: /publications/2017_tvcg_atsne/
 type: article
@@ -11,12 +12,12 @@ image_large: 2017_tvcg_atsne_teaser.png
 image_preview: 2017_tvcg_atsne.png
 
 authors:
-- pezzotti
-- lelieveldt
+- Nicola Pezzotti
+- Boudewijn Lelieveldt
 - Laurens van der Maaten
-- hollt
-- eisemann
-- vilanova
+- Thomas Höllt
+- Elmar Eisemann
+- Anna Vilanova
 
 journal: IEEE Transactions on Visualization and Computer Graphics
 journal-short: TVCG

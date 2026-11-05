@@ -3,23 +3,24 @@ layout: publication
 title: "Cytosplore Simian Viewer: Visual Exploration for Multi-Species Single-Cell RNA Sequencing Data"
 key: 2023_vcbm_soumyadeep
 type: inproceedings
+kind: design
 shortname: Cytosplore Simian Viewer
 image: 2023_vcbm_soumyadeep.png
 image_large: 2023_vcbm_soumyadeep_teaser.png
 image_preview: 2023_vcbm_soumyadeep.png
 
 authors:
-- basu
-- eggermont
-- kroes
+- Soumyadeep Basu
+- Jeroen Eggermont
+- Thomas Kroes
 - Nikolas Jorstad
 - Trygve Bakken
 - Ed Lein
-- lelieveldt
-- hollt
+- Boudewijn Lelieveldt
+- Thomas Höllt
 
 journal: Eurographics Workshop on Visual Computing in Biology and Medicine
-jourunal-short: VCBM
+journal-short: VCBM
 page_start: 111
 page_end: 120
 volume:

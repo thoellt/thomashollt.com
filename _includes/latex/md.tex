@@ -1,0 +1,3 @@
+{%- comment -%} Markdown (front matter text or a document body) to LaTeX: include latex/md.tex text=… {%- endcomment -%}
+{%- capture md_html %}{{ include.text | markdownify }}{% endcapture -%}
+{%- include latex/html.tex html=md_html -%}

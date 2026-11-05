@@ -3,18 +3,19 @@ layout: publication
 title: "Interactive Visual Exploration of Region-Based Sensitivities in Fiber Tracking"
 key: 2023_vcbm_faizan
 type: inproceedings
+kind: method
 shortname: Sensitivities in Fiber Tracking
 image: 2023_vcbm_faizan.png
 image_large: 2023_vcbm_faizan_teaser.png
 image_preview: 2023_vcbm_faizan.png
 
 authors:
-- siddiqui
-- hollt
-- vilanova
+- Faizan Siddiqui
+- Thomas Höllt
+- Anna Vilanova
 
 journal: Eurographics Workshop on Visual Computing in Biology and Medicine
-jourunal-short: VCBM
+journal-short: VCBM
 page_start: 13
 page_end: 22
 volume:

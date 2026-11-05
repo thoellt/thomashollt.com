@@ -2,6 +2,7 @@
 layout: publication
 title: "Visual Analysis of Mass Cytometry Data by Hierarchical Stochastic Neighbor Embedding Reveals Rare Cell Types"
 key: 2017_hsne_preprint
+kind: method
 date:   2017-11-23 12:00:00
 permalink: /publications/2017_hsne_nature_communications/
 redirect_from: /publications/2017_hsne_preprint/
@@ -12,15 +13,15 @@ image_large: 2017_hsne_preprint_teaser.png
 image_preview: 2017_hsne_preprint.png
 
 authors:
-- vanunen
-- hollt
-- pezzotti
-- lina
-- reinders
-- eisemann
-- vilanova
-- koning
-- lelieveldt
+- Vincent van Unen
+- Thomas Höllt
+- Nicola Pezzotti
+- Na Li
+- Marcel Reinders
+- Elmar Eisemann
+- Anna Vilanova
+- Frits Koning
+- Boudewijn Lelieveldt
 
 journal: Nature Communications
 journal-short: Nat Comm

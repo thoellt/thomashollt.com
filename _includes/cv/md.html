@@ -1,0 +1,2 @@
+{%- comment -%} Inline markdown (links, emphasis) without the paragraph wrapper. {%- endcomment -%}
+{{- include.text | markdownify | replace: "</p>", " " | remove: "<p>" | strip -}}

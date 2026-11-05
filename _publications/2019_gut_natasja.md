@@ -2,27 +2,28 @@
 layout: publication
 title: "High-Dimensional Cytometric Analysis of Colorectal Cancer Reveals Novel Mediators of Antitumour Immunity"
 key: 2019_gut_antitumor
+kind: domain
 date:   2019-07-03 12:00:00
 permalink: /publications/2019_gut_antitumor/
 type: article
 shortname: Mediators of Antitumour Immunity
-image: 2019_gut_antitumor.png
-image_large: 2019_gut_antitumor_teaser.png
-image_preview: 2019_gut_antitumor.png
+image:
+image_large:
+image_preview:
 
 authors:
 - Natasja L de Vries
-- vanunen
-- ijsselsteijn
-- abdelaal
+- Vincent van Unen
+- Marieke E. Ijsselsteijn
+- Tamim Abdelaal
 - Ruud van der Breggen
 - Arantza Farina Sarasqueta
-- mahfouz
+- Ahmed Mahfouz
 - Koen C M J Peeters
-- hollt
-- lelieveldt
-- koning
-- demiranda
+- Thomas Höllt
+- Boudewijn Lelieveldt
+- Frits Koning
+- Noel F.C.C. De Miranda
 
 journal: Gut
 journal-short: Gut

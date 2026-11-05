@@ -1,0 +1,7 @@
+{%- comment -%}
+  Arrow after a link outside running text: to="in" → another page of this site (default), "out" ↗ leaves the site, "down" ↘ download.
+  One arrow, rotated for the other two, drawn in the link colour (currentColor), no background. Styled by .arrow in main.css.
+{%- endcomment -%}
+{%- assign to = include.to | default: "in" -%}
+{%- case to -%}{%- when "out" -%}{%- assign rot = -45 -%}{%- when "down" -%}{%- assign rot = 45 -%}{%- else -%}{%- assign rot = 0 -%}{%- endcase -%}
+<svg class="arrow arrow-{{ to }}" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path transform="rotate({{ rot }} 8 8)" d="M2.5 8H13M9 4l4 4-4 4"/></svg>

@@ -5,6 +5,7 @@ key: 2025_genesurfer
 date: 2025-05-01 12:00:00
 permalink: /publications/2025_genesurfer/
 type: article
+kind: design
 shortname: 
 image: 2025_genesurfer.png
 image_large: 2025_genesurfer_teaser.png
@@ -12,14 +13,14 @@ image_preview: 2025_genesurfer.png
 
 authors:
 - Chang Li
-- thijssen
-- kroes
+- Julian Thijssen
+- Thomas Kroes
 - Ximaine van der Burg
 - Louise van der Weerd
-- hollt
-- lelieveldt
+- Thomas Höllt
+- Boudewijn Lelieveldt
 
-journal: iScience
+journal: Cell iScience
 journal-short: iScience
 page_start: 112713
 page_end: 

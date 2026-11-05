@@ -1,0 +1,18 @@
+{%- comment -%}
+  News entries (_news), most recent first: date and one line of markdown, no pages of their own.
+  include.limit: show only the latest n entries (front page).
+  Look: site.news_style in _config.yml (rules | strokes); include.style overrides it.
+{%- endcomment -%}
+{%- assign news = site.news | sort: "date" | reverse -%}
+{%- if include.limit %}{% assign news = news | slice: 0, include.limit %}{% endif -%}
+{%- assign news_style = include.style | default: site.news_style | default: "rules" -%}
+<ul class="news-list news-{{ news_style }}">
+    {%- for item in news %}
+    <li class="news-item">
+        <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %Y" }}</time>
+        {%- comment %} links to other sites open in a new tab {% endcomment %}
+        {%- capture text %}{% include cv/md.html text=item.content %}{% endcapture %}
+        <p>{{ text | replace: '<a href="http', '<a target="_blank" href="http' }}</p>
+    </li>
+    {%- endfor %}
+</ul>

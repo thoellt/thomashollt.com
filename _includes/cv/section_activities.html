@@ -1,0 +1,58 @@
+{%- comment -%} Professional activities (_activities): committees, examinations, reviewing; then talks (_talks). Mirrors latex/section_activities.tex. {%- endcomment -%}
+{%- assign visible = site.activities | where_exp: "a", "a.cv != false" -%}
+{%- assign committees = visible | where: "type", "committee" | sort: "start" | reverse -%}
+{%- assign ongoing = committees | where: "end", "today" -%}
+{%- assign past = committees | where_exp: "a", "a.end != 'today'" -%}
+{%- assign examinations = visible | where: "type", "examination" | sort: "start" | reverse -%}
+{%- assign reviews = visible | where: "type", "review" | sort: "order" -%}
+{%- assign talks = site.talks | where_exp: "t", "t.cv != false" | sort: "date" | reverse -%}
+<h1>Professional Activities</h1>
+
+{%- if committees.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>Chairing and Committees</h2></header>
+  {%- assign ordered = ongoing | concat: past %}
+  {%- for a in ordered %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{% include cv/dates.html start=a.start end=a.end dates=a.dates %}</div>
+    <div class="cv-profile-content col-md">{{ a.role }} &ndash; {% include cv/link.html text=a.title url=a.link %}.</div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+{%- if examinations.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>MSc and PhD Committees</h2></header>
+  {%- for a in examinations %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{{ a.date | default: a.start }}</div>
+    <div class="cv-profile-content col-md">{{ a.role }}, {{ a.title }}, {% include cv/md.html text=a.content %}.</div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+{%- if reviews.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>Conference & Journal Reviewing</h2></header>
+  <p>{% for a in reviews %}{% include cv/link.html text=a.title url=a.link %}{% if forloop.last %}.{% else %}; {% endif %}{% endfor %}</p>
+</div>
+{%- endif %}
+
+{%- assign kinds = "invited:Selected Invited Talks & Lectures|conference:Peer Reviewed Paper/Conference Talks" | split: "|" %}
+{%- for kind in kinds %}
+{%- assign kind_type = kind | split: ":" | first %}
+{%- assign entries = talks | where: "type", kind_type %}
+{%- if entries.size > 0 %}
+<header class="listing-header"><h2>{{ kind | split: ":" | last }}</h2></header>
+<div class="cv-pub-block">
+  {%- for t in entries %}
+  <div class="cv-pub-item">
+    <span class="cv-pub-number">{{ forloop.index }}.</span>
+    <span class="cv-pub-venue">{{ t.title }}.</span> {% include cv/md.html text=t.venue %}, {{ t.date | date: "%B %-d, %Y" }}.
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+{%- endfor %}

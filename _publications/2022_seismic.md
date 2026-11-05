@@ -2,6 +2,7 @@
 layout: publication
 title: "Real-Time Algorithms for Visualizing and Processing Seismic and Reservoir Data"
 key: 2022_seismic
+kind: survey
 date:   2022-01-21 12:00:00
 type: inbook
 shortname: 
@@ -11,7 +12,7 @@ image_preview: 2022_seismic.png
 
 authors:
 - Daniel Patel
-- hollt
+- Thomas Höllt
 - Markus Hadwiger
 
 journal: Interactive Data Processing and 3D Visualization of the Solid Earth

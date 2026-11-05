@@ -2,6 +2,7 @@
 layout: publication
 title: "Combined Surface and Volumetric Occlusion Shading"
 key: 2012_schott_pacificvis
+kind: method
 permalink: /publications/2012_schott_pacificvis/
 type: inproceedings
 shortname: Occlusion Shading
@@ -15,7 +16,7 @@ authors:
 - Tobias Martin
 - A.V. Pascal Grosset
 - Carson Brownlee
-- hollt
+- Thomas Höllt
 - Benjamin P. Brown
 - Sean T. Smith
 - Charles D. Hansen

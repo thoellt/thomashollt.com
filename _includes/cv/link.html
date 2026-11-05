@@ -1,0 +1,2 @@
+{%- comment -%} Text, linked when a URL is given:  include cv/link.html text=… url=… {%- endcomment -%}
+{%- if include.url and include.url != "" -%}<a href="{{ include.url }}" target="_blank">{{ include.text }}</a>{%- else -%}{{ include.text }}{%- endif -%}

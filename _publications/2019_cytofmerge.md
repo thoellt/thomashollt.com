@@ -2,6 +2,7 @@
 layout: publication
 title: "CyTOFmerge: Integrating mass cytometry data across multiple panels"
 key: 2019_cytofmerge
+kind: method
 date:   2019-03-15 00:00:00
 permalink: /publications/2019_cytofmerge/
 type: article
@@ -14,13 +15,13 @@ image_preview: 2019_cytofmerge.png
 
 
 authors:
-- abdelaal
-- hollt
-- vanunen
-- lelieveldt
-- koning
-- reinders
-- mahfouz
+- Tamim Abdelaal
+- Thomas Höllt
+- Vincent van Unen
+- Boudewijn Lelieveldt
+- Frits Koning
+- Marcel Reinders
+- Ahmed Mahfouz
 
 
 journal: Bioinformatics

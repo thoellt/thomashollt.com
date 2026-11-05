@@ -2,32 +2,29 @@
 ================================================== -->
 <meta charset="utf-8">
 <title>{{ site.title }}{% if page.title %} &#8226; {{ page.title }}{% endif %}</title>
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="{{ page.description | default: site.description | strip_html | strip }}">
+<meta name="author" content="{{ site.title }}">
 
 <!-- mobile specific metas
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- CSS
+<!-- day / evening theme, applied before first paint
 ================================================== -->
-<link rel="stylesheet" href="/assets/css/base.css">
-<link rel="stylesheet" href="/assets/css/vendor.css">
-<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-<link rel="stylesheet" href="/assets/css/main.css">
+<script>if (localStorage.getItem("theme")) document.documentElement.dataset.theme = localStorage.getItem("theme");</script>
 
-<!-- script
+<!-- fonts & CSS
 ================================================== -->
-<script src="/assets/js/modernizr.js"></script>
+<link rel="preload" href="{{ '/assets/fonts/literata-normal-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/fraunces-normal-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
 <!-- favicons
 ================================================== -->
-<!-- TODO
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
--->
+<!-- the wordmark's terracotta dab; favicon.ico at the root for browsers that ask for it -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
 <!-- analytics
 ================================================== -->

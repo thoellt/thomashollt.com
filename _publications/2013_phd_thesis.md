@@ -2,6 +2,7 @@
 layout: publication
 title: "Visual Workflows for Oil and Gas Exploration"
 key: 2013_phd_thesis
+kind: method
 type: phdthesis
 shortname: 
 image: 2013_phd_thesis.png
@@ -9,7 +10,7 @@ image_large: 2013_phd_thesis_teaser.png
 image_preview: 2013_phd_thesis.png
 
 authors:
-- hollt
+- Thomas Höllt
 
 journal: Ph.D. Thesis
 jourunal-short: 

@@ -2,6 +2,7 @@
 layout: publication
 title: "BrainScope: interactive visual exploration of the spatial and temporal human brain transcriptome"
 key: 2017_nar_brainscope
+kind: design
 date:   2017-01-28 12:00:00
 permalink: /publications/2017_nar_brainscope/
 type: article
@@ -11,15 +12,15 @@ image_large: 2017_nar_brainscope_teaser.png
 image_preview: 2017_nar_brainscope.jpg
 
 authors:
-- huisman
-- vanlew
-- mahfouz
-- pezzotti
-- hollt
+- Sjoerd Huisman
+- Baldur van Lew
+- Ahmed Mahfouz
+- Nicola Pezzotti
+- Thomas Höllt
 - Lieke Michielsen
-- vilanova
-- reinders
-- lelieveldt
+- Anna Vilanova
+- Marcel Reinders
+- Boudewijn Lelieveldt
 
 journal: Nucleic Acids Research
 journal-short: NAR

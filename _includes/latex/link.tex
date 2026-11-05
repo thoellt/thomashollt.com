@@ -1,0 +1,6 @@
+{%- comment -%} Escaped text, linked when a URL is given:  include latex/link.tex text=… url=… {%- endcomment -%}
+{%- if include.url and include.url != "" -%}
+  \href{ {{- include.url | replace: "%", "\%" | replace: "#", "\#" -}} }{ {%- include latex/escape.tex text=include.text -%} }
+{%- else -%}
+  {%- include latex/escape.tex text=include.text -%}
+{%- endif -%}

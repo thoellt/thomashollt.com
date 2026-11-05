@@ -5,6 +5,7 @@ key: 2026_pathwayfinder
 date: 2026-06-06 12:00:00
 permalink: /publications/2026_pathwayfinder/
 type: article
+kind: design
 shortname: 
 image: 2026_pathwayfinder.png
 image_large: 2026_pathwayfinder_teaser.png
@@ -12,14 +13,14 @@ image_preview: 2026_pathwayfinder.png
 
 authors:
 - Chang Li
-- thijssen
-- kroes
+- Julian Thijssen
+- Thomas Kroes
 - Lisa Koorneef
-- hollt
+- Thomas Höllt
 - Louise van der Weerd
-- lelieveldt
+- Boudewijn Lelieveldt
 
-journal: iScience
+journal: Cell iScience
 journal-short: iScience
 page_start: 118043
 page_end: 

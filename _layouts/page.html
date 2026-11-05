@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<!-- page intro ================================================== -->
+<section class="page-intro col">
+    <div class="intro-art" aria-hidden="true">
+        <div class="wash wash-2 c-dusk" style="right:-3.7rem; top:-7rem; width:26rem; height:22rem; --o:.8"></div>
+        {%- if page.portrait %}
+        <img class="intro-portrait" src="{{ page.portrait | relative_url }}" alt="">
+        {%- else %}
+        <div class="wash wash-4 c-sage" style="right:1.3rem; top:3rem; width:11rem; height:11rem; --o:.8"></div>
+        {%- endif %}
+    </div>
+    <h1>{{ page.title }}</h1>
+    {%- if page.lede %}
+    <p class="lede">{{ page.lede }}</p>
+    {%- endif %}
+</section>
+
+<section class="col page-content">
+    {{ content }}
+</section>

@@ -1,0 +1,27 @@
+{%- comment -%}
+  A paper image with an optional evening (dark mode) variant. Usage:
+    {% include functions/theme_image.html key=pub.key file=pub.image_preview alt="…" %}
+  Images live next to the publication file, in _publications/<key>/.
+  An evening (dark mode) variant is picked up automatically if a file with
+  "_dark" before the extension exists, e.g. 2023_vis_teaser_dark.png;
+  otherwise the regular image is shown in both themes. Sets `has_image` to tell the caller whether
+  anything was rendered.
+{%- endcomment -%}
+{%- assign has_image = false -%}
+{%- assign ext = include.file | split: "." | last -%}
+{%- assign stem_size = include.file.size | minus: ext.size | minus: 1 -%}
+{%- assign dark_file = include.file | slice: 0, stem_size | append: "_dark." | append: ext -%}
+{%- assign light_src = "_publications/" | append: include.key | append: "/" | append: include.file -%}
+{%- assign dark_src = "_publications/" | append: include.key | append: "/" | append: dark_file -%}
+{%- assign light = nil -%}{%- assign dark = nil -%}
+{%- if include.file and include.file != "" -%}{%- assign light = site.static_files | where: "path", light_src | first -%}{%- endif -%}
+{%- if light -%}{%- assign dark = site.static_files | where: "path", dark_src | first -%}{%- endif -%}
+{%- assign base = "/publications/" | append: include.key | append: "/" -%}
+{%- if light and dark -%}
+    {%- assign has_image = true -%}
+    <img class="img-day" src="{{ base | append: include.file | relative_url }}" alt="{{ include.alt }}" loading="lazy">
+    <img class="img-evening" src="{{ base | append: dark_file | relative_url }}" alt="{{ include.alt }}" loading="lazy">
+{%- elsif light -%}
+    {%- assign has_image = true -%}
+    <img src="{{ base | append: include.file | relative_url }}" alt="{{ include.alt }}" loading="lazy">
+{%- endif -%}

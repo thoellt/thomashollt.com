@@ -2,6 +2,7 @@
 layout: publication
 title: "Conserved Cell Types With Divergent Features in Human Versus Mouse Cortex"
 key: 2019_divergent_cell_types
+kind: domain
 date:   2019-08-21 00:00:00
 permalink: /publications/2019_divergent_cell_types/
 redirect_from: /publications/2018_divergent_cell_types/
@@ -9,9 +10,9 @@ type: article
 
 shortname: Cytosplore Viewer
 
-image: 2019_divergent_cell_types.png
-image_large: 2019_divergent_cell_types_teaser.png
-image_preview: 2019_divergent_cell_types.png
+image:
+image_large:
+image_preview:
 
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
@@ -26,8 +27,8 @@ authors:
 - Brian Long
 - Osnat Penn
 - Zizhen Yao
-- eggermont
-- hollt
+- Jeroen Eggermont
+- Thomas Höllt
 - Boaz P Levi
 - Soraya I Shehata
 - Brian Aevermann
@@ -49,7 +50,7 @@ authors:
 - Mohamed Keshk
 - Andrew L Ko
 - Kanan Lathia
-- mahfouz
+- Ahmed Mahfouz
 - Zoe Maltzer
 - Medea McGraw
 - Thuc Nghi Nguyen
@@ -67,7 +68,7 @@ authors:
 - Richard H Scheuermann
 - Rafael Yuste
 - Susan M Sunkin
-- lelieveldt
+- Boudewijn Lelieveldt
 - David Feng
 - Lydia Ng
 - Amy Bernard

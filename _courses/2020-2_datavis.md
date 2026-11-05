@@ -7,12 +7,14 @@ year: 2020
 quarter: 2
 org: TU Delft
 role: Responsible Lecturer
+program: MSc Computer Science
+group: datavis_cs
+cv_note:
 image_preview:
     
 responsible:
-- hollt
-- eisemann
-
+- Thomas Höllt
+- Elmar Eisemann
 teachers:
 
 courseguide:

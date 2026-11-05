@@ -2,6 +2,7 @@
 layout: publication
 title: "Hierarchical Stochastic Neighbor Embedding"
 key: 2016_eurovis_hsne
+kind: method
 date:   2016-06-01 12:00:00
 permalink: /publications/2016_eurovis_hsne/
 type: article
@@ -11,11 +12,11 @@ image_large: 2016_eurovis_hsne_teaser.png
 image_preview: 2016_eurovis_hsne.png
 
 authors:
-- pezzotti
-- hollt
-- lelieveldt
-- eisemann
-- vilanova
+- Nicola Pezzotti
+- Thomas Höllt
+- Boudewijn Lelieveldt
+- Elmar Eisemann
+- Anna Vilanova
 
 journal: Computer Graphics Forum (Proceedings of EuroVis 2016)
 journal-short: CGF (EuroVis 2016)

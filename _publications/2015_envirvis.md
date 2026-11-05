@@ -2,6 +2,7 @@
 layout: publication
 title: "Probability Maps for the Visualization of Assimilation Ensemble Flow Data"
 key: 2015_envirvis
+kind: method
 type: inproceedings
 shortname: Assimilation Flow Vis
 image: 2015_envirvis.png
@@ -9,10 +10,10 @@ image_large: 2015_envirvis_teaser.png
 image_preview: 2015_envirvis.png
 
 authors:
-- hollt
-- hadwiger
+- Thomas Höllt
+- Markus Hadwiger
 - Omar Knio
-- hoteit
+- Ibrahim Hoteit
 
 journal: Proceedings of Workshop on Visualisation in Environmental Sciences
 jourunal-short: EnvirVis

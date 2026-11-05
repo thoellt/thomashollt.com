@@ -3,6 +3,7 @@ layout: publication
 # The quotes make the : possible, otherwise you can do it without quotes
 title: "Cytosplore: Interactive Immune Cell Phenotyping for Large Single-Cell Datasets"
 key: 2016_eurovis_cytosplore
+kind: design
 date:   2016-06-01 12:00:00
 permalink: /publications/2016_eurovis_cytosplore/
 # Options are article | inproceedings  | book | inbook | poster | preprint | phdthesis | mscthesis
@@ -19,13 +20,13 @@ image_preview: 2016_eurovis_cytosplore.png
 
 # Authors in the "database" can be used with just the key (lastname). Others can be written properly.
 authors:
-- hollt
-- pezzotti
-- vanunen
-- koning
-- eisemann
-- lelieveldt
-- vilanova
+- Thomas Höllt
+- Nicola Pezzotti
+- Vincent van Unen
+- Frits Koning
+- Elmar Eisemann
+- Boudewijn Lelieveldt
+- Anna Vilanova
 
 # different entries are required here, for different classes (in parentheses; optional for bibTeX but add them if available):
 # article: journal, year (page_start, page_end, volume, issue)

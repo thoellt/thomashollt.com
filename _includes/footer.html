@@ -1,6 +1,18 @@
 <!-- footer ================================================== -->
-<footer class="s-footer footer">
-    <div class="go-top">
-        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <span class="label">Write</span>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}{% include arrow.html to="out" %}</a></p>
+        </div>
+        <div>
+            <span class="label">Visit</span>
+            <p><a href="https://www.uib.no/en/ii" target="_blank">Department of Informatics{% include arrow.html to="out" %}</a><br>University of Bergen, Norway</p>
+        </div>
+        <div>
+            <span class="label">Office</span>
+            <p>HIB – Thormøhlens gate 55<br>5006 Bergen, <a href="https://link.mazemap.com/BokraRLT" target="_blank">room 403N1{% include arrow.html to="out" %}</a></p>
+        </div>
     </div>
+    <p class="small">© {{ site.time | date: "%Y" }} {{ site.title }}</p>
 </footer>

@@ -2,13 +2,14 @@
 layout: publication
 title: "Helminth Infections Drive Heterogeneity in Human Type 2 and Regulatory Cells"
 key: 2020_helminth
+kind: domain
 date:   2020-01-01 12:00:00
 permalink: /publications/2020_helminth/
 type: article
 shortname: Helminth Infections Drive Cell Heterogeneity
-image: 2020_helminth.png
-image_large: 2020_helminth_teaser.png
-image_preview: 2020_helminth.png
+image:
+image_large:
+image_preview:
 
 authors:
 - Karin de Ruiter
@@ -16,12 +17,12 @@ authors:
 - Dicky L. Tahapary
 - Koen A. Stam
 - Marion König
-- vanunen
+- Vincent van Unen
 - Sandra Laban 
-- hollt
+- Thomas Höllt
 - Moustapha Mbow
-- lelieveldt
-- koning
+- Boudewijn Lelieveldt
+- Frits Koning
 - Erliyani Sartono
 - Johannes W. A. Smit
 - Taniawati Supali

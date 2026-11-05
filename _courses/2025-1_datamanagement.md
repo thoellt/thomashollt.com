@@ -7,6 +7,9 @@ year: 2025
 quarter: 1
 org: TU Delft
 role: Co-Lecturer
+program: MSc Data Science and Artificial Intelligence Technology (DSAIT), core
+group: 
+cv_note: "I am co-teaching this new course. I am responsible for roughly one quarter of the content focusing on visual data analysis. I have designed the lectures and assignments for this part of the course."
 image_preview: DSAIT4000_teaser.png
 
 responsible:
@@ -16,7 +19,7 @@ responsible:
 teachers:
 - Avishek Anand
 - Ujwal Gadiraju
-- hollt
+- Thomas Höllt
 - Asterios Katsifodimos
 - Sole Pera
 - Jie Yang

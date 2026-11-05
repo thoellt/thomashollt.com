@@ -2,6 +2,7 @@
 layout: publication
 title: "Comparative transcriptomics reveals human-specific cortical features"
 key: 2022_great_apes
+kind: domain
 date:   2023-10-12 20:00:00
 permalink: 
 redirect_from: /publications/2022_great_apes/
@@ -9,9 +10,9 @@ type: article
 
 shortname: 
 
-image: 2022_great_apes.png
-image_large: 2022_great_apes_teaser.png
-image_preview: 2022_great_apes.png
+image:
+image_large:
+image_preview:
 
 
 authors:
@@ -25,15 +26,15 @@ authors:
 - Jennie Close
 - Emily Gelfand
 - Kyle J. Travaglini
-- basu
+- Soumyadeep Basu
 - Marc Beaudin
 - Darren Bertagnolli
 - Megan Crow
 - Song-Lin Ding
-- eggermont
+- Jeroen Eggermont
 - Alexandra Glandon
 - Jeff Goldy
-- kroes
+- Thomas Kroes
 - Brian Long
 - Delissa McMillen
 - Trangthanh Pham
@@ -44,11 +45,11 @@ authors:
 - Amy Torkelson
 - Guoping Feng
 - William D Hopkins
-- hollt
+- Thomas Höllt
 - C. Dirk Keene
 - Sten Linnarsson
 - Steven A. McCarroll
-- lelieveldt
+- Boudewijn Lelieveldt
 - Chet C. Sherwood
 - Kimberly Smith
 - Christopher A. Walsh

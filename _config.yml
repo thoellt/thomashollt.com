@@ -1,44 +1,48 @@
 title: Thomas Höllt
-baseurl: /
+baseurl: ""
+# search engines and link previews; a page can set its own description in its front matter
+description: "Thomas Höllt, professor for visualization in the Vis Group at the University of Bergen, Norway. Visual analytics for large, high-dimensional data, single-cell and spatial omics."
+# news list look: rules (hand-drawn line between entries) or strokes (a paint stroke behind each entry, like the publication list)
+news_style: strokes
 url: "https://www.thomashollt.com"
-asset_url: /assets/
 document_url: https://raw.githubusercontent.com/thoellt/publications/main/
 
-twitter: thomashollt
 mastodon: thomashollt
 mastodoninstance: vis.social
 github: thoellt
-email: t.hollt-1@tudelft.nl
+email: thomas.hollt@uib.no
+# optional profile links, shown on the publications page when set
+scholar: https://scholar.google.com/citations?user=7lsHJfkAAAAJ&hl=en
+dblp: https://dblp.org/pid/48/5522.html
+
+# author names (as written in the publication files) that are highlighted
+me: [hollt, Thomas Höllt]
 
 permalink: pretty
 
 markdown: kramdown
 kramdown:
   input: GFM
-sass:
-  sass_dir: _sass
-
+# only publications get their own pages; the other collections feed the CV, news and lists
 collections:
-  persons:
-    output: false
-    permalink: /persons/:path/
   publications:
     output: true
     permalink: /publications/:path/
-  courses:
-    output: true
-    permalink: /teaching/:path/
   profiles:
     output: false
-    permalink: /profiles/:path/
   awards:
     output: false
-    permalink: /awards/:path/
   activities:
     output: false
-    permalink: /activities/:path/
-  teaching:
+  courses:
     output: false
-    permalink: /teaching/:path/
+  talks:
+    output: false
+  supervision:
+    output: false
+  news:
+    output: false
 
-exclude: [".git", ".github", ".gitignore", "Gemfile", "LICENSE", "README.md"]
+exclude: [".git", ".github", ".gitignore", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+plugins:
+  - jekyll-redirect-from

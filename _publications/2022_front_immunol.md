@@ -2,34 +2,35 @@
 layout: publication
 title: "Identification of a Disease-Associated Network of Intestinal Immune Cells in Treatment-Naive Inflammatory Bowel Disease"
 key: 2022_front_immunol
+kind: domain
 date:   2022-03-20 12:00:00
 permalink: /publications/2022_front_immunol/
 type: article
 shortname:
-image: 2022_front_immunol.png
-image_large: 2022_front_immunol_teaser.png
-image_preview: 2022_front_immunol.png
+image:
+image_large:
+image_preview:
 
 authors:
-- vanunen
+- Vincent van Unen
 - Laura F. Ouboter
 - Na Li
 - Mette Schreurs
-- abdelaal
+- Tamim Abdelaal
 - Yvonne Kooy-Winkelaar
 - Guillaume Beyrend
-- hollt
+- Thomas Höllt
 - P. W. Jeroen Maljaars
 - M. Luisa Mearin
-- mahfouz
+- Ahmed Mahfouz
 - Anne M. C. Witte
 - Cornelis H. M. Clemens
 - Sunje Abraham
 - Johanna C. Escher
-- lelieveldt
+- Boudewijn Lelieveldt
 - M. Fernanda Pascutti
 - Andrea E. van der Meulen – de Jong
-- koning
+- Frits Koning
 
 journal: Frontiers in Immunology
 journal-short: Front. Immunol.

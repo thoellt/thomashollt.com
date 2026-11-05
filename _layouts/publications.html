@@ -2,131 +2,51 @@
 layout: default
 ---
 
-<!-- site content ================================================== -->
-{% for publication in site.publications %}
-  {% if publication.type == "preprint" %}
-    {% assign ifpreprint = 'true' %}
-  {% elsif publication.type == "inproceedings" or publication.type == "article" %}
-    {% assign ifpaper = 'true' %}
-  {% elsif publication.type == "book" or publication.type == "inbook" %}
-    {% assign ifbook = 'true' %}
-  {% elsif publication.type == "poster" %}
-    {% assign ifposter = 'true' %}
-  {% elsif publication.type == "mscthesis" or publication.type == "phdthesis" %}
-    {% assign ifthesis = 'true' %}
-  {% endif %}
-{% endfor %}
+<!-- page intro ================================================== -->
+<section class="page-intro col">
+    <div class="intro-art intro-art-wide" aria-hidden="true">
+        <div class="wash wash-1 c-rose"  style="right:-3.3rem; top:-8.3rem; width:28rem; height:24.5rem; --o:.9"></div>
+        <div class="wash wash-4 c-ochre" style="right:10.3rem; top:2.6rem;  width:12rem; height:12.4rem; --o:.9"></div>
+    </div>
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    <p class="muted">
+        All entries {%- if site.scholar %} on <a href="{{ site.scholar }}" target="_blank">Google Scholar</a>{% if site.dblp %} · on <a href="{{ site.dblp }}" target="_blank">dblp</a>{% endif %} · {% elsif site.dblp %}on <a href="{{ site.dblp }}" target="_blank">dblp</a> · {% endif -%}
+        as <a href="{{ '/publications.bib' | relative_url }}" download>BibTeX</a>
+    </p>
+</section>
 
+<!-- filters: only kinds, paper types and years that occur ================================================== -->
+{%- assign years = site.publications | group_by: "year" | sort: "name" | reverse %}
+<div class="filters" role="group" aria-label="Filter publications">
+    <div class="filter-row"><span class="label">Kind</span>
+        {%- for k in site.data.kinds -%}
+          {%- assign hits = site.publications | where_exp: "p", "k.types contains p.type" -%}
+          {%- if hits.size > 0 %}<button class="chip" data-group="type" data-value="{{ k.key }}" aria-pressed="false">{{ k.label }}</button>{% endif -%}
+        {%- endfor -%}
+    </div>
+    <div class="filter-row"><span class="label">Type</span>
+        {%- for t in site.data.paper_types -%}
+          {%- assign hits = site.publications | where: "kind", t.key -%}
+          {%- if hits.size > 0 %}<button class="chip c-{{ t.color }}" data-group="paper" data-value="{{ t.key }}" aria-pressed="false"><span class="dab c-{{ t.color }}"></span>{{ t.label }}</button>{% endif -%}
+        {%- endfor -%}
+    </div>
+    <div class="filter-row"><span class="label">Year</span>
+        {%- for year in years %}<button class="chip chip-year" data-group="year" data-value="{{ year.name }}" aria-pressed="false">{{ year.name }}</button>{% endfor -%}
+    </div>
+</div>
 
-<div class="s-content">
-    {% if ifpreprint %}
-    <header class="listing-header">
-        <h1 class="h2">Preprints</h1>
-    </header>
-    
-    <div class="masonry-wrap">
-
-        <div class="masonry">
-
-            <div class="grid-sizer"></div>
-            
-            {% for publication in site.publications reversed %}
-              {% if publication.type == "preprint" %}
-                {% include publication_list_entry.html %}
-              {% endif %}
+<!-- publication list, grouped by year ================================================== -->
+<section class="pub-list" style="margin-top:0">
+    {% for year in years %}
+    <div class="year-group" data-year="{{ year.name }}">
+        <div class="year">{{ year.name }}<span class="count">{{ year.size }} paper{% if year.size != 1 %}s{% endif %}</span></div>
+        <div>
+            {% assign items = year.items | sort: "key" | reverse %}
+            {% for publication in items %}
+              {% include publication_list_entry.html publication=publication %}
             {% endfor %}
-
-        </div> <!-- end masonry -->
-
-    </div> <!-- end masonry-wrap -->
-    {% endif %}
-
-    {% if ifpaper %}
-    <header class="listing-header">
-        <h1 class="h2">Peer Reviewed Journal &amp; Conference Papers</h1>
-    </header>
-    
-    <div class="masonry-wrap">
-
-        <div class="masonry">
-
-            <div class="grid-sizer"></div>
-            {% assign publications = site.publications | sort: "year" %}
-            {% for publication in publications reversed %}
-              {% if publication.type == "inproceedings" or publication.type == "article" %}
-                {% include publication_list_entry.html %}
-              {% endif %}
-            {% endfor %}
-
-        </div> <!-- end masonry -->
-
-    </div> <!-- end masonry-wrap -->
-    {% endif %}
-
-    {% if ifbook %}
-    <header class="listing-header">
-        <h1 class="h2">Books &amp;  Bookchapters</h1>
-    </header>
-    
-    <div class="masonry-wrap">
-
-        <div class="masonry">
-
-            <div class="grid-sizer"></div>
-            
-            {% for publication in site.publications reversed %}
-              {% if publication.type == "book" or publication.type == "inbook" %}
-                {% include publication_list_entry.html %}
-              {% endif %}
-            {% endfor %}
-
-        </div> <!-- end masonry -->
-
-    </div> <!-- end masonry-wrap -->
-    {% endif %}
-
-    {% if ifposter %}
-    <header class="listing-header">
-        <h1 class="h2">Posters &amp; Sketches</h1>
-    </header>
-    
-    <div class="masonry-wrap">
-
-        <div class="masonry">
-
-            <div class="grid-sizer"></div>
-            
-            {% for publication in site.publications reversed %}
-              {% if publication.type == "poster" %}
-                {% include publication_list_entry.html %}
-              {% endif %}
-            {% endfor %}
-
-        </div> <!-- end masonry -->
-
-    </div> <!-- end masonry-wrap -->
-    {% endif %}
-
-    {% if ifthesis %}
-    <header class="listing-header">
-        <h1 class="h2">Theses</h1>
-    </header>
-    
-    <div class="masonry-wrap">
-
-        <div class="masonry">
-
-            <div class="grid-sizer"></div>
-            
-            {% for publication in site.publications reversed %}
-              {% if publication.type == "mscthesis" or publication.type == "phdthesis" %}
-                {% include publication_list_entry.html %}
-              {% endif %}
-            {% endfor %}
-
-        </div> <!-- end masonry -->
-
-    </div> <!-- end masonry-wrap -->
-    {% endif %}
-
-</div> <!-- end s-content -->
+        </div>
+    </div>
+    {% endfor %}
+</section>

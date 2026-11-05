@@ -5,17 +5,18 @@ key: 2024_cga_faizan
 date:   2024-09-01 12:00:00
 permalink: /publications/2024_cga_faizan/
 type: article
+kind: method
 shortname: White Matter Uncertainty
 image: 2024_cga_faizan.png
 image_large: 2024_cga_faizan.png
 image_preview: 2024_cga_faizan.png
 
 authors:
-- siddiqui
+- Faizan Siddiqui
 - H. Bart Brouwers
 - Geert-Jan Rutten
-- hollt
-- vilanova
+- Thomas Höllt
+- Anna Vilanova
 
 journal: Computer Graphics and Applications
 journal-short: CG&A

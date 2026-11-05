@@ -1,0 +1,50 @@
+{%- comment -%} Professional activities (_activities): committees, examinations, reviewing; then talks (_talks). {%- endcomment -%}
+{%- assign visible = site.activities | where_exp: "a", "a.cv != false" -%}
+{%- assign committees = visible | where: "type", "committee" | sort: "start" | reverse -%}
+{%- assign ongoing = committees | where: "end", "today" -%}
+{%- assign past = committees | where_exp: "a", "a.end != 'today'" -%}
+{%- assign examinations = visible | where: "type", "examination" | sort: "start" | reverse -%}
+{%- assign reviews = visible | where: "type", "review" | sort: "order" -%}
+{%- assign talks = site.talks | where_exp: "t", "t.cv != false" | sort: "date" | reverse -%}
+\section*{Professional Activities}
+{%- if committees.size > 0 %}
+\subsection*{Chairing and Committees}
+\begin{description}[style=multiline,leftmargin=2.0cm,font=\normalfont]
+{%- for a in ongoing %}
+\item[{% include latex/dates.tex start=a.start end=a.end dates=a.dates %}] {% include latex/escape.tex text=a.role %} -- {% include latex/link.tex text=a.title url=a.link %}.
+{%- endfor %}
+{%- for a in past %}
+\item[{% include latex/dates.tex start=a.start end=a.end dates=a.dates %}] {% include latex/escape.tex text=a.role %} -- {% include latex/link.tex text=a.title url=a.link %}.
+{%- endfor %}
+\end{description}
+{%- endif %}
+{%- if examinations.size > 0 %}
+
+\subsection*{MSc and PhD Committees}
+\begin{description}[style=multiline,leftmargin=2.0cm,font=\normalfont]
+{%- for a in examinations %}
+\item[{{ a.date | default: a.start }}] {% include latex/escape.tex text=a.role %}, {% include latex/escape.tex text=a.title %}, {% include latex/md.tex text=a.content %}.
+{%- endfor %}
+\end{description}
+{%- endif %}
+{%- if reviews.size > 0 %}
+
+\subsection*{Conference \& Journal Reviewing}
+{% for a in reviews %}{% include latex/link.tex text=a.title url=a.link %}{% if forloop.last %}.{% else %};
+{% endif %}{% endfor %}
+{%- endif %}
+{%- assign kinds = "invited:Selected Invited Talks \& Lectures|conference:Peer Reviewed Paper/Conference Talks" | split: "|" %}
+{%- for kind in kinds %}
+{%- assign kind_type = kind | split: ":" | first %}
+{%- assign entries = talks | where: "type", kind_type %}
+{%- if entries.size > 0 %}
+
+\subsection*{ {{- kind | split: ":" | last -}} }
+\begin{enumerate}[leftmargin=0cm]
+{%- for t in entries %}
+\item
+\emph{ {%- include latex/escape.tex text=t.title -%}.} {% include latex/md.tex text=t.venue %}, {{ t.date | date: "%B %-d, %Y" }}.
+{%- endfor %}
+\end{enumerate}
+{%- endif %}
+{%- endfor %}

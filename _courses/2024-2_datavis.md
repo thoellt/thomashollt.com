@@ -7,14 +7,15 @@ year: 2024
 quarter: 2
 org: TU Delft
 role: Responsible Lecturer
+program: MSc Data Science and Artificial Intelligence Technology (DSAIT), IVA theme
+group: 
+cv_note:
 image_preview: IN4089_teaser.png
 
 responsible:
-- hollt
-
+- Thomas Höllt
 teachers:
-- eisemann
-
+- Elmar Eisemann
 courseguide:
 - https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=70117
 

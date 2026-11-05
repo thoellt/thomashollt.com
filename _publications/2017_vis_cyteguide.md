@@ -2,6 +2,7 @@
 layout: publication
 title: "CyteGuide: Visual Guidance for Hierarchical Single-Cell Analysis"
 key: 2017_vis_cyteguide
+kind: design
 date:   2018-01-01 12:00:00
 permalink: /publications/2017_vis_cyteguide/
 type: article
@@ -11,12 +12,12 @@ image_large: 2017_vis_cyteguide_teaser.png
 image_preview: 2017_vis_cyteguide.png
 
 authors:
-- hollt
-- pezzotti
-- vanunen
-- koning
-- lelieveldt
-- vilanova
+- Thomas Höllt
+- Nicola Pezzotti
+- Vincent van Unen
+- Frits Koning
+- Boudewijn Lelieveldt
+- Anna Vilanova
 
 journal: IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE InfoVis 2017)
 journal-short: TVCG (InfoVis '17)
@@ -47,12 +48,6 @@ videos:
 pdf: 2017_vis_cyteguide.pdf
 supplement:
 supplements:
-  - name: Slides (pdf)
-    link: 2017_vis_cyteguide_slides.pdf
-    icon: powerpoint
-  - name: Slides (interactive)
-    abslink: https://www.thomashollt.com/assets/papers/2017_vis_cyteguide/2017_vis_cyteguide_slides/
-    icon: powerpoint
   - name: Video
     abslink: https://vimeo.com/223373844
     icon: video

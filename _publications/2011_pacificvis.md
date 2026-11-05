@@ -2,6 +2,7 @@
 layout: publication
 title: "Interactive Seismic Interpretation with Piecewise Global Energy Minimization"
 key: 2011_pacificvis
+kind: method
 type: inproceedings
 shortname: 
 image: 2011_pacificvis.png
@@ -9,13 +10,13 @@ image_large: 2011_pacificvis_teaser.png
 image_preview: 2011_pacificvis.png
 
 authors:
-- hollt
+- Thomas Höllt
 - Johanna Beyer
 - Fritz Michael Gschwantner
 - Philip Muigg
 - Helmut Doleisch
 - Gabor Heinemann
-- hadwiger
+- Markus Hadwiger
 
 journal: Proceedings of IEEE Pacific Visualization Symposium
 jourunal-short: Pacific Vis

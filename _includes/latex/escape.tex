@@ -1,0 +1,9 @@
+{%- comment -%}
+  Escapes plain text for LaTeX:  include latex/escape.tex text=…
+  (Liquid's replace treats "\&" in a replacement as a back-reference, hence "\\&".)
+{%- endcomment -%}
+{%- assign escaped = include.text | replace: "\", "@@BS@@" | replace: "{", "\{" | replace: "}", "\}" | replace: "@@BS@@", "\textbackslash{}"
+  | replace: "&", "\\&" | replace: "%", "\%" | replace: "$", "\$" | replace: "#", "\#" | replace: "_", "\_"
+  | replace: "~", "\textasciitilde{}" | replace: "^", "\textasciicircum{}"
+  | replace: "≈", "$\approx$" | replace: "€", "\euro{}" -%}
+{{- escaped -}}

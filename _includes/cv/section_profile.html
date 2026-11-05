@@ -1,0 +1,17 @@
+{%- comment -%} Professional profile, guest stays and education (_profiles). Mirrors latex/section_profile.tex. {%- endcomment -%}
+{%- assign profiles = site.profiles | reverse -%}
+{%- comment -%} type:heading; the work entries sit directly under the section title {%- endcomment -%}
+{%- assign groups = "work:|guest:Guest Research Stays|education:Education" | split: "|" -%}
+<h1>Professional Profile</h1>
+{%- for group in groups %}
+{%- assign group_type = group | split: ":" | first %}
+{%- assign group_title = group | remove_first: group_type | remove_first: ":" %}
+<div class="cv-profile-block">
+  {%- if group_title != "" %}
+  <header class="listing-header"><h2>{{ group_title }}</h2></header>
+  {%- endif %}
+  {%- for entry in profiles %}{% if entry.type == group_type %}
+  {% include cv/profile_entry.html %}
+  {%- endif %}{% endfor %}
+</div>
+{%- endfor %}

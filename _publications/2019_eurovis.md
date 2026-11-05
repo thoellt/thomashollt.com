@@ -2,6 +2,7 @@
 layout: publication
 title: "Focus+Context Exploration of Hierarchical Embeddings"
 key: 2019_eurovis
+kind: method
 date:   2019-03-25 12:00:00
 permalink: /publications/2019_eurovis/
 type: article
@@ -11,10 +12,10 @@ image_large: 2019_eurovis_teaser.png
 image_preview: 2019_eurovis.png
 
 authors:
-- hollt
-- vilanova
-- pezzotti
-- lelieveldt
+- Thomas Höllt
+- Anna Vilanova
+- Nicola Pezzotti
+- Boudewijn Lelieveldt
 - Helwig Hauser
 
 journal: Computer Graphics Forum (Proceedings of EuroVis 2019)

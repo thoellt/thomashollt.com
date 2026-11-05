@@ -2,6 +2,7 @@
 layout: publication
 title: "Cytosplore: Interactive Visual Single-Cell Profiling of the Immune System"
 key: 2019_dirk_bartz_prize
+kind: design
 date:   2019-03-25 12:00:00
 permalink: /publications/2019_dirk_bartz_prize/
 type: inproceedings
@@ -11,14 +12,14 @@ image_large: 2019_dirk_bartz_prize_teaser.png
 image_preview: 2019_dirk_bartz_prize.png
 
 authors:
-- hollt
-- pezzotti
-- vanunen
-- lina
-- koning
-- eisemann
-- lelieveldt
-- vilanova
+- Thomas Höllt
+- Nicola Pezzotti
+- Vincent van Unen
+- Na Li
+- Frits Koning
+- Elmar Eisemann
+- Boudewijn Lelieveldt
+- Anna Vilanova
 
 journal: Proceedings of Eurographics - Short Papers and Medical Prize Awards
 journal-short: Dirk Bartz Prize

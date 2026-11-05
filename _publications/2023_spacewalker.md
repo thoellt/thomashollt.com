@@ -3,6 +3,7 @@ layout: publication
 title: "SpaceWalker Enables Interactive Gradient Exploration for Spatial Transcriptomics Data"
 key: 2023_spacewalker
 type: article
+kind: design
 shortname: SpaceWalker
 image: 2023_spacewalker.jpg
 image_large: 2023_spacewalker_teaser.png
@@ -10,15 +11,15 @@ image_preview: 2023_spacewalker.jpg
 
 authors:
 - Chang Li
-- thijssen
-- kroes
+- Julian Thijssen
+- Thomas Kroes
 - Mitchell de Boer
-- abdelaal
-- hollt
-- lelieveldt
+- Tamim Abdelaal
+- Thomas Höllt
+- Boudewijn Lelieveldt
 
 journal: Cell Reports Methods
-jourunal-short: Cell Reports Methods
+journal-short: Cell Reports Methods
 page_start:
 page_end:
 volume:

@@ -7,14 +7,15 @@ year: 2025
 quarter: 2
 org: TU Delft
 role: Responsible Lecturer
+program: MSc Data Science and Artificial Intelligence Technology (DSAIT), IVA theme
+group: 
+cv_note: "This is an adapted version of IN4089 for the DSAIT track. I have re-designed the lectures and project for this course and am the responsible lecturer."
 image_preview: IN4089_teaser.png
 
 responsible:
-- hollt
-
+- Thomas Höllt
 teachers:
-- eisemann
-
+- Elmar Eisemann
 courseguide:
 - https://studiegids.tudelft.nl/courses/study-guide/educations/14800
 

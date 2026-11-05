@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: /publications.bib
+---
+{%- assign publications = site.publications | sort: "year" | reverse -%}
+{%- for publication in publications -%}
+{%- include functions/create_bibtex.html publication=publication %}
+{{ bibtex }}
+{% endfor -%}

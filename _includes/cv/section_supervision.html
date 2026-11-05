@@ -1,0 +1,34 @@
+{%- comment -%} PhD and MSc supervision (_supervision), most recent first, dated by graduation year (or "ongoing"). Mirrors latex/section_supervision.tex (no heading of its own: it follows Teaching). {%- endcomment -%}
+{%- assign visible = site.supervision | where_exp: "s", "s.cv != false" | sort: "start" | reverse -%}
+{%- assign levels = "phd:PhD Supervision|msc:MSc Supervision" | split: "|" -%}
+{%- for level in levels %}
+{%- assign level_type = level | split: ":" | first %}
+{%- assign entries = visible | where: "type", level_type %}
+{%- if entries.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>{{ level | split: ":" | last }}</h2></header>
+  {%- for s in entries %}
+  {%- assign body = s.content | strip %}
+  {%- comment -%} Jekyll fills an empty title with the file name {%- endcomment -%}
+  {%- assign has_title = false %}{% if s.title and s.title != "" and s.title != s.slug %}{% assign has_title = true %}{% endif %}
+  {%- assign has_link = false %}{% if s.link and s.link != "" %}{% assign has_link = true %}{% endif %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{% if s.end == "today" or s.end == nil or s.end == "" %}ongoing{% else %}{{ s.end }}{% endif %}</div>
+    <div class="cv-profile-content col-md">
+      {%- if level_type == "phd" %}
+      PhD {{ s.role }} for {{ s.student }}, {{ s.org }}.
+      {%- else %}
+      {{ s.student }}.
+      {%- endif %}
+      {%- if has_title %} {% if has_link %}<a href="{{ s.link }}" target="_blank"><span class="cv_profile_edu_title">{{ s.title }}</span></a>{% else %}<span class="cv_profile_edu_title">{{ s.title }}</span>{% endif %}.
+      {%- elsif has_link %} <a href="{{ s.link }}" target="_blank">Thesis</a>.{% endif %}
+      {%- if s.now_role and s.now_role != "" and s.now_at and s.now_at != "" %} Now {{ s.now_role }} at {{ s.now_at }}.{% endif %}
+      {%- comment -%} the free text of PhD entries stays in the files, but is not shown {%- endcomment -%}
+      {%- if body != "" and level_type == "msc" %} {% include cv/md.html text=body %}{% endif %}
+      {%- if s.publication %}{% assign pub = site.publications | where: "key", s.publication | first %}{% if pub %} (Publication: <a href="{{ pub.url | relative_url }}" target="_blank">{{ pub.title }}</a>).{% endif %}{% endif %}
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+{%- endfor %}

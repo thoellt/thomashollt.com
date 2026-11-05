@@ -1,0 +1,58 @@
+{%- comment -%} Teaching: coordination roles and teaching activities (_activities), courses (_courses), training. Mirrors latex/section_teaching.tex. {%- endcomment -%}
+{%- assign visible = site.activities | where_exp: "a", "a.cv != false" -%}
+{%- assign coordination = visible | where: "type", "coordination" | sort: "start" | reverse -%}
+{%- assign other_teaching = visible | where: "type", "teaching" | sort: "start" | reverse -%}
+{%- assign training = visible | where: "type", "training" -%}
+{%- assign courses = site.courses | where_exp: "c", "c.cv != false" | sort: "year" | reverse -%}
+{%- comment -%} runs of a course (same `group`, or same `key`) become one entry, most recent first {%- endcomment -%}
+{%- assign course_groups = courses | group_by_exp: "c", "c.group | default: c.key" -%}
+<h1>Teaching</h1>
+
+{%- if coordination.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>Coordination</h2></header>
+  {%- for a in coordination %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{% include cv/dates.html start=a.start end=a.end dates=a.dates %}</div>
+    <div class="cv-profile-content col-md">
+      {{ a.role }}, {% include cv/link.html text=a.title url=a.link %}, {{ a.program }}.
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+{%- if course_groups.size > 0 or other_teaching.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>Courses</h2></header>
+  {%- for group in course_groups %}
+  {%- assign latest = group.items | first %}
+  {%- assign earliest = group.items | last %}
+  {%- assign keys = group.items | map: "key" | uniq | reverse | join: "/" %}
+  {%- assign programs = group.items | map: "program" | compact | uniq | reverse | join: " and " %}
+  {%- assign url = latest.courseguide | first %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{% include cv/dates.html start=earliest.year end=latest.year %}</div>
+    <div class="cv-profile-content col-md">
+      {{ latest.role }}, {{ keys }}: {% include cv/link.html text=latest.title url=url %},
+      {%- if programs != "" %} {{ programs }},{% endif %} {{ latest.org }}.
+    </div>
+  </div>
+  {%- endfor %}
+  {%- for a in other_teaching %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{% include cv/dates.html start=a.start end=a.end dates=a.dates %}</div>
+    <div class="cv-profile-content col-md">{% include cv/md.html text=a.content %}</div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+{%- if training.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>Training</h2></header>
+  {%- for a in training %}
+  <p>{% include cv/md.html text=a.content %}</p>
+  {%- endfor %}
+</div>
+{%- endif %}

@@ -2,25 +2,27 @@
 layout: publication
 title: "The Contribution of Cytomegalovirus Infection to Immune Senescence is set by the Infectious Dose"
 key: 2018_front_immunol_cytomegalovirus
+kind: domain
 date:   2018-01-10 12:00:00
 permalink: /publications/2018_front_immunol_cytomegalovirus/
 type: article
 shortname: Cytomegalovirus
-image: 2018_front_immunol_cytomegalovirus.png
+image:
 image_large:
+image_preview:
 
 authors:
 - Anke Redeker
 - Ester Remmerswaal
 - Esme van der Gracht
 - Suzanne Welten
-- hollt
-- koning
+- Thomas Höllt
+- Frits Koning
 - Luka Cicin-Sain
 - Janko Nikolich-Žugich
 - Ineke ten Berge
 - Rene van Lier
-- vanunen
+- Vincent van Unen
 - Ramon Arens
 
 journal: Frontiers in Immunology

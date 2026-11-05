@@ -2,21 +2,22 @@
 layout: publication
 title: "Co-expression patterns of microglia markers Iba1, TMEM119 and P2RY12 in Alzheimer's disease"
 key: 2022_neurobiology_of_disease
+kind: domain
 date:   2022-03-17 12:00:00
 permalink: /publications/2022_neurobiology_of_disease/
 type: article
 shortname: 
-image: 2022_neurobiology_of_disease.png
-image_large: 2022_neurobiology_of_disease_teaser.png
-image_preview: 2022_neurobiology_of_disease.png
+image:
+image_large:
+image_preview:
 
 authors:
-- kenkhuis 
-- somarakis
+- Boyd Kenkhuis
+- Antonios Somarakis
 - Lynn R.T. Kleindouwel
 - Willeke M.C. van Roon-Mom
-- hollt
-- vanderweerd
+- Thomas Höllt
+- Louise van der Weerd
 
 journal: Neurobiology of Disease
 journal-short: Neurobiology of Disease

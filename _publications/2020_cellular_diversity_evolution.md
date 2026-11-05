@@ -2,6 +2,7 @@
 layout: publication
 title: "Comparative cellular analysis of motor cortex in human, marmoset and mouse"
 key: 2020_cellular_diversity_evolution
+kind: domain
 date:   2021-10-08 00:00:00
 permalink: /publications/2021_nature/
 redirect_from: /publications/2020_cellular_diversity_evolution/
@@ -9,9 +10,9 @@ type: article
 
 shortname: Cytosplore Viewer
 
-image: 2020_cellular_diversity_evolution.png
-image_large: 2020_cellular_diversity_evolution_teaser.png
-image_preview: 2020_cellular_diversity_evolution.png
+image:
+image_large:
+image_preview:
 
 
 authors:
@@ -93,12 +94,12 @@ authors:
 - Jesse Gillis
 - Ronna Hertzano
 - Patrick R. Hof
-- hollt
+- Thomas Höllt
 - Gregory D. Horwitz
 - C. Dirk Keene
 - Peter V. Kharchenko
 - Andrew L. Ko
-- lelieveldt
+- Boudewijn Lelieveldt
 - Chongyuan Luo
 - Eran A. Mukamel
 - António Pinto-Duarte

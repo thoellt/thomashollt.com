@@ -2,6 +2,7 @@
 layout: publication
 title: "SpaceWalker: a Visual Analytics Approach to Spatial Transcriptomics Data"
 key: 2022_vcbm_chang
+kind: design
 type: poster
 shortname: SpaceWalker
 image: 2022_vcbm_chang.png
@@ -10,8 +11,8 @@ image_preview: 2022_vcbm_chang.png
 
 authors:
 - Chang Li
-- hollt
-- lelieveldt
+- Thomas Höllt
+- Boudewijn Lelieveldt
 
 journal: Poster Presentation, Visual Computing in Biology and Medicine
 jourunal-short: VCBM

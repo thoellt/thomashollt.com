@@ -7,6 +7,9 @@ year: 2024
 quarter: 1
 org: TU Delft
 role: Co-Lecturer
+program: MSc Data Science and Artificial Intelligence Technology (DSAIT), core
+group: 
+cv_note:
 image_preview: DSAIT4000_teaser.png
 
 responsible:
@@ -16,7 +19,7 @@ responsible:
 teachers:
 - Avishek Anand
 - Ujwal Gadiraju
-- hollt
+- Thomas Höllt
 - Asterios Katsifodimos
 - Sole Pera
 - Jie Yang

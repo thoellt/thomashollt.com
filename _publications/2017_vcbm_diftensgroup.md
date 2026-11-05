@@ -2,6 +2,7 @@
 layout: publication
 title: "Comparative Visualization for Diffusion Tensor Imaging Group Study at Multiple Levels of Detail"
 key: 2017_vcbm_diftensgroup
+kind: method
 date:   2017-09-08 12:00:00
 permalink: /publications/2017_vcbm_diftensgroup/
 type: inproceedings
@@ -12,10 +13,10 @@ image_preview: 2017_vcbm_diftensgroup.png
 
 authors:
 - Changgong Zhang
-- hollt
+- Thomas Höllt
 - Matthan Caan
-- eisemann
-- vilanova
+- Elmar Eisemann
+- Anna Vilanova
 
 journal: Proceedings of Visual Computing for Biology and Medicine (VCBM)
 journal-short: VCBM

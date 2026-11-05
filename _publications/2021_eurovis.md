@@ -2,6 +2,7 @@
 layout: publication
 title: "A Progressive Approach for Uncertainty Visualization in Diffusion Tensor Imaging"
 key: 2021_eurovis
+kind: method
 date:   2021-04-29 12:00:00
 permalink: /publications/2021_eurovis/
 type: article
@@ -11,9 +12,9 @@ image_large: 2021_eurovis_teaser.png
 image_preview: 2021_eurovis.png
 
 authors:
-- siddiqui
-- hollt
-- vilanova
+- Faizan Siddiqui
+- Thomas Höllt
+- Anna Vilanova
 
 journal: Computer Graphics Forum (Proceedings of EuroVis 2021)
 journal-short: CGF (EuroVis 2021)

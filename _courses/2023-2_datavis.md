@@ -7,15 +7,16 @@ year: 2023
 quarter: 2
 org: TU Delft
 role: Responsible Lecturer
+program: MSc Computer Science
+group: datavis_cs
+cv_note: "I have adapted the course from my predecessor and have been the responsible teacher since starting at TU Delft."
 image_preview: IN4089_teaser.png
 
 responsible:
-- hollt
-
+- Thomas Höllt
 teachers:
-- eisemann
-- skrodzki
-
+- Elmar Eisemann
+- Martin Skrodzki
 courseguide:
 - https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=64331
 

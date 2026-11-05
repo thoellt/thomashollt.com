@@ -2,6 +2,7 @@
 layout: publication
 title: "Uncertainty in the DTI Visualization Pipeline"
 key: 2021_tract_uncertainty_chapter
+kind: survey
 date:   2021-01-21 12:00:00
 permalink: /publications/2021_tract_uncertainty_chapter/
 type: inbook
@@ -11,9 +12,9 @@ image_large: 2021_tract_uncertainty_chapter_teaser.png
 image_preview: 2021_tract_uncertainty_chapter.png
 
 authors:
-- siddiqui
-- hollt
-- vilanova
+- Faizan Siddiqui
+- Thomas Höllt
+- Anna Vilanova
 
 journal: Anisotropy Across Fields and Scales
 journal-short: Anisotropy Across Fields and Scales

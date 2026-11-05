@@ -2,6 +2,7 @@
 layout: publication
 title: "Direct Processing of Compressed Volume Data"
 key: 2008_msc_thesis
+kind: method
 type: mscthesis
 shortname: 
 image: 2008_msc_thesis.png
@@ -9,7 +10,7 @@ image_large: 2008_msc_thesis_teaser.png
 image_preview: 2008_msc_thesis.png
 
 authors:
-- hollt
+- Thomas Höllt
 
 journal: Masters Thesis
 jourunal-short: 

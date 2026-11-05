@@ -1,0 +1,29 @@
+{%- comment -%}
+  Turns simple HTML (e.g. from markdownify) into LaTeX:  include latex/html.tex html=…
+  Handles links, bold, italics and superscripts; all other text is escaped, other tags are dropped.
+{%- endcomment -%}
+{%- assign h = include.html | strip
+  | replace: "<p>", "" | replace: "</p>", " " | replace: "<br>", " " | replace: "<br/>", " " | replace: "<br />", " "
+  | replace: "<strong>", "@@B@@" | replace: "<b>", "@@B@@" | replace: "<em>", "@@I@@" | replace: "<i>", "@@I@@"
+  | replace: "<sup>", "@@S@@"
+  | replace: "</strong>", "@@X@@" | replace: "</b>", "@@X@@" | replace: "</em>", "@@X@@" | replace: "</i>", "@@X@@"
+  | replace: "</sup>", "@@X@@" | replace: "</a>", "@@X@@"
+  | replace: "&ndash;", "–" | replace: "&mdash;", "—" | replace: "&hellip;", "…" | replace: "&nbsp;", " "
+  | replace: "&ldquo;", "“" | replace: "&rdquo;", "”" | replace: "&lsquo;", "‘" | replace: "&rsquo;", "’"
+  | replace: "&quot;", '"' | replace: "&lt;", "<" | replace: "&gt;", ">" | replace: "&amp;", "&" -%}
+{%- assign parts = h | split: '<a href="' -%}
+{%- capture latex -%}
+  {%- for part in parts -%}
+    {%- if forloop.first -%}
+      {%- assign text = part | strip_html -%}
+      {%- include latex/escape.tex text=text -%}
+    {%- else -%}
+      {%- assign tag = part | split: ">" | first -%}
+      {%- assign url = tag | split: '"' | first | replace: "%", "\%" | replace: "#", "\#" -%}
+      {%- assign text = part | remove_first: tag | remove_first: ">" | strip_html -%}
+      \href{ {{- url -}} }{ {%- include latex/escape.tex text=text -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign latex = latex | strip | replace: "@@B@@", "\textbf{" | replace: "@@I@@", "\emph{" | replace: "@@S@@", "\textsuperscript{" | replace: "@@X@@", "}" -%}
+{{- latex -}}

@@ -1,108 +1,108 @@
-{% assign bibtex = "" %}
+{%- comment -%}
+  Builds a BibTeX entry as plain text in `bibtex` (newline separated, for a
+  downloadable .bib file). Usage:
+    {% include functions/create_bibtex.html publication=publication %}
+  Without a `publication` parameter it uses the current page.
+{%- endcomment -%}
+{%- assign pub = include.publication | default: page -%}
+{%- capture nl %}
+{% endcapture -%}
+{%- assign bibtex = "" -%}
 
-<!-- type -->
-{% if page.type == "article" or page.type == "preprint" %}
-    {% assign bibtex = bibtex | append: "@article" %}
-{% elsif page.type == "inproceedings" %}
-    {% assign bibtex = bibtex | append: "@inproceedings" %}
-{% elsif page.type == "inbook" %}
-    {% assign bibtex = bibtex | append: "@inbook" %}
-{% elsif page.type == "book" %}
-    {% assign bibtex = bibtex | append: "@book" %}
-{% elsif page.type == "mscthesis" %}
-    {% assign bibtex = bibtex | append: "@mastersthesis" %}
-{% elsif page.type == "phdthesis" %}
-    {% assign bibtex = bibtex | append: "@phdthesis" %}
-{% else %}
-    {% assign bibtex = bibtex | append: "@misc" %}
-{% endif %}
+{%- comment %} type {% endcomment -%}
+{%- if pub.type == "article" or pub.type == "preprint" -%}
+    {%- assign bibtex = bibtex | append: "@article" -%}
+{%- elsif pub.type == "inproceedings" -%}
+    {%- assign bibtex = bibtex | append: "@inproceedings" -%}
+{%- elsif pub.type == "inbook" -%}
+    {%- assign bibtex = bibtex | append: "@inbook" -%}
+{%- elsif pub.type == "book" -%}
+    {%- assign bibtex = bibtex | append: "@book" -%}
+{%- elsif pub.type == "mscthesis" -%}
+    {%- assign bibtex = bibtex | append: "@mastersthesis" -%}
+{%- elsif pub.type == "phdthesis" -%}
+    {%- assign bibtex = bibtex | append: "@phdthesis" -%}
+{%- else -%}
+    {%- assign bibtex = bibtex | append: "@misc" -%}
+{%- endif -%}
 
-<!-- key -->
-{% assign bibtex = bibtex | append: "{ bib:" | append: page.key | append: ",<br/>" %}
+{%- comment %} key {% endcomment -%}
+{%- assign bibtex = bibtex | append: "{" | append: pub.key | append: "," | append: nl -%}
 
-<!-- authors -->
-{% assign bibtex = bibtex | append: "    author = {" %}
+{%- comment %} authors, used as written in the publication file {% endcomment -%}
+{%- assign bibtex = bibtex | append: "    author = { " -%}
+{%- for author in pub.authors -%}
+    {%- include functions/replace_umlauts.html input=author -%}
+    {%- assign bibtex = bibtex | append: fixedString -%}
+    {%- unless forloop.last -%}
+        {%- assign bibtex = bibtex | append: " and " -%}
+    {%- endunless -%}
+{%- endfor -%}
+{%- assign bibtex = bibtex | append: " }," | append: nl -%}
 
-{% for author in page.authors %}
-    {% assign name = author %}
-    {% for person in site.persons %}
-        {% if author == person.key %}
-            {% assign name = person.first_name | append: ' ' | append: person.last_name %}
-        {% endif %}
-    {% endfor %}
-    {% include /functions/replace_umlauts.html input=name %}
-    {% assign bibtex = bibtex | append: fixedString %}
-    
-    {% if author != page.authors.last and page.authors.first != page.authors.last%}
-        {% assign bibtex = bibtex | append: " and " %}
-    {% endif %}
-{% endfor %}
+{%- comment %} title {% endcomment -%}
+{%- assign bibtex = bibtex | append: "    title = { " | append: pub.title | append: " }," | append: nl -%}
 
-{% assign bibtex = bibtex | append: "},<br/>" %}
+{%- comment %} journal/proceedings {% endcomment -%}
+{%- if pub.type == "article" or pub.type == "preprint" -%}
+    {%- assign bibtex = bibtex | append: "    journal = { " | append: pub.journal | append: " }," | append: nl -%}
+{%- elsif pub.type == "inproceedings" -%}
+    {%- assign bibtex = bibtex | append: "    booktitle = { " | append: pub.journal | append: " }," | append: nl -%}
+{%- elsif pub.type == "inbook" -%}
+    {%- assign bibtex = bibtex | append: "    booktitle = { " | append: pub.journal | append: " }," | append: nl -%}
+{%- elsif pub.type == "poster" -%}
+    {%- assign bibtex = bibtex | append: "    howpublished = { Poster presentation at " | append: pub.journal | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- title -->
-{% assign bibtex = bibtex | append: "    title = { " | append: page.title | append: " },<br/>" %}
+{%- comment %} volume {% endcomment -%}
+{%- if pub.volume -%}
+    {%- assign bibtex = bibtex | append: "    volume = { " | append: pub.volume | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- journal/proceedings -->
-{% if page.type == "article" %}
-    {% assign bibtex = bibtex | append: "    journal = { " | append: page.journal | append: " },<br/>" %}
-{% elsif page.type == "inproceedings" %}
-    {% assign bibtex = bibtex | append: "    booktitle = { " | append: page.journal | append: " },<br/>" %}
-{% elsif page.type == "inbook" %}
-    {% assign bibtex = bibtex | append: "    booktitle = { " | append: page.journal | append: " },<br/>" %}
-{% elsif page.type == "poster" %}
-    {% assign bibtex = bibtex | append: "    howpublished = { Poster presentation at " | append: page.journal | append: " },<br/>" %}
-{% endif %}
+{%- comment %} issue {% endcomment -%}
+{%- if pub.issue -%}
+    {%- assign bibtex = bibtex | append: "    number = { " | append: pub.issue | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- volume -->
-{% if page.volume %}
-    {% assign bibtex = bibtex | append: "    volume = { " | append: page.volume | append: " },<br/>" %}
-{% endif %}
+{%- comment %} chapter {% endcomment -%}
+{%- if pub.chapter -%}
+    {%- assign bibtex = bibtex | append: "    chapter = { " | append: pub.chapter | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- issue -->
-{% if page.issue %}
-    {% assign bibtex = bibtex | append: "    number = { " | append: page.issue | append: " },<br/>" %}
-{% endif %}
+{%- comment %} pages {% endcomment -%}
+{%- if pub.page_start -%}
+    {%- assign bibtex = bibtex | append: "    pages = { " | append: pub.page_start -%}
+    {%- if pub.page_end -%}
+        {%- assign bibtex = bibtex | append: " -- " | append: pub.page_end -%}
+    {%- endif -%}
+    {%- assign bibtex = bibtex | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- chapter -->
-{% if page.chapter %}
-    {% assign bibtex = bibtex | append: "    chapter = { " | append: page.chapter | append: " },<br/>" %}
-{% endif %}
+{%- comment %} editor {% endcomment -%}
+{%- if pub.editor -%}
+    {%- assign bibtex = bibtex | append: "    editor = { " | append: pub.editor | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- pages -->
-{% if page.page_start %}
-    {% assign bibtex = bibtex | append: "    pages = { " | append: page.page_start %}
-    {% if page.page_end %}
-        {% assign bibtex = bibtex | append: " -- " | append: page.page_end  %}
-    {% endif %}
-    {% assign bibtex = bibtex | append: " },<br/>" %}
-{% endif %}
+{%- comment %} publisher {% endcomment -%}
+{%- if pub.publisher -%}
+    {%- assign bibtex = bibtex | append: "    publisher = { " | append: pub.publisher | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- editor -->
-{% if page.editor %}
-    {% assign bibtex = bibtex | append: "    editor = { " | append: page.editor | append: " },<br/>" %}
-{% endif %}
+{%- comment %} school {% endcomment -%}
+{%- if pub.school -%}
+    {%- include functions/replace_umlauts.html input=pub.school -%}
+    {%- assign bibtex = bibtex | append: "    school = { " | append: fixedString | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- publisher -->
-{% if page.publisher %}
-    {% assign bibtex = bibtex | append: "    publisher = { " | append: page.publisher | append: " },<br/>" %}
-{% endif %}
+{%- comment %} year {% endcomment -%}
+{%- if pub.year -%}
+    {%- assign bibtex = bibtex | append: "    year = { " | append: pub.year | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- school -->
-{% if page.school %}
-    {% include /functions/replace_umlauts.html input=page.school %}
-    {% assign bibtex = bibtex | append: "    school = { " | append: fixedString | append: " },<br/>" %}
-{% endif %}
+{%- comment %} doi {% endcomment -%}
+{%- if pub.doi -%}
+    {%- assign bibtex = bibtex | append: "    doi = { " | append: pub.doi | append: " }," | append: nl -%}
+{%- endif -%}
 
-<!-- year -->
-{% if page.year %}
-    {% assign bibtex = bibtex | append: "    year = { " | append: page.year | append: " },<br/>" %}
-{% endif %}
-
-<!-- doi -->
-{% if page.doi %}
-    {% assign bibtex = bibtex | append: "    doi = { " | append: page.doi | append: " },<br/>" %}
-{% endif %}
-
-<!-- close -->
-{% assign bibtex = bibtex | append: "}" %}
+{%- comment %} close {% endcomment -%}
+{%- assign bibtex = bibtex | append: "}" -%}

@@ -5,20 +5,21 @@ key: 2025_evoviewer
 date:   2025-03-24 12:00:00
 permalink: /publications/2025_evoviewer/
 type: inproceedings
+kind: design
 shortname: 
 image: 2025_evoviewer.png
-image_large: 2025_evoviewer_teaser_.png
+image_large: 2025_evoviewer_teaser.png
 image_preview: 2025_evoviewer.png
 
 authors:
-- basu
+- Soumyadeep Basu
 - Morgan Wirthlin
-- eggermont
-- kroes
-- lelieveldt
+- Jeroen Eggermont
+- Thomas Kroes
+- Boudewijn Lelieveldt
 - Ed S. Lein
 - Trygve E. Bakken
-- hollt
+- Thomas Höllt
 
 journal: Proceedings of the 18th IEEE Pacific Visualization Symposium
 journal-short: Pacific Vis

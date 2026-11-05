@@ -1,56 +1,21 @@
 <!-- site header
 ================================================== -->
-<header class="s-header header">
+<header class="site-header">
+    <a class="wordmark" href="{{ '/' | relative_url }}"><span class="dab c-terracotta" style="--r:-14deg"></span>{{ site.title }}</a>
 
-    <div class="header__top">
-        <div class="header__logo">
-            <a class="site-logo" href="https://www.thomashollt.com">
-                <img src="/assets/images/logo.svg" alt="Homepage">
-            </a>
-        </div>
+    <nav class="site-nav" id="site-nav">
+        <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>About</a>
+        <a href="{{ '/publications/' | relative_url }}"{% if page.url == "/publications/" %} aria-current="page"{% endif %}>Publications</a>
+        <a href="{{ '/cv/' | relative_url }}"{% if page.url == "/cv/" %} aria-current="page"{% endif %}>CV</a>
+        <a href="{{ '/contact/' | relative_url }}"{% if page.url == "/contact/" %} aria-current="page"{% endif %}>Contact</a>
+    </nav>
 
-        <!-- toggles -->
-        <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
-    </div>
-
-    <nav class="header__nav-wrap">
-
-        <ul class="header__nav">
-            <li><a href="/index.html" title="">About</a></li>
-            <li><a href="/teaching/" title="">Teaching</a></li>
-            <li><a href="/publications/" title="">Publications</a></li>
-            <li><a href="https://gallery.thomashollt.com/" title="">Photography</a></li>
-            <li><a href="/contact/" title="">Contact</a></li>
-        </ul> <!-- end header__nav -->
-
-        <ul class="header__social">
-            <li class="ss-address">
-                <a href="https://maps.apple.com/?address=Van%20Mourik%20Broekmanweg%206,%202628%20XE%20Delft,%20Netherlands&auid=14847247505893078258&ll=51.999005,4.378132&lsp=9902&q=TU%20Delft%20-%20Mathematics%20%26%20Computer%20Science" alt="https://goo.gl/maps/c8CYdisjBKtTNrGj6">
-                    <span class="screen-reader-text">Address</span>
-                </a>
-            </li>
-            <li class="ss-email">
-                <a href="mailto:{{ site.email }}">
-                    <span class="screen-reader-text">Email</span>
-                </a>
-            </li>
-            <li class="ss-twitter">
-                <a href="https://www.twitter.com/{{ site.twitter }}" target="_blank">
-                    <span class="screen-reader-text">Twitter</span>
-                </a>
-            </li>
-            <li class="ss-mastodon">
-                <a href="https://{{ site.mastodoninstance }}/@{{ site.mastodon }}" target="_blank">
-                    <span class="screen-reader-text">Mastodon</span>
-                </a>
-            </li>
-            <li class="ss-github">
-                <a href="https://www.github.com/{{ site.github }}" target="_blank">
-                    <span class="screen-reader-text">Twitter</span>
-                </a>
-            </li>
-        </ul>
-
-    </nav> <!-- end header__nav-wrap -->
-
-</header> <!-- end s-header -->
+    <button class="search-toggle" aria-label="Search" title="Search (⌘K / Ctrl K)">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.2 15.4 C17 17.2 18.6 18.8 20 20.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <kbd class="search-key">⌘K</kbd>
+    </button>
+    <button class="theme-toggle" aria-label="Toggle evening mode" title="Day / evening">◐</button>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7.2 C9 6.6 15 7.6 20 6.9 M4 12.3 C9 11.8 14.5 12.8 20 12.1 M4 17.3 C8.5 16.8 15 17.8 20 17.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </button>
+</header> <!-- end site-header -->

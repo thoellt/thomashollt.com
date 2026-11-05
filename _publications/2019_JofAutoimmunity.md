@@ -2,11 +2,12 @@
 layout: publication
 title: "Multidimensional Analyses of Proinsulin Peptide-specific Regulatory T Cells Induced by Tolerogenic Dendritic Cells"
 key: 2019_JofAutoimmunity
+kind: domain
 date:   2019-11-09 12:00:00
 permalink: /publications/2019_JofAutoimmunity/
 type: article
 shortname: Proinsulin Peptide-specific Regulatory T Cells
-image: 2019_JofAutoimmunity.png
+image:
 image_preview:
 
 authors:
@@ -14,9 +15,9 @@ authors:
 - Sandra Laban
 - Kincso Vass
 - Antoinette Joosten
-- vanunen
-- lelieveldt
-- hollt
+- Vincent van Unen
+- Boudewijn Lelieveldt
+- Thomas Höllt
 - Jaap Jan Zwaginga
 - Tatjana Nikolic
 - Bart O.Roep

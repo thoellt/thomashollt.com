@@ -7,14 +7,15 @@ year: 2022
 quarter: 1
 org: TU Delft
 role: Responsible Lecturer
+program: MSc Computer Science
+group: 
+cv_note:
 image_preview: IN4307_teaser.png
 
 responsible:
-- hollt
-
+- Thomas Höllt
 teachers:
-- eisemann
-
+- Elmar Eisemann
 courseguide:
 - https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=61048
 

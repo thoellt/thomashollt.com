@@ -1,288 +1,99 @@
-/* ===================================================================
- * TypeRite - Main JS
- *
- * ------------------------------------------------------------------- */
+// Theme toggle (day / evening), remembered across pages.
+(function () {
+  // the saved theme is applied by the inline script in the head, before the first paint
+  const root = document.documentElement;
 
-(function($) {
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".theme-toggle");
+    if (!btn) return;
+    const next = root.dataset.theme === "evening" ? "day" : "evening";
+    root.dataset.theme = next;
+    localStorage.setItem("theme", next);
+  });
+})();
 
-    "use strict";
-    
-    var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : ''   // mailchimp url
-    },
+// Menu on narrow screens: the button folds the nav links in and out.
+(function () {
+  const header = document.querySelector(".site-header");
+  const button = header && header.querySelector(".menu-toggle");
+  if (!button) return;
+  const set = (open) => {
+    header.classList.toggle("menu-open", open);
+    button.setAttribute("aria-expanded", open);
+  };
+  button.addEventListener("click", () => set(!header.classList.contains("menu-open")));
+  document.addEventListener("click", (e) => {
+    if (!header.contains(e.target) || e.target.closest(".site-nav a")) set(false);
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
+})();
 
-    $WIN = $(window);
+// Publication filters: one active chip per group (kind / paper type / year).
+// Chips that would give an empty list together with the other groups' choices are hidden.
+(function () {
+  const filters = document.querySelector(".filters");
+  if (!filters) return;
+  const active = { type: "all", paper: "all", year: "all" };
+  const pubs = [...document.querySelectorAll(".year-group .pub")].map((p) => ({
+    type: p.dataset.type,
+    paper: p.dataset.paper,
+    year: p.closest(".year-group").dataset.year,
+  }));
+  // would any publication remain with `value` chosen in `group` (other groups as they are)?
+  const matches = (group, value) =>
+    pubs.some((p) => Object.keys(active).every((g) => {
+      const want = g === group ? value : active[g];
+      return want === "all" || p[g] === want;
+    }));
 
-    // Add the User Agent to the <html>
-    // will be used for IE10/IE11 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; rv:11.0))
-    var doc = document.documentElement;
-    doc.setAttribute('data-useragent', navigator.userAgent);
+  filters.addEventListener("click", (e) => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    const group = chip.dataset.group;
+    const value = chip.dataset.value;
+    active[group] = active[group] === value ? "all" : value;
 
+    filters.querySelectorAll(`.chip[data-group="${group}"]`).forEach((c) =>
+      c.setAttribute("aria-pressed", c.dataset.value === active[group])
+    );
 
-   /* Preloader
-    * -------------------------------------------------- */
-    var ssPreloader = function() {
-        
-        $("html").addClass('ss-preload');
+    document.querySelectorAll(".year-group").forEach((g) => {
+      const yearOk = active.year === "all" || g.dataset.year === active.year;
+      let visible = 0;
+      g.querySelectorAll(".pub").forEach((p) => {
+        const ok =
+          yearOk &&
+          (active.type === "all" || p.dataset.type === active.type) &&
+          (active.paper === "all" || p.dataset.paper === active.paper);
+        p.classList.toggle("is-hidden", !ok);
+        if (ok) visible++;
+      });
+      g.classList.toggle("is-empty", visible === 0);
+      const count = g.querySelector(".count");
+      if (count) count.textContent = visible + (visible === 1 ? " paper" : " papers");
+    });
 
-        $WIN.on('load', function() {
+    filters.querySelectorAll(".chip").forEach((c) => {
+      const g = c.dataset.group;
+      const ok = active[g] === c.dataset.value || matches(g, c.dataset.value);
+      c.classList.toggle("is-unavailable", !ok);
+    });
+  });
+})();
 
-            // will first fade out the loading animation 
-            $("#loader").fadeOut(250, function() {
-                // will fade out the whole DIV that covers the website.
-                $("#preloader").delay(100).fadeOut(250);
-            }); 
-            
-            // for hero content animations 
-            $("html").removeClass('ss-preload');
-            $("html").addClass('ss-loaded');
-        
-        });
-    };
-
-
-   /* Pretty Print
-    * -------------------------------------------------- */
-    var ssPrettyPrint = function() {
-        $('pre').addClass('prettyprint');
-        $( document ).ready(function() {
-            prettyPrint();
-        });
-    };
-
-   
-   /* search
-    * ------------------------------------------------------ */
-    var ssSearch = function() {
-            
-        var searchWrap = $('.header__search'),
-            searchField = searchWrap.find('.search-field'),
-            closeSearch = searchWrap.find('.header__search-close'),
-            searchTrigger = $('.header__search-trigger'),
-            siteBody = $('body');
-
-
-        searchTrigger.on('click', function(e) {
-            
-            e.preventDefault();
-            e.stopPropagation();
-        
-            var $this = $(this);
-        
-            siteBody.addClass('search-is-visible');
-            setTimeout(function(){
-                searchWrap.find('.search-field').focus();
-            }, 100);
-        
-        });
-
-        closeSearch.on('click', function(e) {
-
-            var $this = $(this);
-        
-            e.stopPropagation(); 
-        
-            if(siteBody.hasClass('search-is-visible')){
-                siteBody.removeClass('search-is-visible');
-                setTimeout(function(){
-                    searchWrap.find('.search-field').blur();
-                }, 100);
-            }
-        });
-
-        searchWrap.on('click',  function(e) {
-            if( !$(e.target).is('.search-field') ) {
-                closeSearch.trigger('click');
-            }
-        });
-            
-        searchField.on('click', function(e){
-            e.stopPropagation();
-        });
-            
-        searchField.attr({placeholder: 'Type Keywords', autocomplete: 'off'});
-
-    };
-
-
-   /* menu
-    * ------------------------------------------------------ */
-    var ssMenu = function() {
-
-        var menuToggle = $('.header__menu-toggle'),
-            siteBody = $('body');
-    
-        menuToggle.on('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            menuToggle.toggleClass('is-clicked');
-            siteBody.toggleClass('nav-wrap-is-visible');
-        });
-
-        $('.header__nav .has-children').children('a').on('click', function (e) {
-            
-            e.preventDefault();
-
-            $(this).toggleClass('sub-menu-is-open')
-                .next('ul')
-                .slideToggle(200)
-                .end()
-                .parent('.has-children')
-                .siblings('.has-children')
-                .children('a')
-                .removeClass('sub-menu-is-open')
-                .next('ul')
-                .slideUp(200);
-
-        });
-    };
-
-
-   /* masonry
-    * ---------------------------------------------------- */ 
-    var ssMasonryFolio = function () {
-        
-        var containerBricks = $('.masonry');
-
-        containerBricks.masonry({
-            itemSelector: '.masonry__brick',
-            columnWidth: '.grid-sizer',
-            percentPosition: true,
-            resize: true
-        });
-
-        // layout Masonry after each image loads
-        containerBricks.imagesLoaded().progress( function() {
-            containerBricks.masonry('layout');
-        });
-
-    };
-
-   /* animate bricks
-    * ------------------------------------------------------ */
-    var ssBricksAnimate = function() {
-
-        var animateEl = $('.animate-this');
-
-        $WIN.on('load', function() {
-
-            setTimeout(function() {
-                animateEl.each(function(ctr) {
-                    var el = $(this);
-                    
-                    setTimeout(function() {
-                        el.addClass('animated');
-                    }, ctr * 200);
-                });
-            }, 300);
-
-        });
-
-        $WIN.on('resize', function() {
-            // remove animation classes
-            animateEl.removeClass('animate-this animated');
-        });
-
-    };
-
-
-   /* slick slider
-    * ------------------------------------------------------ */
-    var ssSlickSlider = function() {
-
-        var $gallery = $('.slider__slides').slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight: true,
-            pauseOnFocus: false,
-            fade: true,
-            cssEase: 'linear'
-        });
-        
-        $('.slider__slide').on('click', function() {
-            $gallery.slick('slickGoTo', parseInt($gallery.slick('slickCurrentSlide'))+1);
-        });
-
-    };
-
-
-   /* smooth scrolling
-    * ------------------------------------------------------ */
-    var ssSmoothScroll = function() {
-        
-        $('.smoothscroll').on('click', function (e) {
-            var target = this.hash,
-            $target    = $(target);
-            
-                e.preventDefault();
-                e.stopPropagation();
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing').promise().done(function () {
-
-                // check if menu is open
-                if ($('body').hasClass('menu-is-open')) {
-                    $('.header-menu-toggle').trigger('click');
-                }
-
-                window.location.hash = target;
-            });
-        });
-
-    };
-
-
-   /* alert boxes
-    * ------------------------------------------------------ */
-    var ssAlertBoxes = function() {
-
-        $('.alert-box').on('click', '.alert-box__close', function() {
-            $(this).parent().fadeOut(500);
-        }); 
-
-    };
-
-
-   /* Back to Top
-    * ------------------------------------------------------ */
-    var ssBackToTop = function() {
-        
-        var pxShow      = 500,
-            goTopButton = $(".go-top")
-
-        // Show or hide the button
-        if ($(window).scrollTop() >= pxShow) goTopButton.addClass('link-is-visible');
-
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() >= pxShow) {
-                if(!goTopButton.hasClass('link-is-visible')) goTopButton.addClass('link-is-visible')
-            } else {
-                goTopButton.removeClass('link-is-visible')
-            }
-        });
-    };
-
-
-   /* Initialize
-    * ------------------------------------------------------ */
-    (function clInit() {
-
-        ssPreloader();
-        ssPrettyPrint();
-        ssSearch();
-        ssMenu();
-        ssMasonryFolio();
-        ssBricksAnimate();
-        ssSlickSlider();
-        ssSmoothScroll();
-        ssAlertBoxes();
-        ssBackToTop();
-
-    })();
-
-})(jQuery);
+// Copy buttons: copy the text of the element named in data-copy.
+document.addEventListener("click", async (e) => {
+  const btn = e.target.closest("[data-copy]");
+  if (!btn) return;
+  const target = document.querySelector(btn.dataset.copy);
+  if (!target) return;
+  const text = target.tagName === "PRE" ? target.textContent : target.textContent.replace(/\s+/g, " ").trim();
+  const label = btn.textContent;
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.textContent = "Copied";
+  } catch {
+    btn.textContent = "Copy failed";
+  }
+  setTimeout(() => (btn.textContent = label), 1500);
+});

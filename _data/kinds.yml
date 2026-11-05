@@ -1,0 +1,19 @@
+# Publication kinds for the filter, matched against `type` in the publication files.
+- key: preprint
+  label: Preprint
+  types: [preprint]
+- key: journal
+  label: Journal
+  types: [article]
+- key: conference
+  label: Conference
+  types: [inproceedings]
+- key: book
+  label: Book
+  types: [book, inbook]
+- key: poster
+  label: Poster
+  types: [poster]
+- key: thesis
+  label: Thesis
+  types: [mscthesis, phdthesis]

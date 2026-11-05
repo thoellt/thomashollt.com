@@ -2,12 +2,14 @@
 layout: publication
 title: "The Anatomical Location Shapes the Immune Infiltrate in Tumors of Same Etiology and Impacts Survival"
 key: 2018_clinical_cancer_research
+kind: domain
 date:   2019-01-01 12:00:00
 permalink: /publications/2018_clinical_cancer_research/
 type: article
 shortname: Anatomical Location Shapes Immune Infiltrate
-image: 2018_clinical_cancer_research.png
+image:
 image_large:
+image_preview:
 
 authors:
 - Saskia J Santegoets
@@ -15,8 +17,8 @@ authors:
 - Ilina Ehsan
 - Pornpimol Charoentong
 - Chantal L Duurland
-- vanunen
-- hollt
+- Vincent van Unen
+- Thomas Höllt
 - Lilly-Ann van der Velden
 - Sylvia I van Egmond
 - Kim Kortekaas

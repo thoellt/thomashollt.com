@@ -1,0 +1,44 @@
+{%- comment -%}
+  One publication, the LaTeX twin of cv_publication_list_entry.html.
+  More than 15 authors: the first 8, then "et al."; names listed in site.me are highlighted.
+{%- endcomment -%}
+\item
+{% assign n_authors = publication.authors.size -%}
+{%- assign shorten = false -%}
+{%- if n_authors > 15 -%}{%- assign shorten = true -%}{%- assign n_authors = 8 -%}{%- endif -%}
+{%- for author in publication.authors limit: n_authors -%}
+  {%- if site.me contains author -%}\highlightauthor{ {%- include latex/escape.tex text=author -%} }{%- else -%}{%- include latex/escape.tex text=author -%}{%- endif -%}
+  {%- if shorten -%}
+    {{- ", " -}}{%- if forloop.last -%}et al.{%- endif -%}
+  {%- elsif forloop.last -%}
+    {{- "." -}}
+  {%- elsif forloop.rindex == 2 -%}
+    {%- if n_authors == 2 -%}{{- " and " -}}{%- else -%}{{- ", and " -}}{%- endif -%}
+  {%- else -%}
+    {{- ", " -}}
+  {%- endif -%}
+{%- endfor %}
+\href{ {{- publication.url | prepend: site.production_url -}} }{\textbf{ {%- include latex/html.tex html=publication.title -%} }},
+{% if publication.type == "inproceedings" -%}
+  In \emph{ {%- include latex/escape.tex text=publication.journal -%} },
+{%- elsif publication.type == "book" -%}
+  \emph{ {%- include latex/escape.tex text=publication.publisher -%} },
+{%- elsif publication.type == "inbook" -%}
+  In \emph{ {%- include latex/escape.tex text=publication.journal -%} }, {% include latex/escape.tex text=publication.publisher %},
+{%- elsif publication.type == "phdthesis" or publication.type == "mscthesis" -%}
+  {% include latex/escape.tex text=publication.school %},
+{%- else -%}
+  \emph{ {%- include latex/escape.tex text=publication.journal -%} },
+{%- endif %}
+{%- if publication.volume %} {% include latex/escape.tex text=publication.volume %}{% if publication.issue %}({% include latex/escape.tex text=publication.issue %}){% endif %},{% endif %}
+{%- if publication.chapter %} Chapter {% include latex/escape.tex text=publication.chapter %},{% endif %}
+{%- if publication.page_start and publication.page_end %} pp.~{{ publication.page_start }}--{{ publication.page_end }},
+{%- elsif publication.page_start %} p.~{{ publication.page_start }},{% endif %}
+{{ publication.year }}.
+{%- if publication.award and publication.award != "" %}
+\textbf{ {%- include latex/html.tex html=publication.award -%} }.
+{%- endif %}
+{%- if publication.doi %}
+{%- capture doi_text %}{% include latex/escape.tex text=publication.doi %}{% endcapture %}
+\href{https://doi.org/{{ publication.doi | replace: "%", "\%" | replace: "#", "\#" }}}{DOI: {{ doi_text | replace: "/", "/\allowbreak " }}}.
+{%- endif %}

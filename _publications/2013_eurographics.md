@@ -2,6 +2,7 @@
 layout: publication
 title: "Extraction and Visual Analysis of Seismic Horizon Ensembles"
 key: 2013_eurographics
+kind: method
 type: inproceedings
 shortname: 
 image: 2013_eurographics.png
@@ -9,10 +10,10 @@ image_large: 2013_eurographics_teaser.png
 image_preview: 2013_eurographics.png
 
 authors:
-- hollt
+- Thomas Höllt
 - Guoning Chen
 - Charles D. Hansen
-- hadwiger
+- Markus Hadwiger
 
 journal: Eurographics (short papers)
 jourunal-short: Eurographics

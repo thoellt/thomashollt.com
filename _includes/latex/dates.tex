@@ -1,0 +1,12 @@
+{%- comment -%}
+  The date label of a list entry: one year; two consecutive years as "A, B";
+  longer spans as "A--C" (also anything that is not a plain year, e.g. "today"); or the free-text `dates` override.
+{%- endcomment -%}
+{%- assign s = include.start | append: "" -%}
+{%- assign e = include.end | append: "" -%}
+{%- assign next = s | plus: 1 | append: "" -%}
+{%- if include.dates and include.dates != "" -%}{{ include.dates | replace: "–", "--" }}
+{%- elsif e == "" or e == s -%}{{ s }}
+{%- elsif s.size == 4 and e == next -%}{{ s }}, {{ e }}
+{%- else -%}{{ s }}--{{ e }}
+{%- endif -%}

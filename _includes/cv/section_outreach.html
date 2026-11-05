@@ -1,0 +1,36 @@
+{%- comment -%} Outreach: media coverage (_activities type press) and software (type software). Mirrors latex/section_outreach.tex. {%- endcomment -%}
+{%- assign visible = site.activities | where_exp: "a", "a.cv != false" -%}
+{%- assign press = visible | where: "type", "press" | sort: "start" | reverse -%}
+{%- assign software = visible | where: "type", "software" | sort: "order" -%}
+<h1>Outreach</h1>
+
+{%- if press.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>Media</h2></header>
+  {%- for a in press %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{{ a.start }}</div>
+    <div class="cv-profile-content col-md">{{ a.title }}, {{ a.outlet }}{% if a.link and a.link != "" %}: <a href="{{ a.link }}" target="_blank"><u>weblink</u></a>{% endif %}.</div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+
+{%- if software.size > 0 %}
+<div class="cv-profile-block">
+  <header class="listing-header"><h2>Software</h2></header>
+  {%- for a in software %}
+  {%- assign body = a.content | strip %}
+  {%- assign has_link = false %}{% if a.link and a.link != "" %}{% assign has_link = true %}{% endif %}
+  <div class="cv-profile-item row">
+    <div class="cv-profile-time col-md">{{ a.title }}</div>
+    <div class="cv-profile-content col-md">
+      {%- if body != "" %}{% include cv/md.html text=body %}{% endif %}
+      {%- if has_link %} <a href="{{ a.link }}" target="_blank"><u>website</u></a>{% endif %}
+      {%- if a.code and a.code != "" %}{% if has_link %},{% endif %} <a href="{{ a.code }}" target="_blank"><u>code</u></a>{% endif %}
+      {%- if has_link %}.{% elsif a.code and a.code != "" %}.{% endif %}
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}

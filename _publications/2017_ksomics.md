@@ -2,21 +2,23 @@
 layout: publication
 title: "Interactive Visual Analysis of Mass Cytometry Data by Hierarchical Stochastic Neighbor Embedding Reveals Rare Cell Types"
 key: 2017_ksomics
+kind: method
 type: poster
 shortname: 
 image:
 image_large:
+image_preview:
 
 authors:
-- hollt
-- vanunen
-- pezzotti
-- lina
-- reinders
-- eisemann
-- koning
-- vilanova
-- lelieveldt
+- Thomas Höllt
+- Vincent van Unen
+- Nicola Pezzotti
+- Na Li
+- Marcel Reinders
+- Elmar Eisemann
+- Frits Koning
+- Anna Vilanova
+- Boudewijn Lelieveldt
 
 journal: Poster Presentation, Keystone Symposia on Molecular and Cellular Biology; Single Cell Omics, Stockholm, Swe
 jourunal-short: 

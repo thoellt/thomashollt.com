@@ -5,10 +5,11 @@ key: 2026_mucosalimmunology
 date: 2026-01-01 12:00:00
 permalink: /publications/2026_mucosalimmunology/
 type: article
+kind: domain
 shortname: 
-image: 2026_mucosalimmunology.png
-image_large: 2026_mucosalimmunology_teaser.png
-image_preview: 2026_mucosalimmunology.png
+image:
+image_large:
+image_preview:
 
 authors:
 - Qinyue Jiang
@@ -17,13 +18,13 @@ authors:
 - Jens Krijgsman
 - Nannan Guo
 - Laura F. Ouboter
-- hollt
+- Thomas Höllt
 - Philip W. Voorneveld
 - Caroline R. Meijer-Boekel
-- koning
+- Frits Koning
 - Andrea E van der Meulen-de Jong
 - Maria Fernanda Pascutti
-- vanunen
+- Vincent van Unen
 
 journal: Mucosal Immunology
 journal-short: Mucosal Immunology

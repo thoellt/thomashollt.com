@@ -2,6 +2,7 @@
 layout: publication
 title: "Overview + Detail Visualization for Ensembles of Diffusion Tensors"
 key: 2017_eurovis_diftens
+kind: method
 date:   2017-07-04 12:00:00
 permalink: /publications/2017_eurovis_diftens/
 type: article
@@ -13,9 +14,9 @@ image_preview: 2017_eurovis_diftens.jpg
 authors:
 - Changgong Zhang
 - Matthan Caan
-- hollt
-- eisemann
-- vilanova
+- Thomas Höllt
+- Elmar Eisemann
+- Anna Vilanova
 
 journal: Computer Graphics Forum (Proceedings of EuroVis 2017)
 journal-short: CGF (EuroVis 2017)

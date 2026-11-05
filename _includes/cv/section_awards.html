@@ -1,0 +1,13 @@
+{%- comment -%} Grants and awards & prizes (_awards). Mirrors latex/section_awards.tex. {%- endcomment -%}
+{%- assign awards = site.awards | reverse -%}
+{%- assign groups = "grant:Grants|prize:Awards & Prizes" | split: "|" -%}
+<h1>Grants & Awards</h1>
+{%- for group in groups %}
+{%- assign group_type = group | split: ":" | first %}
+<div class="cv-grants-block">
+  <header class="listing-header"><h2>{{ group | split: ":" | last }}</h2></header>
+  {%- for award in awards %}{% if award.type == group_type %}
+  {% include cv/award_entry.html %}
+  {%- endif %}{% endfor %}
+</div>
+{%- endfor %}

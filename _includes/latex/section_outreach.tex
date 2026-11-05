@@ -1,0 +1,28 @@
+{%- comment -%} Outreach: media coverage (_activities type press) and software (type software). {%- endcomment -%}
+{%- assign visible = site.activities | where_exp: "a", "a.cv != false" -%}
+{%- assign press = visible | where: "type", "press" | sort: "start" | reverse -%}
+{%- assign software = visible | where: "type", "software" | sort: "order" %}
+\section*{Outreach}
+{%- if press.size > 0 %}
+
+\subsection*{Media}
+\begin{description}[style=multiline,leftmargin=2.0cm,font=\normalfont]
+{%- for a in press %}
+\item[{{ a.start }}] {% include latex/escape.tex text=a.title %}, {% include latex/escape.tex text=a.outlet %}{% if a.link and a.link != "" %}: \href{ {{- a.link | replace: "%", "\%" | replace: "#", "\#" -}} }{\underline{weblink}}{% endif %}.
+{%- endfor %}
+\end{description}
+{%- endif %}
+{%- if software.size > 0 %}
+
+\subsection*{Software}
+\begin{description}[style=multiline,leftmargin=2.0cm,font=\normalfont]
+{%- for a in software %}
+{%- assign body = a.content | strip %}
+\item[{% include latex/escape.tex text=a.title %}] {% if body != "" %}{% include latex/md.tex text=body %}{% endif %}
+{%- if a.link and a.link != "" %} \href{ {{- a.link | replace: "%", "\%" | replace: "#", "\#" -}} }{\underline{website}}{% endif %}
+{%- if a.code and a.code != "" %}{% if a.link and a.link != "" %},{% endif %} \href{ {{- a.code | replace: "%", "\%" | replace: "#", "\#" -}} }{\underline{code}}{% endif %}
+{%- assign has_url = false %}{% if a.link and a.link != "" %}{% assign has_url = true %}{% endif %}{% if a.code and a.code != "" %}{% assign has_url = true %}{% endif %}
+{%- if has_url %}.{% endif %}
+{%- endfor %}
+\end{description}
+{%- endif %}

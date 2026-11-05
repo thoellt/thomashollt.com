@@ -2,6 +2,7 @@
 layout: publication
 title: "Cytofast: A workflow for visual and quantitative analysis of flow and mass cytometry data to discover immune signatures and correlations"
 key: 2018_cytofast
+kind: design
 date:   2018-10-24 12:00:00
 permalink: /publications/2018_cytofast/
 type: article
@@ -14,7 +15,7 @@ image_preview: 2018_cytofast.png
 authors:
 - Guillaume Beyrend
 - Koen Stam
-- hollt
+- Thomas Höllt
 - Ferry Ossendorp
 - Ramon Arens
 

@@ -2,18 +2,19 @@
 layout: publication
 title: "Memory CD4+ T Cells are Generated in the Human Fetal Intestine"
 key: 2019_nature_immunology
+kind: domain
 date:   2019-01-21 12:00:00
 permalink: /publications/2019_nature_immunology/
 type: article
 shortname: Innate Lymphoid Differentiation
-image: 2019_nature_immunology.png
-image_large: 2019_nature_immunology_teaser.png
-image_preview: 2019_nature_immunology.png
+image:
+image_large:
+image_preview:
 
 authors:
-- lina
-- vanunen
-- abdelaal
+- Na Li
+- Vincent van Unen
+- Tamim Abdelaal
 - Nannan Guo
 - Sofya Kasatskaya
 - Kristin Ladell
@@ -21,14 +22,14 @@ authors:
 - Evgeniy Egorov
 - Mark Izraelson
 - Susana Chuva de Sousa Lopes
-- hollt
+- Thomas Höllt
 - Olga Britanova
-- eggermont
-- demiranda
+- Jeroen Eggermont
+- Noel F.C.C. De Miranda
 - Dmitriy Chudakov
 - David Price
-- lelieveldt
-- koning
+- Boudewijn Lelieveldt
+- Frits Koning
 
 journal: Nature Immunology
 journal-short: Nat Immu

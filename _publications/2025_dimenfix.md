@@ -5,15 +5,16 @@ key: 2025_dimenfix
 date:   2025-06-01 12:00:00
 permalink: /publications/2025_dimenfix/
 type: article
+kind: method
 shortname: 
 image: 2025_dimenfix.png
-image_large: 2025_dimenfix_teaser_.png
+image_large: 2025_dimenfix_teaser.png
 image_preview: 2025_dimenfix.png
 
 authors:
 - Zixuan Han
 - Diede van der Hoorn
-- hollt
+- Thomas Höllt
 - Qiaodan Luo
 - Leonardo Christino
 - Evangelos Milios
