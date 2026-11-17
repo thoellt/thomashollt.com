@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'cmr-regular';
+    src: url(../fonts/cmr12-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cmr-bold';
+    src: url(../fonts/cmbx12-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cmr-italic';
+    src: url(../fonts/cmti12-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------- the few Bootstrap 5.3 rules the CV relied on (replaces the CDN stylesheet) ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* superscripts (e.g. 3rd prize) without stretching the line */
+sub, sup {
+  position: relative;
+  font-size: .75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
+/* two-column entries (dates | position, award | amount); stacked below 768px */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.75rem;
+  margin-left: -.75rem;
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: .75rem;
+  padding-left: .75rem;
+}
+@media (min-width: 768px) {
+  .col-md { flex: 1 0 0%; }
+}
+
+/* ---------- CV styles ---------- */
+
+body {
+  font-size: 17px;
+  line-height: 1.6em;
+  font-family: cmr-regular, serif !important;
+  font-weight: 400;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 1.5em;
+  position: relative;
+  text-align: left;
+  padding-left:90px;
+  font-weight: 200;
+  margin-top: 35px;
+}
+
+h1:before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 0.3em;
+  background: #000;
+  left: 0;
+  top: 30%;
+  position: absolute;
+}
+
+h2 {
+  margin-top: 25px;
+  font-size: 1.2em;
+  font-family: cmr-italic;
+  font-weight: 400;
+}
+
+.cv-wrapper {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cv-content {
+  margin: 100px;
+}
+
+.cv-info-name {
+  font-size: 1.6em;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.cv-info-icon {
+  display: inline-block;
+  width: 24px;
+  margin-top: 5px;
+}
+
+.cv-profile-time {
+  flex: 0 0 170px;
+}
+
+.cv_profile_edu_title {
+  font-family: cmr-italic;
+}
+
+.cv-award-value {
+  flex: 0 0 100px;
+  text-align: right;
+}
+
+.cv-pub-item, .cv-profile-item {
+  margin-bottom: 1em;
+}
+
+.cv-pub-number {
+  font-family: cmr-bold;
+}
+
+.cv-pub-authors {
+}
+
+.cv-pub-title {
+  font-family: cmr-bold;
+}
+
+.cv-pub-venue {
+  font-family: cmr-italic;
+}
+
+.cv-pub-volume {
+}
+
+.cv-pub-chapter {
+}
+
+.cv-pub-pages {
+}
+
+.cv-pub-year {
+}
+
+.cv-pub-award {
+  font-family: cmr-bold;
+}
+
+.cv-pub-doi {
+}
